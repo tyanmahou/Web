@@ -1,6 +1,6 @@
-FROM node:12.12.0-alpine
+FROM node:latest
 
 WORKDIR /usr/src/app
 
-RUN apk update && \
+RUN apt-get update && \
     npm install -g npm @vue/cli
