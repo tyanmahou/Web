@@ -1,17 +1,18 @@
 <template>
+  <myheader />
   <div class="main">
-    <myheader />
     <h2>コンテンツ</h2>
-    <div id="text">aaaaa
-    
-    <p>
-    aa<br>
-    aa<br>
-    aa<br>aa<br>aa<br>aa<br>aa<br>aa<br>aa<br>aa<br>aa<br>aa<br>aa<br>aa<br>aa<br>aa<br>aa<br>aa<br>aa<br>aa<br>aa<br>aa<br>aa<br>aa<br>aa<br>aa<br>aa<br>aa<br>aa<br>
-    </p>
+    <div id="text">
+      aaaaa
+
+      <p>
+        aa<br />
+        aa<br />
+        aa<br />aa<br />aa<br />aa<br />aa<br />aa<br />aa<br />aa<br />aa<br />aa<br />aa<br />aa<br />aa<br />aa<br />aa<br />aa<br />aa<br />aa<br />aa<br />aa<br />aa<br />aa<br />aa<br />aa<br />aa<br />aa123<br />aaaaa<br />
+      </p>
     </div>
-    <foot />
-  </div>    
+  </div>
+  <foot />
 </template>
 
 <script>
