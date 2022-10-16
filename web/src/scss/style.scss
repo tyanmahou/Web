@@ -10,22 +10,87 @@ html {
 
 body {
     height: 100%;
-    background: #f5f5dc;    
 }
 
 .app {
     height: 100%;
+    background: #f5f5dc;
 }
 
 // ヘッダー
 .header {
-    margin: 0%;
+    margin: 0% 0 40px 0;
+    width: 100%;
+    height: 60px;
+    background: #2e8b57;
+    position: fixed;
+
+    .logo {
+        margin: 0 0 0 clamp(10px, 5%, 50px);
+        padding: 10px 0 0 0;
+        width: 300px;
+        height: 90px;
+        background: #fffafa;
+        border-radius: 0 0 30px 30px;
+        float: left;
+    }
+
+    .navi {
+        padding: 20px 40px 0 0;
+        color: #ffffff;
+        // 右寄せ
+        display: flex;
+        justify-content: flex-end;
+
+        ul {
+            display: flex;
+            list-style: none;
+
+            li {
+                margin-bottom:20px;
+
+                a {
+                    display: block;
+                    padding: 0 10px;
+                    text-decoration: none;
+                    color: #ffffff;
+
+                    /*線の基点とするためrelativeを指定*/
+                    position: relative;
+                }
+                a::after {
+                    content: '';
+                    /*絶対配置で線の位置を決める*/
+                    position: absolute;
+                    bottom: 0;
+                    left: 10%;
+                    /*線の形状*/
+                    width: 80%;
+                    height: 2px;
+                    background: #ffffff;
+                    /*アニメーションの指定*/
+                    transition: all .3s;
+                    transform: scale(0, 1);
+                    /*X方向0、Y方向1*/
+                    transform-origin: center top;
+                    /*上部中央基点*/
+                }
+                /*現在地とhoverの設定*/
+                &.current a::after,
+                a:hover::after {
+                    transform: scale(1, 1);
+                    /*X方向にスケール拡大*/
+                }
+            }
+        }
+    }
 }
 
 // メイン
 .main {
     min-height: 100%;
     height: auto;
+    position: relative;
 }
 
 // フッター

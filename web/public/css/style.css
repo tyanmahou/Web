@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0 0 0 0;
   padding: 0;
@@ -9,20 +10,78 @@ html {
 
 body {
   height: 100%;
-  background: #f5f5dc;
 }
 
 .app {
   height: 100%;
+  background: #f5f5dc;
 }
 
 .header {
-  margin: 0%;
+  margin: 0% 0 40px 0;
+  width: 100%;
+  height: 60px;
+  background: #2e8b57;
+  position: fixed;
+}
+.header .logo {
+  margin: 0 0 0 clamp(10px, 5%, 50px);
+  padding: 10px 0 0 0;
+  width: 300px;
+  height: 90px;
+  background: #fffafa;
+  border-radius: 0 0 30px 30px;
+  float: left;
+}
+.header .navi {
+  padding: 20px 40px 0 0;
+  color: #ffffff;
+  display: flex;
+  justify-content: flex-end;
+}
+.header .navi ul {
+  display: flex;
+  list-style: none;
+}
+.header .navi ul li {
+  margin-bottom: 20px;
+  /*現在地とhoverの設定*/
+}
+.header .navi ul li a {
+  display: block;
+  padding: 0 10px;
+  text-decoration: none;
+  color: #ffffff;
+  /*線の基点とするためrelativeを指定*/
+  position: relative;
+}
+.header .navi ul li a::after {
+  content: "";
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  /*線の形状*/
+  width: 80%;
+  height: 2px;
+  background: #ffffff;
+  /*アニメーションの指定*/
+  transition: all 0.3s;
+  transform: scale(0, 1);
+  /*X方向0、Y方向1*/
+  transform-origin: center top;
+  /*上部中央基点*/
+}
+.header .navi ul li.current a::after,
+.header .navi ul li a:hover::after {
+  transform: scale(1, 1);
+  /*X方向にスケール拡大*/
 }
 
 .main {
   min-height: 100%;
   height: auto;
+  position: relative;
 }
 
 .footer {
