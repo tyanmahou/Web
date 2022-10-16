@@ -12,17 +12,21 @@
         <li><a href="#">ABOUT</a></li>
       </ul>
       <ul class="service">
-        <li><a href="https://twitter.com/tyanmahou" target="_blank"><img src="../assets/commons/icon/twitter.png" width="20" /></a></li>
-        <li><a href="https://github.com/tyanmahou" target="_blank"><img src="../assets/commons/icon/github.png" width="20" /></a></li>
-        <li><a href="https://soundcloud.com/tyanmahou" target="_blank"><img src="../assets/commons/icon/soundcloud.png" width="20" /></a></li>
-        <li><a href="https://www.youtube.com/user/tyanmahou" target="_blank"><img src="../assets/commons/icon/youtube.png" width="20" /></a></li>
+        <li><serviceicon url="https://twitter.com/tyanmahou" icon="twitter.png"/></li>
+        <li><serviceicon url="https://github.com/tyanmahou" icon="github.png"/></li>
+        <li><serviceicon url="https://soundcloud.com/tyanmahou" icon="soundcloud.png"/></li>
+        <li><serviceicon url="https://www.youtube.com/user/tyanmahou" icon="youtube.png"/></li>
       </ul>      
     </div>
   </div>
 </template>
 
 <script>
+import serviceicon from "@/components/ServiceIcon.vue";
 export default {
   name: "Header",
+  components: {
+    serviceicon,
+  },  
 };
 </script>
