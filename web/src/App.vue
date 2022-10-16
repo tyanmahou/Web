@@ -4,8 +4,6 @@
   </div>
 </template>
 
-<!--
 <style>
-@import "./css/style.css";
+@import "../public/css/style.css";
 </style>
--->
