@@ -12,8 +12,10 @@
         <li><a href="#">ABOUT</a></li>
       </ul>
       <ul class="service">
-        <li><a href="https://twitter.com/tyanmahou" target="_blank"><img src="../assets/commons/twitter.png" width="20" /></a></li>
-        <li><a href="https://github.com/tyanmahou" target="_blank"><img src="../assets/commons/github.png" width="20" /></a></li>
+        <li><a href="https://twitter.com/tyanmahou" target="_blank"><img src="../assets/commons/icon/twitter.png" width="20" /></a></li>
+        <li><a href="https://github.com/tyanmahou" target="_blank"><img src="../assets/commons/icon/github.png" width="20" /></a></li>
+        <li><a href="https://soundcloud.com/tyanmahou" target="_blank"><img src="../assets/commons/icon/soundcloud.png" width="20" /></a></li>
+        <li><a href="https://www.youtube.com/user/tyanmahou" target="_blank"><img src="../assets/commons/icon/youtube.png" width="20" /></a></li>
       </ul>      
     </div>
   </div>
