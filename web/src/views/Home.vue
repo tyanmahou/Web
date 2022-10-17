@@ -17,21 +17,19 @@
         <div class="catch-copy">
           <h1>MISSION</h1>
           <p>
-            <span class="big"
-              ><ruby><rb>世界</rb><rt>せかい</rt></ruby></span
-            >
-            をつくる<span class="big2"
-              ><ruby><rb>創作活動</rb><rt>モノづくり</rt></ruby></span
-            >
-          </p>
+            <span class="big2"><ruby><rb>創作活動</rb><rt>モノづくり</rt></ruby></span>で
+            <span class="big"><ruby><rb>世界</rb><rt>せかい</rt></ruby></span>つくる
+          </p>    
         </div>
       </div>
     </header>
+    <div class="home-container-outer">
     <div class="home-container">
       <div class = "main-container">
       <h2>NEWS</h2>
       <div id="text"></div>
       </div> 
+    </div>
     </div>
   </div>
   <foot />
@@ -95,6 +93,11 @@ export default {
   height: 200px;
   border-radius: 100px;
   overflow: hidden;
+
+  transition: all .3s;
+  &:hover{
+    transform: scale(1.1);
+  }
 }
 .profile-text {
   margin: 10px 0 0 0;
@@ -124,11 +127,16 @@ export default {
     font-size: 0.3em;
   }
 }
-
-.home-container {
+.home-container-outer {
   position: relative;
   z-index: 1;
   background: #f5f5dc;
-  height: 600px;
+  margin:-160px 0 0 0;
+  padding: 40px 0 0 0;
+}
+.home-container {
+  background: #f5f5dc;
+  height: 800px;
+  margin: 0 0 -20px 0;
 }
 </style>
