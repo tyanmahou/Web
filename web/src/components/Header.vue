@@ -10,7 +10,7 @@
         <li class="current"><a href="#">Top</a></li>
         <li><a href="#">GAMES</a></li>
         <li><a href="#">GALLERY</a></li>
-        <li><a href="#">BLOG</a></li>
+        <li><a href="https://mahou-ptr.hatenablog.com" target="_blank">BLOG</a></li>
         <li><a href="#">ABOUT</a></li>
       </ul>
       <ul class="service">
