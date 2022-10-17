@@ -24,7 +24,7 @@
             >で
             <span class="big"
               ><ruby>世界<rt>せかい</rt></ruby></span
-            >つくる
+            >をつくる
           </p>
         </div>
       </div>
