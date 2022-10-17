@@ -2,7 +2,6 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 // import VueCarousel from 'vue-carousel';
-// import ElementUI from 'element-ui';
 import axios from 'axios'
 
 const app = createApp(App);

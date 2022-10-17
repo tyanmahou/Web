@@ -9,7 +9,7 @@ export default {
     url: String,
     icon: String,
     width: {
-        type: String,
+        type: Number,
         default: 20
     }
   },

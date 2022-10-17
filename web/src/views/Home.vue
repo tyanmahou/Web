@@ -18,10 +18,10 @@
           <h1>MISSION</h1>
           <p>
             <span class="big2"
-              ><ruby><rb>創作活動</rb><rt>モノづくり</rt></ruby></span
+              ><ruby>創作活動<rt>モノづくり</rt></ruby></span
             >で
             <span class="big"
-              ><ruby><rb>世界</rb><rt>せかい</rt></ruby></span
+              ><ruby>世界<rt>せかい</rt></ruby></span
             >つくる
           </p>
         </div>
