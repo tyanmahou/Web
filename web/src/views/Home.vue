@@ -5,9 +5,11 @@
       <div class="header-container">
         <div class="profile">
           <div class="profile-core">
+            <mylink url="/about">
             <div class="profile-icon">
               <img src="../assets/commons/avatar.png" width="200" />
             </div>
+            </mylink>
             <div class="profile-text">
               <h3>TYANMAHOU</h3>
               <span>GAME PROGRAMMER</span>
@@ -68,6 +70,7 @@
 <script>
 import myheader from "@/components/Header.vue";
 import foot from "@/components/Foot.vue";
+import mylink from "@/components/Link.vue";
 export default {
   name: "home-view",
   data() {
@@ -76,6 +79,7 @@ export default {
   components: {
     myheader,
     foot,
+    mylink
   },
 };
 </script>
