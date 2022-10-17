@@ -50,7 +50,15 @@
                 <span class="date">2021.7.23</span>
                 <h3>ColorfulTone v3.2.0 リリース</h3>
                 <div class="text">
-                  <figure></figure>
+                  <mylink
+                    url="https://colorfultone.tyanmahou.com/web/"
+                    absolute
+                    target="_blank"
+                  >                  
+                  <figure>
+                  <img src="https://colorfultone.tyanmahou.com/web/img/slide/Screenshot1.png" width="300" />
+                  </figure>
+                  </mylink>
                   「ColorfulTone」の更新がリリースされました。<br />
                   カスタムフォルダ機能の改善など
                 </div>
