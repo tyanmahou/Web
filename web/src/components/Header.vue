@@ -9,20 +9,26 @@
       </a>
     <div class="navi">
       <ul class="core">
-        <li v-bind:class="current == 0 ? 'current' : ''"><mylink url="/">Top</mylink></li>
-        <li v-bind:class="current == 1 ? 'current' : ''"><mylink url="/game">GAME</mylink></li>
-        <li v-bind:class="current == 2 ? 'current' : ''"><mylink url="/gallery">GALLERY</mylink></li>
-        <li><a href="https://mahou-ptr.hatenablog.com" target="_blank">BLOG <img src="@/assets/commons/icon/external_link.png" width="15" /></a></li>
-        <li v-bind:class="current == 4 ? 'current' : ''"><mylink url="/about">ABOUT</mylink></li>
+        <li v-for="(item, index) in navis" :key="item.name"
+        v-bind:class="current == index ? 'current' : ''"
+        >
+        <a v-if="item.external"
+        :href="item.url"
+        target="_blank"
+        >
+         {{item.name}} <img src="@/assets/commons/icon/external_link.png" width="15" />
+         </a>        
+        <mylink v-else
+        :url="current == index ?'#' : item.url"
+        :absolute="current == index"
+        >
+         {{item.name}}
+         </mylink>
+        </li>
       </ul>
       <ul class="service">
-        <li><serviceicon url="https://twitter.com/tyanmahou" icon="twitter.png" /></li>
-        <li><serviceicon url="https://github.com/tyanmahou" icon="github.png" /></li>
-        <li>
-          <serviceicon url="https://soundcloud.com/tyanmahou" icon="soundcloud.png" />
-        </li>
-        <li>
-          <serviceicon url="https://www.youtube.com/user/tyanmahou" icon="youtube.png" />
+        <li v-for="item in services">
+            <serviceicon :url="item.url" :icon="item.icon" />
         </li>
       </ul>
     </div>
@@ -35,11 +41,60 @@ import mylink from "@/components/Link.vue";
 export default {
   name: "Header",
   props: {
-    current: Number
+    current: String
   },
   components: {
     serviceicon,
     mylink,
   },
+  data() {
+    return {
+      navis:[
+        {
+          name:'TOP',
+          url:'/',
+          external: false
+        },
+        {
+          name:'GAME',
+          url:'/game',
+          external: false
+        },
+        {
+          name:'GALLERY',
+          url:'/gallery',
+          external: false
+        },
+        {
+          name:'BLOG',
+          url:'https://mahou-ptr.hatenablog.com',
+          external: true
+        },
+        {
+          name:'ABOUT',
+          url:'/about',
+          external: false
+        },
+      ],
+      services:[
+        {
+          url:'https://twitter.com/tyanmahou',
+          icon:'twitter.png'
+        },
+        {
+          url:'https://github.com/tyanmahou',
+          icon:'github.png'
+        },
+        {
+          url:'https://soundcloud.com/tyanmahou',
+          icon:'soundcloud.png'
+        },
+        {
+          url:'https://www.youtube.com/user/tyanmahou',
+          icon:'youtube.png'
+        },
+      ]
+    };
+  }
 };
 </script>
