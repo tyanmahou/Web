@@ -3,7 +3,7 @@
   <div class="main">
     <div class="main-container">
       <h1>GAME</h1>
-      <div class="news-contents">
+      <div class="contents-wrap">
       Comming Soon
       </div>
     </div>

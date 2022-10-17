@@ -33,58 +33,8 @@
       <div class="home-container">
         <div class="main-container">
           <h2>NEWS</h2>
-          <div class="news-contents">
-            <ul class="news">
-              <li>
-                <span class="date">2022.10.XX</span>
-                <h3>ホームページリニューアル！</h3>
-                <div class="text">
-                  <figure>
-                    <img src="@/assets/commons/web_logo.png" width="300" />
-                  </figure>
-                  ホームページをリニューアルしました。<br />
-                  今後ともよろしくお願いいたします。
-                </div>
-              </li>
-              <li>
-                <span class="date">2021.7.23</span>
-                <h3>ColorfulTone v3.2.0 リリース</h3>
-                <div class="text">
-                  <mylink
-                    url="https://colorfultone.tyanmahou.com/web/"
-                    absolute
-                    target="_blank"
-                  >                  
-                  <figure>
-                  <img src="https://colorfultone.tyanmahou.com/web/img/slide/Screenshot1.png" width="300" />
-                  </figure>
-                  </mylink>
-                  「ColorfulTone」の更新がリリースされました。<br />
-                  カスタムフォルダ機能の改善など
-                </div>
-              </li>              
-              <li>
-                <span class="date">2020.11.16</span>
-                <h3>LINEスタンプ販売開始</h3>
-                <div class="text">
-                  <mylink
-                    url="https://store.line.me/stickershop/product/13692750"
-                    absolute
-                    target="_blank"
-                  >
-                    <figure>
-                      <img src="@/assets/news/20201116.png" width="300" />
-                    </figure>
-                  </mylink>
-                  LINEスタンプにて<mylink
-                    url="https://store.line.me/stickershop/product/13692750"
-                    absolute
-                    target="_blank"
-                    >「まほうくん スタンプ」<br /></mylink
-                  >販売開始！！<br />
-                </div>
-              </li>
-            </ul>
+          <div class="contents-wrap">
+          <news />
             <div class="changelog">
               <modal id="modal-changelog">
                 <template #title> 更新履歴 </template>
@@ -95,7 +45,7 @@
             </div>
           </div>
           <h2>WORKS</h2>
-          <div class="news-contents">Comming Soon</div>
+          <div class="contents-wrap">Comming Soon</div>
         </div>
       </div>
     </div>
@@ -108,6 +58,7 @@ import myheader from "@/components/Header.vue";
 import foot from "@/components/Foot.vue";
 import mylink from "@/components/Link.vue";
 import modal from "@/components/Modal.vue";
+import news from "@/components/News.vue"
 import changelog from "@/components/ChangeLog.vue";
 export default {
   name: "home-view",
@@ -119,6 +70,7 @@ export default {
     foot,
     mylink,
     modal,
+    news,
     changelog,
   },
 };

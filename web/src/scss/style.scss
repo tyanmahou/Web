@@ -20,16 +20,6 @@ body {
     z-index: 0;
 }
 
-// ヘッダー
-.header {
-    margin: 0% 0 40px 0;
-    width: 100%;
-    height: 60px;
-    background: #2e8b57;
-    position: fixed;
-    z-index: 2;
-}
-
 // メイン
 .main {
     margin: 0 0 0 0;
@@ -60,66 +50,10 @@ body {
         font-size: 24px;
     }
     
-    .news-contents{
+    .contents-wrap{
         background:#cecece;
-        margin: 0 0 20px 0;
+        margin: 20px 0 20px 0;
         padding: 10px;
-        ul.news{
-            list-style: none;  
-            display: flex;
-            justify-content: center;     
-            
-            li {
-                border: solid;
-                border-color: #ffffff;
-                background:#ffffff;
-                margin: 30px 20px 20px 20px;
-                min-width: 400px;
-                position: relative;                
-                span.date{
-                    position: absolute;
-                    top: -30px;
-                    left: -40px;
-                    border: 1px solid;
-                    border-color: #ffffff;                   
-                    font-weight: bold;
-                    color: #ffffff;
-                    background:#2e8b57;
-                    padding: 5px;
-                }
-                h3 {
-                    background:#8eae8e;
-                    color: #ffffff;
-                    margin: 0;
-                    padding: 15px 0 80px 0;
-                }
-                figure {
-                    position:relative;
-                    display: flex;
-                    justify-content: center;
-                    background: #ffffff;
-                    padding: auto;
-                    margin: -80px 0 5px 0;
-                    min-width: 300px;
-                    height: 200px;
-                    overflow: hidden;  
-                    
-                    border: 1px solid;
-                    border-color: #8eae8e; 
-                    border-radius: 50px;
-                    
-                    img {
-                        margin: 0;
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        margin-right: -50%;
-                        transform: translate(-50%, -50%);
-                        overflow: hidden;                    
-                    }
-                }          
-            }
-        }      
     }
     .text{
         text-align: left;
