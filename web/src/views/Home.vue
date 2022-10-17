@@ -39,9 +39,9 @@
                 <span class="date">2022.10.XX</span>
                 <h3>ホームページリニューアル！</h3>
                 <div class="text">
-                <figure>
-                <img src="@/assets/commons/web_logo.png" width="300"/>
-                </figure>
+                  <figure>
+                    <img src="@/assets/commons/web_logo.png" width="300" />
+                  </figure>
                   ホームページをリニューアルしました。<br />
                   今後ともよろしくお願いいたします。
                 </div>
@@ -55,9 +55,9 @@
                     absolute
                     target="_blank"
                   >
-                  <figure>
-                  <img src="@/assets/news/20201116.png" width="300"/>
-                  </figure>
+                    <figure>
+                      <img src="@/assets/news/20201116.png" width="300" />
+                    </figure>
                   </mylink>
                   LINEスタンプにて<mylink
                     url="https://store.line.me/stickershop/product/13692750"
@@ -65,20 +65,56 @@
                     target="_blank"
                     >「まほうくん スタンプ」<br /></mylink
                   >販売開始！！<br />
-
                 </div>
               </li>
               <li>
                 <span class="date">2020.7.23</span>
                 <h3>ColorfulTone v3.2.0 リリース</h3>
                 <div class="text">
-                <figure></figure>
-                「ColorfulTone」の更新がリリースされました。<br>
-                カスタムフォルダ機能の改善など
+                  <figure></figure>
+                  「ColorfulTone」の更新がリリースされました。<br />
+                  カスタムフォルダ機能の改善など
                 </div>
               </li>
             </ul>
-            <div class="update-history">過去の更新を見る</div>
+            <div class="update-history">
+              <a href="#info-1" class="modal">過去の更新を見る</a>
+              <section id="info-1" style="display: none" class="modal">
+                <div class="text">
+                  <h2>お知らせ1</h2>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                  <p>おしらせの内容が入ります。</p>
+                </div>
+              </section>
+            </div>
           </div>
           <h2>WORKS</h2>
           <div class="news-contents">Comming Soon</div>
@@ -103,10 +139,63 @@ export default {
     foot,
     mylink,
   },
+  mounted() {
+    //テキストを含む一般的なモーダル
+    $(".modal").modaal({
+      overlay_close: true,
+    });
+  },
 };
 </script>
 
 <style lang="scss">
+.update-history {
+  font-weight: bold;
+  display: inline-block;
+  a {
+    display: block;
+    padding: 0 10px;
+    text-decoration: none;
+    color: #2e8b57;
+
+    /*線の基点とするためrelativeを指定*/
+    position: relative;
+  }
+  a::after {
+    content: "";
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    /*線の形状*/
+    width: 80%;
+    height: 2px;
+    background: #2e8b57;
+    /*アニメーションの指定*/
+    transition: all 0.3s;
+    transform: scale(0, 1);
+    /*X方向0、Y方向1*/
+    transform-origin: center top;
+    /*上部中央基点*/
+  }
+  /*現在地とhoverの設定*/
+  &.current a::after,
+  a:hover::after {
+    transform: scale(1, 1);
+    /*X方向にスケール拡大*/
+  }
+}
+.modaal-close:after,
+.modaal-close:before {
+  background: #ccc;
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before {
+  background: #666;
+}
 .header-container {
   position: fixed;
 
