@@ -47,6 +47,15 @@
                 </div>
               </li>
               <li>
+                <span class="date">2021.7.23</span>
+                <h3>ColorfulTone v3.2.0 リリース</h3>
+                <div class="text">
+                  <figure></figure>
+                  「ColorfulTone」の更新がリリースされました。<br />
+                  カスタムフォルダ機能の改善など
+                </div>
+              </li>              
+              <li>
                 <span class="date">2020.11.16</span>
                 <h3>LINEスタンプ販売開始</h3>
                 <div class="text">
@@ -67,24 +76,12 @@
                   >販売開始！！<br />
                 </div>
               </li>
-              <li>
-                <span class="date">2020.7.23</span>
-                <h3>ColorfulTone v3.2.0 リリース</h3>
-                <div class="text">
-                  <figure></figure>
-                  「ColorfulTone」の更新がリリースされました。<br />
-                  カスタムフォルダ機能の改善など
-                </div>
-              </li>
             </ul>
-            <div class="update-history">
-              <modal id="update-history">
-                <template #title> 過去の更新を見る </template>
+            <div class="changelog">
+              <modal id="modal-changelog">
+                <template #title> 更新履歴 </template>
                 <template #contents>
-                  <div class="text">
-                    <h2>お知らせ1</h2>
-                    <p>おしらせの内容が入ります。</p>
-                  </div>
+                <changelog/>
                 </template>
               </modal>         
             </div>
@@ -103,6 +100,7 @@ import myheader from "@/components/Header.vue";
 import foot from "@/components/Foot.vue";
 import mylink from "@/components/Link.vue";
 import modal from "@/components/Modal.vue";
+import changelog from "@/components/ChangeLog.vue";
 export default {
   name: "home-view",
   data() {
@@ -113,6 +111,7 @@ export default {
     foot,
     mylink,
     modal,
+    changelog,
   },
 };
 </script>
@@ -206,7 +205,7 @@ export default {
   margin: 0 0 -20px 0;
 }
 
-.update-history {
+.changelog {
   font-weight: bold;
   display: inline-block;
   a {
