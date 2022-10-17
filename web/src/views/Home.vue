@@ -6,9 +6,9 @@
         <div class="profile">
           <div class="profile-core">
             <mylink url="/about">
-            <div class="profile-icon">
-              <img src="../assets/commons/avatar.png" width="200" />
-            </div>
+              <div class="profile-icon">
+                <img src="../assets/commons/avatar.png" width="200" />
+              </div>
             </mylink>
             <div class="profile-text">
               <h3>TYANMAHOU</h3>
@@ -39,6 +39,9 @@
                 <span class="date">2022.10.17</span>
                 <h3>ホームページリニューアル！</h3>
                 <div class="text">
+                <figure>
+                <img src="@/assets/commons/web_logo.png" width="300"/>
+                </figure>
                   ホームページをリニューアルしました。<br />
                   今後ともよろしくお願いいたします。
                 </div>
@@ -46,20 +49,39 @@
               <li>
                 <span class="date">2020.11.16</span>
                 <h3>LINEスタンプ販売開始</h3>
-                <div class="text">ああああああ</div>
+                <div class="text">
+                  <mylink
+                    url="https://store.line.me/stickershop/product/13692750"
+                    absolute
+                    target="_blank"
+                  >
+                  <figure>
+                  <img src="@/assets/news/20201116.png" width="300"/>
+                  </figure>
+                  </mylink>
+                  LINEスタンプにて<mylink
+                    url="https://store.line.me/stickershop/product/13692750"
+                    absolute
+                    target="_blank"
+                    >「まほうくん スタンプ」<br /></mylink
+                  >販売開始！！<br />
+
+                </div>
               </li>
               <li>
                 <span class="date">2020.7.23</span>
-                <h3>ColorfulTone v3.1.0 リリース</h3>
-                <div class="text">ああああああ</div>
+                <h3>ColorfulTone v3.2.0 リリース</h3>
+                <div class="text">
+                <figure></figure>
+                「ColorfulTone」の更新がリリースされました。<br>
+                カスタムフォルダ機能の改善など
+                </div>
               </li>
             </ul>
             <div class="update-history">過去の更新を見る</div>
           </div>
           <h2>WORKS</h2>
-          <div class="news-contents">
-          Comming Soon
-          </div>
+          <div class="news-contents">Comming Soon</div>
         </div>
       </div>
     </div>
@@ -79,7 +101,7 @@ export default {
   components: {
     myheader,
     foot,
-    mylink
+    mylink,
   },
 };
 </script>

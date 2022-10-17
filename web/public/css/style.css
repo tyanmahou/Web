@@ -150,16 +150,49 @@ body {
   padding: 5px;
 }
 .main-container .news-contents ul.news li h3 {
-  background: #8e8e8e;
+  background: #8eae8e;
   color: #ffffff;
   margin: 0;
-  padding: 15px 0;
+  padding: 15px 0 80px 0;
 }
-.main-container .news-contents ul.news li .text {
+.main-container .news-contents ul.news li figure {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background: #ffffff;
+  padding: auto;
+  margin: -80px 0 5px 0;
+  min-width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #8eae8e;
+  border-radius: 50px;
+}
+.main-container .news-contents ul.news li figure img {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.main-container .text {
   text-align: left;
   background: #ffffff;
   padding: 10px 20px;
-  min-height: 200px;
+  min-height: 180px;
+}
+.main-container .text a {
+  color: #008080;
+  text-decoration: none;
+}
+.main-container .text a:hover {
+  color: #66cdaa;
+}
+.main-container .text a:active {
+  color: #66cdaa;
 }
 
 .footer {
