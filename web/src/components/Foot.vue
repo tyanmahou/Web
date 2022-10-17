@@ -16,3 +16,19 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+// フッター
+.footer {  
+    margin: 0%;
+    padding: 15px 0 10px 0;
+    clear: both;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60pt;
+    background: #2e8b57;
+    color: #ffffff;
+    text-align: center;
+}
+</style>
