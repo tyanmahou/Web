@@ -10,7 +10,7 @@
         <li v-bind:class="current == 0 ? 'current' : ''"><mylink url="/">Top</mylink></li>
         <li v-bind:class="current == 1 ? 'current' : ''"><mylink url="/game">GAME</mylink></li>
         <li v-bind:class="current == 2 ? 'current' : ''"><mylink url="/gallery">GALLERY</mylink></li>
-        <li><a href="https://mahou-ptr.hatenablog.com" target="_blank">BLOG</a></li>
+        <li><a href="https://mahou-ptr.hatenablog.com" target="_blank">BLOG <img src="@/assets/commons/icon/external_link.png" width="15" /></a></li>
         <li v-bind:class="current == 4 ? 'current' : ''"><mylink url="/about">ABOUT</mylink></li>
       </ul>
       <ul class="service">
