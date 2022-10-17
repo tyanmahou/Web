@@ -2,6 +2,7 @@
   <myheader current="4" />
   <div class="main">
     <div class="main-container">
+      <h1>ABOUT</h1>
       <h2>PROFILE</h2>
     </div>
   </div>
@@ -23,4 +24,17 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.main-container {
+    h1 {
+        text-align: initial;
+        color: #2e8b57;
+        font-size: 70px;
+        text-decoration: underline;
+        
+        &::first-letter{
+            font-size: 120px;
+        }
+    }
+}
+</style>

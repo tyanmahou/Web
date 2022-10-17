@@ -165,7 +165,7 @@ export default {
   position: relative;
   z-index: 1;
   background: #f5f5dc;
-  margin: -160px 0 0 0;
+  margin: -120px 0 0 0;
   padding: 40px 0 0 0;
 }
 .home-container {
