@@ -16,7 +16,7 @@
       <div class="catch-copy">
       <h1>MISSION</h1>
       <p>
-        <span class="big"><ruby><rb>世界</rb><rt>せかい</rt></ruby></span> をつくる<br><span class="big2"><ruby><rb>創作活動</rb><rt>モノづくり</rt></ruby></span>
+        <span class="big"><ruby><rb>世界</rb><rt>せかい</rt></ruby></span> をつくる<span class="big2"><ruby><rb>創作活動</rb><rt>モノづくり</rt></ruby></span>
       </p>
       </div> 
     </div>
@@ -46,14 +46,13 @@ export default {
 <style lang="scss">
 .catch-copy{
   margin: calc(50% - 50vw + 45px) 0 0 100px;
-  //width: 750px;
   padding: 20px;
   background:#00000080;
   h1 {
     text-decoration:underline;
   }
   p{
-    padding: 0 0 0 20px;
+    padding: 50px 0 60px 40px;
     font-size: 2.5em;
 
     span.big {
