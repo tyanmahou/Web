@@ -17,19 +17,47 @@
         <div class="catch-copy">
           <h1>MISSION</h1>
           <p>
-            <span class="big2"><ruby><rb>創作活動</rb><rt>モノづくり</rt></ruby></span>で
-            <span class="big"><ruby><rb>世界</rb><rt>せかい</rt></ruby></span>つくる
-          </p>    
+            <span class="big2"
+              ><ruby><rb>創作活動</rb><rt>モノづくり</rt></ruby></span
+            >で
+            <span class="big"
+              ><ruby><rb>世界</rb><rt>せかい</rt></ruby></span
+            >つくる
+          </p>
         </div>
       </div>
     </header>
     <div class="home-container-outer">
-    <div class="home-container">
-      <div class = "main-container">
-      <h2>NEWS</h2>
-      <div id="text"></div>
-      </div> 
-    </div>
+      <div class="home-container">
+        <div class="main-container">
+          <h2>NEWS</h2>
+          <div class ="news-contents">
+          <ul class ="news">
+            <li>
+              <span class="date">2022.10.17</span>
+              <h3>ホームページリニューアル！</h3>
+              <div class="text">
+                ホームページをリニューアルしました。<br />
+                今後ともよろしくお願いいたします。
+              </div>
+            </li>
+            <li>
+              <span class="date">2020.11.16</span>
+              <h3>LINEスタンプ販売開始</h3>
+              <div class="text">ああああああ</div>
+            </li>
+            <li>
+              <span class="date">2020.7.23</span>
+              <h3>ColorfulTone v3.1.0 リリース</h3>
+              <div class="text">ああああああ</div>
+            </li>
+          </ul>  
+          <div class="update-history">
+          過去の更新を見る
+          </div>   
+          </div>         
+        </div>
+      </div>
     </div>
   </div>
   <foot />
@@ -53,7 +81,7 @@ export default {
 <style lang="scss">
 .header-container {
   position: fixed;
-  
+
   padding: 100px 0 0 0;
   width: 100%;
   color: #ffffff;
@@ -94,8 +122,8 @@ export default {
   border-radius: 100px;
   overflow: hidden;
 
-  transition: all .3s;
-  &:hover{
+  transition: all 0.3s;
+  &:hover {
     transform: scale(1.1);
   }
 }
@@ -131,12 +159,11 @@ export default {
   position: relative;
   z-index: 1;
   background: #f5f5dc;
-  margin:-160px 0 0 0;
+  margin: -160px 0 0 0;
   padding: 40px 0 0 0;
 }
 .home-container {
   background: #f5f5dc;
-  height: 800px;
   margin: 0 0 -20px 0;
 }
 </style>
