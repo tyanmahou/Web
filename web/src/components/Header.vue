@@ -7,11 +7,11 @@
       </a>
     <div class="navi">
       <ul class="core">
-        <li class="current"><mylink url="/">Top</mylink></li>
-        <li><a href="#">GAMES</a></li>
-        <li><a href="#">GALLERY</a></li>
+        <li v-bind:class="current == 0 ? 'current' : ''"><mylink url="/">Top</mylink></li>
+        <li v-bind:class="current == 1 ? 'current' : ''"><a href="#">GAMES</a></li>
+        <li v-bind:class="current == 2 ? 'current' : ''"><a href="#">GALLERY</a></li>
         <li><a href="https://mahou-ptr.hatenablog.com" target="_blank">BLOG</a></li>
-        <li><mylink url="/about">ABOUT</mylink></li>
+        <li v-bind:class="current == 4 ? 'current' : ''"><mylink url="/about">ABOUT</mylink></li>
       </ul>
       <ul class="service">
         <li><serviceicon url="https://twitter.com/tyanmahou" icon="twitter.png" /></li>
@@ -32,6 +32,9 @@ import serviceicon from "@/components/ServiceIcon.vue";
 import mylink from "@/components/Link.vue";
 export default {
   name: "Header",
+  props: {
+    current: Number
+  },
   components: {
     serviceicon,
     mylink,

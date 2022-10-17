@@ -1,5 +1,5 @@
 <template>
-  <myheader />
+  <myheader current="0" />
   <div class="main">
     <header class="home-header">
       <div class="header-container">

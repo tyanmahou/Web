@@ -1,5 +1,5 @@
 <template>
-  <myheader />
+  <myheader current="4" />
   <div class="main">
     <div class="main-container">
       <h2>PROFILE</h2>
