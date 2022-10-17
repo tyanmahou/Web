@@ -8,8 +8,8 @@
     <div class="navi">
       <ul class="core">
         <li v-bind:class="current == 0 ? 'current' : ''"><mylink url="/">Top</mylink></li>
-        <li v-bind:class="current == 1 ? 'current' : ''"><a href="#">GAMES</a></li>
-        <li v-bind:class="current == 2 ? 'current' : ''"><a href="#">GALLERY</a></li>
+        <li v-bind:class="current == 1 ? 'current' : ''"><mylink url="/game">GAME</mylink></li>
+        <li v-bind:class="current == 2 ? 'current' : ''"><mylink url="/gallery">GALLERY</mylink></li>
         <li><a href="https://mahou-ptr.hatenablog.com" target="_blank">BLOG</a></li>
         <li v-bind:class="current == 4 ? 'current' : ''"><mylink url="/about">ABOUT</mylink></li>
       </ul>

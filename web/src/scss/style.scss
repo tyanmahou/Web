@@ -111,6 +111,17 @@ body {
 .main-container {
     padding: 10px 100px 50px 100px;
     text-align: center;
+    h1 {
+        text-align: initial;
+        color: #2e8b57;
+        font-size: 70px;
+        text-decoration: underline;
+        
+        &::first-letter{
+            font-size: 120px;
+        }
+    }
+        
     h2 {
         color: #ffffff;
 

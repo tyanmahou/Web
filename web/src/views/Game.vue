@@ -1,9 +1,11 @@
 <template>
-  <myheader current="4" />
+  <myheader current="1" />
   <div class="main">
     <div class="main-container">
-      <h1>ABOUT</h1>
-      <h2>PROFILE</h2>
+      <h1>GAME</h1>
+      <div class="news-contents">
+      Comming Soon
+      </div>
     </div>
   </div>
   <foot />
@@ -13,7 +15,7 @@
 import myheader from "@/components/Header.vue";
 import foot from "@/components/Foot.vue";
 export default {
-  name: "about-view",
+  name: "game-view",
   data() {
     return {};
   },
