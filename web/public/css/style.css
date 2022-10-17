@@ -29,11 +29,15 @@ body {
 .header .logo {
   margin: 0 0 0 200px;
   padding: 15px 0 0 0;
-  width: 300px;
   height: 85px;
+  width: 300px;
   background: #fffafa;
   border-radius: 0 0 30px 30px;
   float: left;
+}
+.header .logo:hover {
+  padding: 20px 0 0 0;
+  transition: all 0.2s;
 }
 .header .navi {
   padding: 20px 120px 0 0;
