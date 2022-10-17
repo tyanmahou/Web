@@ -22,7 +22,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .modaal-close:after,
 .modaal-close:before {
   background: #ccc;
@@ -32,6 +32,6 @@ export default {
 .modaal-close:focus:before,
 .modaal-close:hover:after,
 .modaal-close:hover:before {
-  background: #666;
+  background: #2e8b57;
 }
 </style>
