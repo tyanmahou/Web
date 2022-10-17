@@ -78,42 +78,15 @@
               </li>
             </ul>
             <div class="update-history">
-              <a href="#info-1" class="modal">過去の更新を見る</a>
-              <section id="info-1" style="display: none" class="modal">
-                <div class="text">
-                  <h2>お知らせ1</h2>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                  <p>おしらせの内容が入ります。</p>
-                </div>
-              </section>
+              <modal id="update-history">
+                <template #title> 過去の更新を見る </template>
+                <template #contents>
+                  <div class="text">
+                    <h2>お知らせ1</h2>
+                    <p>おしらせの内容が入ります。</p>
+                  </div>
+                </template>
+              </modal>         
             </div>
           </div>
           <h2>WORKS</h2>
@@ -129,6 +102,7 @@
 import myheader from "@/components/Header.vue";
 import foot from "@/components/Foot.vue";
 import mylink from "@/components/Link.vue";
+import modal from "@/components/Modal.vue";
 export default {
   name: "home-view",
   data() {
@@ -138,64 +112,12 @@ export default {
     myheader,
     foot,
     mylink,
-  },
-  mounted() {
-    //テキストを含む一般的なモーダル
-    $(".modal").modaal({
-      overlay_close: true,
-    });
+    modal,
   },
 };
 </script>
 
 <style lang="scss">
-.update-history {
-  font-weight: bold;
-  display: inline-block;
-  a {
-    display: block;
-    padding: 0 10px;
-    text-decoration: none;
-    color: #2e8b57;
-
-    /*線の基点とするためrelativeを指定*/
-    position: relative;
-  }
-  a::after {
-    content: "";
-    /*絶対配置で線の位置を決める*/
-    position: absolute;
-    bottom: 0;
-    left: 10%;
-    /*線の形状*/
-    width: 80%;
-    height: 2px;
-    background: #2e8b57;
-    /*アニメーションの指定*/
-    transition: all 0.3s;
-    transform: scale(0, 1);
-    /*X方向0、Y方向1*/
-    transform-origin: center top;
-    /*上部中央基点*/
-  }
-  /*現在地とhoverの設定*/
-  &.current a::after,
-  a:hover::after {
-    transform: scale(1, 1);
-    /*X方向にスケール拡大*/
-  }
-}
-.modaal-close:after,
-.modaal-close:before {
-  background: #ccc;
-}
-
-.modaal-close:focus:after,
-.modaal-close:focus:before,
-.modaal-close:hover:after,
-.modaal-close:hover:before {
-  background: #666;
-}
 .header-container {
   position: fixed;
 
@@ -282,5 +204,42 @@ export default {
 .home-container {
   background: #f5f5dc;
   margin: 0 0 -20px 0;
+}
+
+.update-history {
+  font-weight: bold;
+  display: inline-block;
+  a {
+    display: block;
+    padding: 0 10px;
+    text-decoration: none;
+    color: #2e8b57;
+
+    /*線の基点とするためrelativeを指定*/
+    position: relative;
+  }
+  a::after {
+    content: "";
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    /*線の形状*/
+    width: 80%;
+    height: 2px;
+    background: #2e8b57;
+    /*アニメーションの指定*/
+    transition: all 0.3s;
+    transform: scale(0, 1);
+    /*X方向0、Y方向1*/
+    transform-origin: center top;
+    /*上部中央基点*/
+  }
+  /*現在地とhoverの設定*/
+  &.current a::after,
+  a:hover::after {
+    transform: scale(1, 1);
+    /*X方向にスケール拡大*/
+  }
 }
 </style>
