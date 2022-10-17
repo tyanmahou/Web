@@ -101,6 +101,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// ヘッダー
+.header {
+    margin: 0% 0 40px 0;
+    width: 100%;
+    height: 60px;
+    background: #2e8b57;
+    position: fixed;
+    z-index: 2;
+
+
 .logo {
   margin: 0 0 0 200px;
   padding: 15px 0 0 0;
@@ -173,5 +183,6 @@ export default {
       padding: 0 3px;
     }
   }
+}    
 }
 </style>
