@@ -2,7 +2,9 @@
   <div class="header">
       <a href="#">
     <div class="logo">
+    <mylink url="/">
         <img src="../assets/commons/web_logo.png" width="300" />
+        </mylink>
     </div>
       </a>
     <div class="navi">

@@ -36,7 +36,7 @@
           <div class="news-contents">
             <ul class="news">
               <li>
-                <span class="date">2022.10.17</span>
+                <span class="date">2022.10.XX</span>
                 <h3>ホームページリニューアル！</h3>
                 <div class="text">
                 <figure>
