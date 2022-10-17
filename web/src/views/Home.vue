@@ -31,31 +31,33 @@
       <div class="home-container">
         <div class="main-container">
           <h2>NEWS</h2>
-          <div class ="news-contents">
-          <ul class ="news">
-            <li>
-              <span class="date">2022.10.17</span>
-              <h3>ホームページリニューアル！</h3>
-              <div class="text">
-                ホームページをリニューアルしました。<br />
-                今後ともよろしくお願いいたします。
-              </div>
-            </li>
-            <li>
-              <span class="date">2020.11.16</span>
-              <h3>LINEスタンプ販売開始</h3>
-              <div class="text">ああああああ</div>
-            </li>
-            <li>
-              <span class="date">2020.7.23</span>
-              <h3>ColorfulTone v3.1.0 リリース</h3>
-              <div class="text">ああああああ</div>
-            </li>
-          </ul>  
-          <div class="update-history">
-          過去の更新を見る
-          </div>   
-          </div>         
+          <div class="news-contents">
+            <ul class="news">
+              <li>
+                <span class="date">2022.10.17</span>
+                <h3>ホームページリニューアル！</h3>
+                <div class="text">
+                  ホームページをリニューアルしました。<br />
+                  今後ともよろしくお願いいたします。
+                </div>
+              </li>
+              <li>
+                <span class="date">2020.11.16</span>
+                <h3>LINEスタンプ販売開始</h3>
+                <div class="text">ああああああ</div>
+              </li>
+              <li>
+                <span class="date">2020.7.23</span>
+                <h3>ColorfulTone v3.1.0 リリース</h3>
+                <div class="text">ああああああ</div>
+              </li>
+            </ul>
+            <div class="update-history">過去の更新を見る</div>
+          </div>
+          <h2>WORKS</h2>
+          <div class="news-contents">
+          Comming Soon
+          </div>
         </div>
       </div>
     </div>
