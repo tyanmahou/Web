@@ -91,8 +91,7 @@ export default {
         },
         {
           date: "2014.10.24",
-          text:
-            "リニューアル報告\nナビゲーション画像作成\nホームページ編集\ncss編集\n",
+          text: "リニューアル報告\nナビゲーション画像作成\nホームページ編集\ncss編集\n",
         },
         {
           date: "2014.10.17",
@@ -100,40 +99,39 @@ export default {
         },
         {
           date: "2014.5.10",
-          text: "ゲーム集のエンコード調整。旧ＨＰ閉鎖。",
+          text: "ゲーム集のエンコード調整\n旧HP閉鎖",
         },
         {
           date: "2014.3.19",
-          text: "TOPの絵をランダム表示に。",
+          text: "TOPの絵をランダム表示に",
         },
         {
           date: "2014.3.12",
-          text:
-            "MONSTER'S バグが見つかったため終了。長い間ご利用ありがとうございました。また「ネット航海時代」「信じられない植物」を開始。",
+          text: "MONSTER'Sの閉鎖\n「ネット航海時代」「信じられない植物」を開始",
         },
         {
           date: "2013.6.11",
-          text: "待ち受け配布、ブログパーツ変更",
+          text: "待ち受け配布\nブログパーツ変更",
         },
         {
           date: "2013.5.30",
-          text: "うごめも移植ページ作成。うごメモでの応援ありがとうございました。",
+          text: "うごくメモ帳移植用ページ作成",
         },
         {
           date: "2013.2.26",
-          text: "hp更新バナー新使用に yahooブログTyanmahou閉鎖",
+          text: "HP更新バナー新使用に\nYahooブログ「Tyanmahou」閉鎖",
         },
         {
           date: "2013.1.14",
-          text: "マホウライブラリー閉鎖⇒運命のろうそく†遊戯王OCG情報†に",
+          text: "マホウライブラリー閉鎖\n運命のろうそく†遊戯王OCG情報†の新設",
         },
         {
           date: "2012.12.16",
-          text: "MONSTER'Sのリスタート（こちらのミスです。すみません。）",
+          text: "MONSTER'Sのリスタート",
         },
         {
           date: "2012.12.02",
-          text: "Hp編集 index.htmlを作ったんでいってみて",
+          text: "Hp編集 index.htmlの追加",
         },
         {
           date: "2012.12.01",
@@ -151,6 +149,7 @@ export default {
 
 <style lang="scss" scoped>
 .changelog {
+  width: 100%;
   background: #8eae8e;
   ul {
     list-style: none;
