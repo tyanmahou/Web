@@ -181,6 +181,11 @@ export default {
     li {
       margin-bottom: 20px;
       padding: 0 3px;
+
+      transition: all 0.3s;
+      &:hover {
+        transform: scale(0.9);
+      }      
     }
   }
 }    

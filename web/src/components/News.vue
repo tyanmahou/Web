@@ -23,7 +23,9 @@
             />
           </figure>
         </mylink>
-        「ColorfulTone」の更新がリリースされました。<br />
+        <mylink url="https://colorfultone.tyanmahou.com/web/" absolute target="_blank">
+        「ColorfulTone」
+        </mylink>の更新がリリースされました。<br />
         カスタムフォルダ機能の改善など
       </div>
     </li>
@@ -118,6 +120,12 @@ ul.news {
         margin-right: -50%;
         transform: translate(-50%, -50%);
         overflow: hidden;
+      }      
+    }
+    a figure img{
+      transition: all 0.3s;
+      &:hover {
+        transform: translate(-50%, -50%) scale(1.1);
       }
     }
   }
