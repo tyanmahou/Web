@@ -15,7 +15,7 @@ export default {
   mounted() {
       const script = document.createElement('script');
       this.script = script;
-      script.setAttribute('src', '//cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=cpp');
+      script.setAttribute('src', '//cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js');
       this.$el.appendChild(script);
   },  
 }
