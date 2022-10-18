@@ -16,7 +16,7 @@
             </div>
           </div>
         </div>
-        <div class="catch-copy">
+        <div class="mission">
           <h1>MISSION</h1>
           <p>
             <span class="big2"
@@ -129,7 +129,7 @@ export default {
   background: #00000080;
 }
 
-.catch-copy {
+.mission {
   margin: 0 0 0 100px;
   padding: 20px;
   background: #00000080;

@@ -25,6 +25,7 @@
                 <h4>HOBBY!!</h4>
                 <p class="text">創作活動 ゲーム アニメ サイクリング パン作り など</p>
               </div>
+
               <div class="profile-right-down-2">
                 <h4>MOTTO CODE</h4>
                 <mycode opt="lang-cpp">{{ mottocode }}</mycode>
@@ -41,15 +42,41 @@
             </div>
           </div>
         </div>
-      </div>
-      <div>
-        <h2>SKILL</h2>
-        <div></div>
+        <div class="skill">
+          <h4>SKILL</h4>
+        </div>
       </div>
       <h2>MISSION</h2>
-      <div></div>
+      <div class="mission">
+        <p class="main">
+          <span class="big2"
+            ><ruby>創作活動<rt>モノづくり</rt></ruby></span
+          >で
+          <span class="big"
+            ><ruby>世界<rt>せかい</rt></ruby></span
+          >をつくる
+        </p>
+        <div class="what">
+          <h4>WHAT?</h4>
+          <p class="text">
+            私が、さっき考えたスローガン。創作活動を通して実現したいこと。
+          </p>
+        </div>
+      </div>
       <h2>CONTACT</h2>
-      <div></div>
+      <div class="contact">
+        <table v-for="(item, index) in contacts" :key="item.title">
+          <tr>
+            <th>{{ item.title }}</th>
+            <td>：</td>
+            <td>
+              <a :href="item.url" :target="item.mail?'':'_blank'">
+                {{ item.name }}
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
   <foot />
@@ -99,6 +126,19 @@ export default {
         {
           url: "https://speakerdeck.com/tyanmahou",
           icon: "web/speakerdeck.png",
+        },
+      ],
+      contacts: [
+        {
+          title: "Twitter",
+          name: "@tyanmahou",
+          url: "https://twitter.com/tyanmahou",
+        },
+        {
+          title: "Gmail",
+          name: "tyanmahou@gmail.com",
+          url: "mailto:tyanmahou@gmail.com?subject=件名",
+          mail: true,
         },
       ],
     };
@@ -183,6 +223,60 @@ export default {
       transition: all 0.3s;
       &:hover {
         transform: scale(0.9);
+      }
+    }
+  }
+}
+.mission {
+  padding: 20px;
+  p.main {
+    padding: 0;
+    font-size: 2em;
+
+    span.big {
+      font-size: 2em;
+    }
+    span.big2 {
+      padding: 0 0 0 0px;
+      font-size: 2em;
+    }
+  }
+  rt {
+    font-size: 0.3em;
+  }
+  .what {
+    text-align: initial;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: max(50%, 500px);
+  }
+  .text {
+    border-radius: 25px;
+  }
+}
+.contact {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: max(50%, 500px);
+  table {
+    font-size: 25px;
+    th {
+      text-align: left;
+      width:100px;
+    }
+    td {
+      text-align: left;
+    }
+
+    a {
+      color: #008080;
+      text-decoration: none;
+
+      &:hover {
+        color: #66cdaa;
+      }
+      &:active {
+        color: #66cdaa;
       }
     }
   }
