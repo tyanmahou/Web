@@ -18,10 +18,12 @@
               本業はゲームプログラマ―。家庭用ゲームソフトの開発からモバイル向けのソーシャルゲーム開発など経験。<br />
               モノづくりが好きで、趣味でもプログラミングをしたりDTM作曲やイラストを描いたりしている。<br />
               愛する言語は「C++」<br />
-              アイコンのキャラクターは、うちの子の「まほうくん」
+              アイコンのキャラクターは、うちのこの「まほうくん」
             </p>
             <h4>HOBBY!!</h4>
             <p class="text">創作活動 ゲーム アニメ サイクリング パン作り など</p>
+            <h4>MOTTO CODE</h4>
+            <mycode opt="lang-cpp">{{ mottocode }}</mycode>
           </div>
         </div>
       </div>
@@ -41,14 +43,24 @@
 <script>
 import myheader from "@/components/Header.vue";
 import foot from "@/components/Foot.vue";
+import mycode from "@/components/Code.vue";
+
 export default {
   name: "about-view",
   data() {
-    return {};
+    return {
+      mottocode: `int main()
+{
+    constexpr I am = "C++"_er;
+    constexpr I like = C++;
+    constexpr I love = C++;
+}`,
+    };
   },
   components: {
     myheader,
     foot,
+    mycode,
   },
 };
 </script>
@@ -60,9 +72,6 @@ h4 {
   padding: 0 5px 0 0;
   margin: 10px 0 -10px 0;
   background: linear-gradient(transparent 70%, #8eae8e 70%);
-}
-.text {
-  border-radius: 25px;
 }
 .profile {
   position: relative;
@@ -76,7 +85,7 @@ h4 {
 
     position: absolute;
     top: 0;
-    bottom: 0;    
+    bottom: 0;
   }
   &-right {
     margin: 0 0 0 300px;
@@ -104,6 +113,10 @@ h4 {
   span.aka {
     font-size: 30px;
     padding: 10px 0 0 0;
+  }
+
+  .text {
+    border-radius: 25px;
   }
 }
 </style>
