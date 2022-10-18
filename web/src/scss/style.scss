@@ -13,6 +13,7 @@ body {
 }
 
 .app {
+    color: #494949;    
     background: #f5f5dc;
     min-height: 100vh;
     height: auto;
@@ -59,7 +60,7 @@ body {
         text-align: left;
         background:#ffffff;
         padding: 10px 20px;
-        min-height: 180px;
+        //min-height: 180px;
 
         a {
             color: #008080;

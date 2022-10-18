@@ -75,8 +75,7 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
+<style lang="scss" scoped>
 .header-container {
   position: fixed;
 
@@ -165,7 +164,7 @@ export default {
   margin: 0 0 -20px 0;
 }
 
-.changelog {
+.changelog::v-deep {
   font-weight: bold;
   display: inline-block;
   a {
