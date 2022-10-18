@@ -87,6 +87,10 @@ export default {
           icon: "github.png",
         },
         {
+          url: "https://www.pixiv.net/users/15137779",
+          icon: "pixiv.png",
+        },
+        {
           url: "https://soundcloud.com/tyanmahou",
           icon: "soundcloud.png",
         },

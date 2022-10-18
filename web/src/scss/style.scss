@@ -50,7 +50,14 @@ body {
 
         font-size: 24px;
     }
-    
+
+    h4 {
+        font-size: 24px;
+        display: inline-block;
+        padding: 0 5px 0 0;
+        margin: 10px 0 5px 0;
+        background: linear-gradient(transparent 70%, #8eae8e 70%);
+    }    
     .contents-wrap{
         background:#cecece;
         margin: 20px 0 20px 0;

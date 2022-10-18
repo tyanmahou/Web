@@ -20,10 +20,25 @@
               愛する言語は「C++」。<br />
               アイコンのキャラクターは、うちのこの「まほうくん」。
             </p>
-            <h4>HOBBY!!</h4>
-            <p class="text">創作活動 ゲーム アニメ サイクリング パン作り など</p>
-            <h4>MOTTO CODE</h4>
-            <mycode opt="lang-cpp">{{ mottocode }}</mycode>
+            <div class="profile-right-down">
+              <div class="profile-right-down-1">
+                <h4>HOBBY!!</h4>
+                <p class="text">創作活動 ゲーム アニメ サイクリング パン作り など</p>
+              </div>
+              <div class="profile-right-down-2">
+                <h4>MOTTO CODE</h4>
+                <mycode opt="lang-cpp">{{ mottocode }}</mycode>
+              </div>
+
+              <div class="account">
+                <h4>SERVICE ACCOUNT</h4>
+                <ul class="service">
+                  <li v-for="item in services">
+                    <serviceicon :url="item.url" :icon="item.icon" :width="80" />
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -44,6 +59,7 @@
 import myheader from "@/components/Header.vue";
 import foot from "@/components/Foot.vue";
 import mycode from "@/components/Code.vue";
+import serviceicon from "@/components/ServiceIcon.vue";
 
 export default {
   name: "about-view",
@@ -55,24 +71,48 @@ export default {
     constexpr I like = C++;
     constexpr I love = C++;
 }`,
+      services: [
+        {
+          url: "https://twitter.com/tyanmahou",
+          icon: "web/twitter.png",
+        },
+        {
+          url: "https://github.com/tyanmahou",
+          icon: "web/github.png",
+        },
+        {
+          url: "https://qiita.com/tyanmahou",
+          icon: "web/qiita.png",
+        },
+        {
+          url: "https://www.pixiv.net/users/15137779",
+          icon: "web/pixiv.png",
+        },
+        {
+          url: "https://soundcloud.com/tyanmahou",
+          icon: "web/soundcloud.png",
+        },
+        {
+          url: "https://www.youtube.com/user/tyanmahou",
+          icon: "web/youtube.png",
+        },
+        {
+          url: "https://speakerdeck.com/tyanmahou",
+          icon: "web/speakerdeck.png",
+        },
+      ],
     };
   },
   components: {
     myheader,
     foot,
     mycode,
+    serviceicon,
   },
 };
 </script>
 
 <style lang="scss" scoped>
-h4 {
-  font-size: 24px;
-  display: inline-block;
-  padding: 0 5px 0 0;
-  margin: 10px 0 -10px 0;
-  background: linear-gradient(transparent 70%, #8eae8e 70%);
-}
 .profile {
   position: relative;
   display: block;
@@ -89,6 +129,19 @@ h4 {
   }
   &-right {
     margin: 0 0 0 300px;
+
+    &-down {
+      &-1 {
+        width: 45%;
+        float: left;
+        .text {
+          min-height: 65px;
+        }
+      }
+      &-2 {
+        margin: 0 0 0 50%;
+      }
+    }
   }
   &-icon {
     margin: auto;
@@ -117,6 +170,21 @@ h4 {
 
   .text {
     border-radius: 25px;
+  }
+}
+.account {
+  ul.service {
+    list-style: none;
+
+    li {
+      display: inline-block;
+      margin: 0 2px;
+
+      transition: all 0.3s;
+      &:hover {
+        transform: scale(0.9);
+      }
+    }
   }
 }
 </style>
