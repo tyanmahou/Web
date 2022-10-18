@@ -1,3 +1,5 @@
+@import "common.scss";
+
 // ベース
 * {
     margin: 0 0 0 0;
@@ -13,8 +15,8 @@ body {
 }
 
 .app {
-    color: #494949;    
-    background: #f5f5dc;
+    color: $color-text;    
+    background: $color-mainbg;
     min-height: 100vh;
     height: auto;
     position: relative;
@@ -31,7 +33,7 @@ body {
     text-align: center;
     h1 {
         text-align: initial;
-        color: #2e8b57;
+        color: $color-theme;
         font-size: 70px;
         text-decoration: underline;
         
@@ -41,12 +43,12 @@ body {
     }
 
     h2 {
-        color: #ffffff;
+        color: $color-text-light;
 
         display: inline-block;
         margin: 10px 0;
         padding: 0.5em 6em;
-        background: #2e8b57;
+        background: $color-theme;
 
         font-size: 24px;
     }
@@ -56,7 +58,7 @@ body {
         display: inline-block;
         padding: 0 5px 0 0;
         margin: 10px 0 5px 0;
-        background: linear-gradient(transparent 70%, #8eae8e 70%);
+        background: linear-gradient(transparent 70%, $color-theme-sub 70%);
     }    
     .contents-wrap{
         background:#cecece;
@@ -65,20 +67,9 @@ body {
     }
     .text{
         text-align: left;
-        background:#ffffff;
+        background:$color-textbg;
         padding: 10px 20px;
-        //min-height: 180px;
 
-        a {
-            color: #008080;
-            text-decoration: none;
-
-            &:hover {
-                color: #66cdaa;
-            }
-            &:active {
-                color: #66cdaa;
-            }            
-        }        
+        @include normal-link;      
     }       
 }

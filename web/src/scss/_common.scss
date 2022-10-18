@@ -1,0 +1,23 @@
+// カラー定義
+$color-text: #494949;
+$color-text-light: #ffffff;
+
+$color-mainbg: #f5f5dc;
+$color-theme: #2e8b57;
+$color-theme-sub: #8eae8e;
+$color-textbg: #ffffff;
+
+// 通常リンク設定
+@mixin normal-link {
+    a {
+        color: #008080;
+        text-decoration: none;
+
+        &:hover {
+            color: #66cdaa;
+        }
+        &:active {
+            color: #66cdaa;
+        }            
+    }  
+}

@@ -18,6 +18,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/scss/common.scss";
+
 // フッター
 .footer {  
     margin: 0%;
@@ -27,8 +29,8 @@ export default {
     bottom: 0;
     width: 100%;
     height: 60pt;
-    background: #2e8b57;
-    color: #ffffff;
+    background: $color-theme;
+    color: $color-text-light;
     text-align: center;
 }
 </style>

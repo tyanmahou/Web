@@ -68,6 +68,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/scss/common.scss";
+
 ul.news {
   list-style: none;
   display: flex;
@@ -75,8 +77,8 @@ ul.news {
 
   li {
     border: solid;
-    border-color: #ffffff;
-    background: #ffffff;
+    border-color: $color-textbg;
+    background: $color-textbg;
     margin: 30px 20px 20px 20px;
     min-width: 400px;
     position: relative;
@@ -85,15 +87,15 @@ ul.news {
       top: -30px;
       left: -40px;
       border: 1px solid;
-      border-color: #ffffff;
+      border-color: $color-textbg;
       font-weight: bold;
-      color: #ffffff;
-      background: #2e8b57;
+      color: $color-text-light;
+      background: $color-theme;
       padding: 5px;
     }
     h3 {
-      background: #8eae8e;
-      color: #ffffff;
+      background: $color-theme-sub;
+      color: $color-text-light;
       margin: 0;
       padding: 15px 0 80px 0;
     }
@@ -101,7 +103,7 @@ ul.news {
       position: relative;
       display: flex;
       justify-content: center;
-      background: #ffffff;
+      background: $color-textbg;
       padding: auto;
       margin: -80px 0 5px 0;
       min-width: 300px;
@@ -109,7 +111,7 @@ ul.news {
       overflow: hidden;
 
       border: 1px solid;
-      border-color: #8eae8e;
+      border-color: $color-theme-sub;
       border-radius: 50px;
 
       img {

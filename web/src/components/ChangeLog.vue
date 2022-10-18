@@ -148,17 +148,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/scss/common.scss";
+
 .changelog {
   width: 100%;
-  background: #8eae8e;
+  background: $color-theme-sub;
   ul {
     list-style: none;
     padding: 5px 0 5px 0;
     li {
-      color: #000000;
+      color: $color-text;
       border: solid;
-      border-color: #ffffff;
-      background: #ffffff;
+      border-color: $color-textbg;
+      background: $color-textbg;
       margin: 30px 20px 25px 20px;
       padding: 10px;
       position: relative;
@@ -168,10 +170,10 @@ export default {
         top: -30px;
         left: -40px;
         border: 1px solid;
-        border-color: #ffffff;
+        border-color: $color-textbg;
         font-weight: bold;
-        color: #ffffff;
-        background: #2e8b57;
+        color: $color-text-light;
+        background: $color-theme;
         padding: 5px;
       }
     }

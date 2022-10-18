@@ -105,12 +105,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/scss/common.scss";
+
 // ヘッダー
 .header {
     margin: 0% 0 40px 0;
     width: 100%;
     height: 60px;
-    background: #2e8b57;
+    background: $color-theme;
     position: fixed;
     z-index: 2;
 
@@ -120,7 +122,7 @@ export default {
   padding: 15px 0 0 0;
   height: 85px;
   width: 300px;
-  background: #ffffff;
+  background: $color-textbg;
   border-radius: 0 0 30px 30px;
   float: left;
 
@@ -132,7 +134,7 @@ export default {
 
 .navi {
   padding: 20px 120px 0 0;
-  color: #ffffff;
+  color: $color-text-light;
   // 右寄せ
   display: flex;
   justify-content: flex-end;
@@ -148,7 +150,7 @@ export default {
         display: block;
         padding: 0 10px;
         text-decoration: none;
-        color: #ffffff;
+        color: $color-text-light;
 
         /*線の基点とするためrelativeを指定*/
         position: relative;
@@ -162,7 +164,7 @@ export default {
         /*線の形状*/
         width: 80%;
         height: 2px;
-        background: #ffffff;
+        background: $color-text-light;
         /*アニメーションの指定*/
         transition: all 0.3s;
         transform: scale(0, 1);

@@ -153,6 +153,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/scss/common.scss";
 .profile {
   position: relative;
   display: block;
@@ -267,18 +268,7 @@ export default {
     td {
       text-align: left;
     }
-
-    a {
-      color: #008080;
-      text-decoration: none;
-
-      &:hover {
-        color: #66cdaa;
-      }
-      &:active {
-        color: #66cdaa;
-      }
-    }
+    @include normal-link;
   }
 }
 </style>
