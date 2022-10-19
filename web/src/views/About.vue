@@ -35,7 +35,7 @@
                 <h4>SERVICE ACCOUNT</h4>
                 <ul class="service">
                   <li v-for="item in services">
-                    <serviceicon :url="item.url" :icon="item.icon" :width="80" />
+                    <serviceicon :url="item.url" :icon="item.icon" :width="40" />
                   </li>
                 </ul>
               </div>
@@ -43,7 +43,7 @@
           </div>
         </div>
         <div class="skill">
-          <h4>SKILL</h4>
+          <h2>SKILL</h2>
           <div>
             <ul>
               <li v-for="item in skills">
