@@ -1,12 +1,10 @@
 <template>
   <div class="header">
-    <a href="#">
+    <mylink :url="current == 0 ? '#' : '/'" :absolute="current == 0">
       <div class="logo">
-        <mylink :url="current == 0 ? '#' : '/'" :absolute="current == 0">
-          <img src="../assets/commons/web_logo.png" width="300" />
-        </mylink>
+        <img src="../assets/commons/web_logo.png" width="300" />
       </div>
-    </a>
+    </mylink>
     <div class="navi">
       <ul class="core">
         <li
