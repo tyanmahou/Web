@@ -377,6 +377,7 @@ export default {
   ul {
     list-style: none;
     li {
+      margin:2px;
       display: inline-block;
     }
   }
