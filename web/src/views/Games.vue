@@ -1,8 +1,8 @@
 <template>
-  <myheader current="2" />
+  <myheader current="1" />
   <div class="main">
     <div class="main-container">
-      <h1>GALLERY</h1>
+      <h1>GAMES</h1>
       <div class="contents-wrap">
       Comming Soon
       </div>
@@ -15,7 +15,7 @@
 import myheader from "@/components/Header.vue";
 import foot from "@/components/Foot.vue";
 export default {
-  name: "gallery-view",
+  name: "GamesView",
   data() {
     return {};
   },

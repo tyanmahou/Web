@@ -55,13 +55,13 @@ export default {
           external: false,
         },
         {
-          name: "GAME",
+          name: "GAMES",
           url: "/game",
           external: false,
         },
         {
-          name: "GALLERY",
-          url: "/gallery",
+          name: "WORKS",
+          url: "/works",
           external: false,
         },
         {

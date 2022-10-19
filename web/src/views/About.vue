@@ -100,7 +100,7 @@ import serviceicon from "@/components/ServiceIcon.vue";
 import skillicon from "@/components/SkillIcon.vue";
 
 export default {
-  name: "about-view",
+  name: "AboutView",
   data() {
     return {
       mottocode: `int main()

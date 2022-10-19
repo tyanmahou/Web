@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from './views/Home.vue'
-import Game from './views/Game.vue'
-import Gallery from './views/Gallery.vue'
+import Works from './views/Works.vue'
+import Games from './views/Games.vue'
 import About from './views/About.vue'
 
 const routes = [
@@ -12,16 +12,16 @@ const routes = [
     meta:{title: ''}
   },
   {
-    path: '/game',
-    name: 'Game',
-    component: Game,
+    path: '/works',
+    name: 'Works',
+    component: Works,
     meta:{title: 'Game'}
   },
   {
-    path: '/gallery',
-    name: 'Gallery',
-    component: Gallery,
-    meta:{title: 'Gallery'}
+    path: '/game',
+    name: 'Games',
+    component: Games,
+    meta:{title: 'Games'}
   },   
   {
     path: '/about',
