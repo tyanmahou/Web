@@ -375,6 +375,7 @@ export default {
 }
 .skill {
   ul {
+    padding: 20px 0;
     list-style: none;
     li {
       margin:2px;
