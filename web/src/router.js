@@ -18,7 +18,7 @@ const routes = [
     meta:{title: 'Game'}
   },
   {
-    path: '/game',
+    path: '/games',
     name: 'Games',
     component: Games,
     meta:{title: 'Games'}

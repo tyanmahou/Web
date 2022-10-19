@@ -56,7 +56,7 @@ export default {
         },
         {
           name: "GAMES",
-          url: "/game",
+          url: "/games",
           external: false,
         },
         {
