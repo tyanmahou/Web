@@ -81,8 +81,8 @@ import myheader from "@/components/Header.vue";
 import foot from "@/components/Foot.vue";
 import mylink from "@/components/Link.vue";
 import modal from "@/components/Modal.vue";
-import news from "@/components/News.vue";
-import changelog from "@/components/ChangeLog.vue";
+import news from "@/components/home/News.vue";
+import changelog from "@/components/home/ChangeLog.vue";
 import mymission from "@/components/home/MyMission.vue";
 import workmusic from "@/components/home/WorkMusic.vue";
 
