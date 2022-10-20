@@ -143,7 +143,7 @@ export default {
 
     li {
       margin-bottom: 20px;
-
+      white-space: nowrap;
       a {
         display: block;
         padding: 0 10px;

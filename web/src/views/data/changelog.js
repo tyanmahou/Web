@@ -9,11 +9,11 @@ export default [
     },
     {
       date: "2021.7.23",
-      text: "ColorfulTone v3.2.0 リリース",
+      text: "「ColorfulTone」 v3.2.0 リリース",
     },
     {
       date: "2021.2.7",
-      text: "ColorfulTone v3.1.1 リリース",
+      text: "「ColorfulTone」 v3.1.1 リリース",
     },
     {
       date: "2020/11/16",
@@ -21,7 +21,7 @@ export default [
     },
     {
       date: "2020.7.23",
-      text: "ColorfulTone v3.1.0 リリース",
+      text: "「ColorfulTone」 v3.1.0 リリース",
     },
     {
       date: "2020.7.1",
@@ -29,18 +29,18 @@ export default [
     },
     {
       date: "2019.7.14",
-      text: "ColorfulTone v3.0.0 リリース\n箱にア 公開",
+      text: "「ColorfulTone」 v3.0.0 リリース\n箱にア 公開",
     },
     {
       date: "2018.7.15",
-      text: "ColorfulTone v2.3.0 リリース",
+      text: "「ColorfulTone」 v2.3.0 リリース",
     },
     {
       date: "2018.3.9",
       text: "ホームページの移行",
     },
     {
-      date: "2016.12.05",
+      date: "2016.12.5",
       text: "ブログリニューアル",
     },
     {
@@ -89,7 +89,7 @@ export default [
     },
     {
       date: "2014.3.12",
-      text: "MONSTER'Sの閉鎖\n「ネット航海時代」「信じられない植物」を開始",
+      text: "「MONSTER'S」の閉鎖\n「ネット航海時代」「信じられない植物」を開始",
     },
     {
       date: "2013.6.11",
@@ -105,22 +105,70 @@ export default [
     },
     {
       date: "2013.1.14",
-      text: "マホウライブラリー閉鎖\n運命のろうそく†遊戯王OCG情報†の新設",
+      text: "「マホウライブラリー」閉鎖\n「運命のろうそく†遊戯王OCG情報†」の新設",
     },
     {
       date: "2012.12.16",
-      text: "MONSTER'Sのリスタート",
+      text: "「MONSTER'S」のリスタート",
     },
     {
-      date: "2012.12.02",
+      date: "2012.12.2",
       text: "Hp編集 index.htmlの追加",
     },
     {
-      date: "2012.12.01",
+      date: "2012.12.1",
       text: "Hp編集",
     },
     {
       date: "2012.2.23",
-      text: "＠パーティii 再開",
+      text: "「＠パーティii」 再開",
     },
+    {
+      date: "2009.3.7",
+      text: "CGIゲーム公開\n「ブルーアイズストーリー2」公開",
+    },
+    {
+      date: "2008.12.3",
+      text: "「ダンシングおにぎり」がゲーム集で公開",
+    },
+    {
+      date: "2008.12.2",
+      text: "「遊戯王アイランド」公開",
+    }, 
+    {
+      date: "2008.11.14",
+      text: "「チャンマホウの冒険3」公開",
+    },            
+    {
+      date: "2008.11.8",
+      text: "「チャンマホウRPG」公開\n「チャンマホウシューティング」(シフトアップネット版)公開",
+    },            
+    {
+      date: "2008.10.3",
+      text: "「MAHOTESU」公開",
+    }, 
+    {
+      date: "2008.10.2",
+      text: "自由掲示板が正男投稿掲示板にリンクされました",
+    },     
+    {
+      date: "2008.8.4",
+      text: "「WWA脱出1」「WWA脱出2」公開",
+    },     
+    {
+      date: "2008.7.9",
+      text: "「正男ワールド3」公開\nWWA「Kuest x Quest」公開",
+    },      
+    {
+      date: "2008.6.13",
+      text: "「正男ワールド2」完成",
+    },
+    {
+      date: "2008.5.3",
+      text: "正男シティで「正男ワールド2」開始",
+    },      
+    {
+      date: "2008.4.23",
+      text: "更新履歴を書き始める",
+    },         
   ];
