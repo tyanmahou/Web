@@ -66,11 +66,7 @@
               <li>
                 <h3>MUSIC</h3>
                 <div class="text">
-                <ul class="music">
-                <li><mysound id=685584331 width="250" height="250"/></li>
-                <li><mysound id=720784921 width="250" height="250"/></li>
-                <li><mysound id=1290148249 width="250" height="250"/></li>
-                </ul>
+                <workmusic />
                 </div>
               </li>
             </ul>
@@ -94,7 +90,7 @@ import mylink from "@/components/Link.vue";
 import modal from "@/components/Modal.vue";
 import news from "@/components/News.vue";
 import changelog from "@/components/ChangeLog.vue";
-import mysound from "@/components/widgets/SoundCloud/MySound.vue";
+import workmusic from "@/components/home/WorkMusic.vue";
 export default {
   name: "home-view",
   data() {
@@ -108,7 +104,7 @@ export default {
     modal,
     news,
     changelog,
-    mysound,
+    workmusic,
   },
 };
 </script>
@@ -260,14 +256,6 @@ ul.works {
     margin: 0 20px;
     border-radius: 25px;
     text-align: center;
-  }
-
-  ul.music {
-      list-style: none;
-      & > li {
-        display: inline-block;
-        margin: 10px;
-      }
   }
 }
 </style>
