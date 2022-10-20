@@ -57,7 +57,7 @@ export default {
         {
           date: "2020.11.16",
           title: "LINEスタンプ販売開始",
-          img: require("@/assets/news/20201116.png"),
+          img: require("@/assets/home/news/20201116.png"),
           text: `LINEスタンプにて<a href="https://store.line.me/stickershop/product/13692750" target="_blank">
           「まほうくん スタンプ」<br /></a>販売開始！！<br>`,
           link :{
