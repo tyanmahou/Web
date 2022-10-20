@@ -22,17 +22,17 @@
             </p>
             <div class="profile-right-down">
               <div class="profile-right-down-1">
-                <h4>HOBBY!!</h4>
+                <h3>HOBBY!!</h3>
                 <p class="text">創作活動 ゲーム アニメ サイクリング パン作り など</p>
               </div>
 
               <div class="profile-right-down-2">
-                <h4>MOTTO CODE</h4>
+                <h3>MOTTO CODE</h3>
                 <mycode opt="lang-cpp">{{ mottocode }}</mycode>
               </div>
 
               <div class="account">
-                <h4>SERVICE ACCOUNT</h4>
+                <h3>SERVICE ACCOUNT</h3>
                 <ul class="service">
                   <li v-for="item in services">
                     <serviceicon :url="item.url" :icon="item.icon" :width="40" />
@@ -66,7 +66,7 @@
           >をつくる
         </p>
         <div class="what">
-          <h4>WHAT?</h4>
+          <h3>WHAT?</h3>
           <p class="text">
             さっき考えたスローガン。創作活動を通して実現したいこと。<br />
             自分の中にある「世界」を作品を通して表現していきたい。

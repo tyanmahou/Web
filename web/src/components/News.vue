@@ -94,6 +94,7 @@ ul.news {
       padding: 5px;
     }
     h3 {
+      display: block;
       background: $color-theme-sub;
       color: $color-text-light;
       margin: 0;

@@ -34,18 +34,52 @@
         <div class="main-container">
           <h2>NEWS</h2>
           <div class="contents-wrap">
-          <news />
+            <news />
             <div class="changelog">
               <modal id="modal-changelog">
                 <template #title> 更新履歴 </template>
                 <template #contents>
-                <changelog/>
+                  <changelog />
                 </template>
-              </modal>         
+              </modal>
             </div>
           </div>
           <h2>WORKS</h2>
-          <div class="contents-wrap">Comming Soon</div>
+          <div class="contents-wrap">
+            <ul class="works">
+              <li>
+                <h3>GAME</h3>
+                <div class="text">
+                a<br>
+                a<br>
+                a<br>
+                </div>
+              </li>
+              <li>
+                <h3>Illust</h3>
+                <div class="text">
+                a<br>
+                a<br>
+                a<br>
+                </div>
+              </li>
+              <li>
+                <h3>MUSIC</h3>
+                <div class="text">
+                <ul class="music">
+                <li><mysound id=685584331 width="250" height="250"/></li>
+                <li><mysound id=720784921 width="250" height="250"/></li>
+                <li><mysound id=1290148249 width="250" height="250"/></li>
+                </ul>
+                </div>
+              </li>
+            </ul>
+            <span>
+            <mylink url="/works">
+            AND MORE...
+            </mylink>
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -58,12 +92,14 @@ import myheader from "@/components/Header.vue";
 import foot from "@/components/Foot.vue";
 import mylink from "@/components/Link.vue";
 import modal from "@/components/Modal.vue";
-import news from "@/components/News.vue"
+import news from "@/components/News.vue";
 import changelog from "@/components/ChangeLog.vue";
+import mysound from "@/components/widgets/SoundCloud/MySound.vue";
 export default {
   name: "home-view",
   data() {
-    return {};
+    return {
+    };
   },
   components: {
     myheader,
@@ -72,6 +108,7 @@ export default {
     modal,
     news,
     changelog,
+    mysound,
   },
 };
 </script>
@@ -198,6 +235,39 @@ export default {
   a:hover::after {
     transform: scale(1, 1);
     /*X方向にスケール拡大*/
+  }
+}
+ul.works {
+  list-style: none;
+  text-align: initial;
+  position: relative;
+  & > li {
+    width: 70%;
+    &:nth-child(1) {
+      margin-top: 0;
+    }
+    &:nth-child(odd) {
+      margin-left: 5%;
+    }
+    &:nth-child(even) {
+      margin-left: 100% - 70 - 5;
+    }
+  }
+  h3 {
+    font-size: 30px;
+  }
+  .text {
+    margin: 0 20px;
+    border-radius: 25px;
+    text-align: center;
+  }
+
+  ul.music {
+      list-style: none;
+      & > li {
+        display: inline-block;
+        margin: 10px;
+      }
   }
 }
 </style>
