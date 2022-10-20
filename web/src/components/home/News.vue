@@ -1,53 +1,26 @@
 <template>
   <ul class="news">
-    <li>
-      <span class="date">2022.10.XX</span>
-      <h3>ホームページリニューアル！</h3>
+    <li v-for="item in news">
+      <span class="date">{{ item.date }}</span>
+      <h3>{{ item.title }}</h3>
       <div class="text">
-        <figure>
-          <img src="@/assets/commons/web_logo.png" width="300" />
-        </figure>
-        ホームページをリニューアルしました。<br />
-        今後ともよろしくお願いいたします。
-      </div>
-    </li>
-    <li>
-      <span class="date">2021.7.23</span>
-      <h3>ColorfulTone v3.2.0 リリース</h3>
-      <div class="text">
-        <mylink url="https://colorfultone.tyanmahou.com/web/" absolute target="_blank">
+        <div v-if="item.link">
+          <mylink
+            :url="item.link.url"
+            :absolute="item.link.external"
+            :target="item.link.external ? '_blank' : '_self'"
+          >
+            <figure>
+              <img :src="item.img" width="300" />
+            </figure>
+          </mylink>
+        </div>
+        <div v-else>
           <figure>
-            <img
-              src="https://colorfultone.tyanmahou.com/web/img/slide/Screenshot1.png"
-              width="300"
-            />
+            <img :src="item.img" width="300" />
           </figure>
-        </mylink>
-        <mylink url="https://colorfultone.tyanmahou.com/web/" absolute target="_blank">
-        「ColorfulTone」
-        </mylink>の更新がリリースされました。<br />
-        カスタムフォルダ機能の改善など
-      </div>
-    </li>
-    <li>
-      <span class="date">2020.11.16</span>
-      <h3>LINEスタンプ販売開始</h3>
-      <div class="text">
-        <mylink
-          url="https://store.line.me/stickershop/product/13692750"
-          absolute
-          target="_blank"
-        >
-          <figure>
-            <img src="@/assets/news/20201116.png" width="300" />
-          </figure>
-        </mylink>
-        LINEスタンプにて<mylink
-          url="https://store.line.me/stickershop/product/13692750"
-          absolute
-          target="_blank"
-          >「まほうくん スタンプ」<br /></mylink
-        >販売開始！！<br />
+        </div>
+        <p v-html="item.text" />
       </div>
     </li>
   </ul>
@@ -59,7 +32,41 @@ import mylink from "@/components/Link.vue";
 export default {
   name: "News",
   data() {
-    return {};
+    return {
+      news: [
+        {
+          date: "2022.10.XX",
+          title: "ホームページリニューアル！",
+          img: require("@/assets/commons/web_logo.png"),
+          text: `ホームページをリニューアルしました。<br>今後ともよろしくお願いいたします。`,
+        },
+        {
+          date: "2021.7.23",
+          title: "ColorfulTone v3.2.0 リリース",
+          img: "https://colorfultone.tyanmahou.com/web/img/slide/Screenshot1.png",
+          text: `
+          <a href="https://colorfultone.tyanmahou.com/web/" target="_blank">
+        「ColorfulTone」
+         </a>の更新がリリースされました。<br>カスタムフォルダ機能の改善など          
+          `,
+          link :{
+            url: "https://colorfultone.tyanmahou.com/web/",
+            external: true
+          },
+        },
+        {
+          date: "2020.11.16",
+          title: "LINEスタンプ販売開始",
+          img: require("@/assets/news/20201116.png"),
+          text: `LINEスタンプにて<a href="https://store.line.me/stickershop/product/13692750" target="_blank">
+          「まほうくん スタンプ」<br /></a>販売開始！！<br>`,
+          link :{
+            url: "https://store.line.me/stickershop/product/13692750",
+            external: true
+          },          
+        },
+      ],
+    };
   },
   components: {
     mylink,
@@ -123,9 +130,9 @@ ul.news {
         margin-right: -50%;
         transform: translate(-50%, -50%);
         overflow: hidden;
-      }      
+      }
     }
-    a figure img{
+    a figure img {
       transition: all 0.3s;
       &:hover {
         transform: translate(-50%, -50%) scale(1.1);
