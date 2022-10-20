@@ -18,14 +18,7 @@
         </div>
         <div class="mission">
           <h1>MISSION</h1>
-          <p>
-            <span class="big2"
-              ><ruby>創作活動<rt>モノづくり</rt></ruby></span
-            >で
-            <span class="big"
-              ><ruby>世界<rt>せかい</rt></ruby></span
-            >をつくる
-          </p>
+          <mymission class="word"/>
         </div>
       </div>
     </header>
@@ -90,7 +83,9 @@ import mylink from "@/components/Link.vue";
 import modal from "@/components/Modal.vue";
 import news from "@/components/News.vue";
 import changelog from "@/components/ChangeLog.vue";
+import mymission from "@/components/home/MyMission.vue";
 import workmusic from "@/components/home/WorkMusic.vue";
+
 export default {
   name: "home-view",
   data() {
@@ -104,6 +99,7 @@ export default {
     modal,
     news,
     changelog,
+    mymission,
     workmusic,
   },
 };
@@ -169,20 +165,9 @@ export default {
   h1 {
     text-decoration: underline;
   }
-  p {
+  .word {
     padding: 50px 0 60px 40px;
-    font-size: 2.5em;
-
-    span.big {
-      font-size: 2em;
-    }
-    span.big2 {
-      padding: 0 0 0 0px;
-      font-size: 2em;
-    }
-  }
-  rt {
-    font-size: 0.3em;
+    font-size: 2.5em;    
   }
 }
 .home-container-outer {

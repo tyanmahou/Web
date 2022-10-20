@@ -57,14 +57,7 @@
       </div>
       <h2>MISSION</h2>
       <div class="mission">
-        <p class="main">
-          <span class="big2"
-            ><ruby>創作活動<rt>モノづくり</rt></ruby></span
-          >で
-          <span class="big"
-            ><ruby>世界<rt>せかい</rt></ruby></span
-          >をつくる
-        </p>
+        <mymission class="word"/>
         <div class="what">
           <h3>WHAT?</h3>
           <p class="text">
@@ -100,6 +93,7 @@ import serviceicon from "@/components/ServiceIcon.vue";
 import skillicon from "@/components/SkillIcon.vue";
 import skillsets from "@/views/data/skillsets";
 import mottocode from "@/views/data/mottocode";
+import mymission from "@/components/home/MyMission.vue";
 
 export default {
   name: "AboutView",
@@ -158,6 +152,7 @@ export default {
     mycode,
     serviceicon,
     skillicon,
+    mymission,
   },
 };
 </script>
@@ -250,20 +245,9 @@ export default {
 }
 .mission {
   padding: 20px;
-  p.main {
+  .word {
     padding: 0;
     font-size: 2em;
-
-    span.big {
-      font-size: 2em;
-    }
-    span.big2 {
-      padding: 0 0 0 0px;
-      font-size: 2em;
-    }
-  }
-  rt {
-    font-size: 0.3em;
   }
   .what {
     text-align: initial;
