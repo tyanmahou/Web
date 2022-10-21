@@ -43,23 +43,25 @@
               <li>
                 <h3>GAME</h3>
                 <div class="text">
-                a<br>
-                a<br>
-                a<br>
+                <img src="https://colorfultone.tyanmahou.com/web/img/slide/Screenshot1.png" width="400">
                 </div>
               </li>
               <li>
                 <h3>Illust</h3>
                 <div class="text">
-                a<br>
-                a<br>
-                a<br>
+                <div class="pickup">
+                <img src="@/assets/works/illust/2021/7.png" width="400">
+                </div>
+                <ul class="sub">
+                <li><img src="@/assets/works/illust/2022/2.png" width="200"><img src="@/assets/works/illust/2021/6.png" width="200"></li>
+                <li><img src="@/assets/works/illust/2019/7.png" width="200"><img src="@/assets/works/illust/2018/6.png" width="200"></li>
+                </ul>
                 </div>
               </li>
               <li>
                 <h3>MUSIC</h3>
                 <div class="text">
-                <workmusic />
+                <workmusic width="250" />
                 </div>
               </li>
             </ul>
@@ -235,12 +237,18 @@ ul.works {
     }
   }
   h3 {
-    font-size: 30px;
+    font-size: 40px;
   }
   .text {
     margin: 0 20px;
     border-radius: 25px;
     text-align: center;
+  }
+  .pickup {
+    float: left;
+  }
+  .sub {
+    list-style: none;
   }
 }
 </style>
