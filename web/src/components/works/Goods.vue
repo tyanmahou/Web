@@ -16,10 +16,9 @@
   
 <script>
 export default {
-  name: "Program",
+  name: "Goods",
   data() {
     return {
-      isActive: 1
     };
   },
   components: {

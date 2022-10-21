@@ -14,7 +14,6 @@ export default {
   name: "Music",
   data() {
     return {
-      isActive: 1
     };
   },
   components: {

@@ -6,10 +6,9 @@
   
 <script>
 export default {
-  name: "Program",
+  name: "Illust",
   data() {
     return {
-      isActive: 1
     };
   },
   components: {

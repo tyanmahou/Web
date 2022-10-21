@@ -9,7 +9,6 @@ export default {
   name: "Program",
   data() {
     return {
-      isActive: 1
     };
   },
   components: {
