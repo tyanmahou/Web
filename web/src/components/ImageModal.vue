@@ -3,7 +3,7 @@
     <img :src="src" :width="width" :height="height">
   </a>
   <section :id="id" style="display: none">
-    <img :src="src" />
+    <img :src="src" class="custom-class"/>
   </section>
 </template>
 <script>
