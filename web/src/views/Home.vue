@@ -265,7 +265,6 @@ ul.works {
 
   .text {
     margin: 0 20px;
-    border-radius: 25px;
     text-align: center;
   }
 }

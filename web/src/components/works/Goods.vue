@@ -26,10 +26,6 @@ export default {
 </script>
   
 <style lang="scss" scoped>
-.text {
-  border-radius: 25px;
-}
-
 a img {
   transition: all 0.3s;
 

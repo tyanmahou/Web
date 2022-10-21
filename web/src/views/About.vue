@@ -213,10 +213,6 @@ export default {
     font-size: 30px;
     padding: 10px 0 0 0;
   }
-
-  .text {
-    border-radius: 25px;
-  }
 }
 .account {
   ul.service {
@@ -254,9 +250,6 @@ export default {
     margin-left: 50%;
     transform: translateX(-50%);
     width: max(50%, 500px);
-  }
-  .text {
-    border-radius: 25px;
   }
 }
 .contact {
