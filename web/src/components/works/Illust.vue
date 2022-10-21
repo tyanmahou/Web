@@ -88,11 +88,11 @@ ul.gallery {
   ul {
     columns: 4;
 
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 1100px) {
       columns: 3;
     }
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 850px) {
 
       columns: 2;
     }

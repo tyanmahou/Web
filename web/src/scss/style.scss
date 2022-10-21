@@ -14,9 +14,10 @@ body {
     height: 100%;
 }
 
-.app {
+.app { 
     color: $color-text;    
     background: $color-mainbg;
+    min-width: 800px;   
     min-height: 100vh;
     height: auto;
     position: relative;
@@ -29,7 +30,7 @@ body {
     padding: 80px 0 90pt 0;
 }
 .main-container {
-    padding: 10px 100px 50px 100px;
+    padding: 10px 7% 50px 7%;
     text-align: center;
     h1 {
         text-align: initial;
