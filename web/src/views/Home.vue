@@ -18,7 +18,7 @@
         </div>
         <div class="mission">
           <h1>MISSION</h1>
-          <mymission class="word"/>
+          <mymission class="word" />
         </div>
       </div>
     </header>
@@ -44,28 +44,30 @@
                 <h3>GAME</h3>
                 <img class="icon" src="@/assets/home/icon/mahou.png" width="64">
                 <div class="text">
-                <img src="https://colorfultone.tyanmahou.com/web/img/slide/Screenshot1.png" width="400">
+                  <mylink url="https://colorfultone.tyanmahou.com/web/" absolute target="_blank">
+                    <img src="https://colorfultone.tyanmahou.com/web/img/slide/Screenshot1.png" width="400">
+                  </mylink>
                 </div>
               </li>
               <li>
                 <h3>Illust</h3>
                 <img class="icon" src="@/assets/home/icon/mahou2.png" width="64">
                 <div class="text">
-                <workillust />
+                  <workillust />
                 </div>
               </li>
               <li>
                 <h3>MUSIC</h3>
                 <img class="icon" src="@/assets/home/icon/mahou3.png" width="64">
                 <div class="text">
-                <workmusic width="250" />
+                  <workmusic width="250" />
                 </div>
               </li>
             </ul>
-            <span>
-            <mylink url="/works">
-            AND MORE...
-            </mylink>
+            <span class="and-more">
+              <mylink url="/works">
+                AND MORE...
+              </mylink><img class="icon" src="@/assets/home/icon/slime.png" width="64">
             </span>
           </div>
         </div>
@@ -113,6 +115,7 @@ export default {
   width: 100%;
   color: #ffffff;
 }
+
 .home-header {
   width: 100%;
   height: 100vh;
@@ -139,6 +142,7 @@ export default {
   margin: 0 0;
   float: right;
 }
+
 .profile-icon {
   margin: auto;
   background: #fffafa;
@@ -150,10 +154,12 @@ export default {
   overflow: hidden;
 
   transition: all 0.3s;
+
   &:hover {
     transform: scale(1.1);
   }
 }
+
 .profile-text {
   margin: 10px 0 0 0;
   background: #00000080;
@@ -163,14 +169,17 @@ export default {
   margin: 0 0 0 100px;
   padding: 20px;
   background: #00000080;
+
   h1 {
     text-decoration: underline;
   }
+
   .word {
     padding: 50px 0 60px 40px;
-    font-size: 2.5em;    
+    font-size: 2.5em;
   }
 }
+
 .home-container-outer {
   position: relative;
   z-index: 1;
@@ -178,6 +187,7 @@ export default {
   margin: -120px 0 0 0;
   padding: 40px 0 0 0;
 }
+
 .home-container {
   background: #f5f5dc;
   margin: 0 0 -20px 0;
@@ -186,6 +196,7 @@ export default {
 .changelog :deep() {
   font-weight: bold;
   display: inline-block;
+
   a {
     display: block;
     padding: 0 10px;
@@ -195,6 +206,7 @@ export default {
     /*線の基点とするためrelativeを指定*/
     position: relative;
   }
+
   a::after {
     content: "";
     /*絶対配置で線の位置を決める*/
@@ -212,6 +224,7 @@ export default {
     transform-origin: center top;
     /*上部中央基点*/
   }
+
   /*現在地とhoverの設定*/
   &.current a::after,
   a:hover::after {
@@ -219,33 +232,74 @@ export default {
     /*X方向にスケール拡大*/
   }
 }
+
 ul.works {
   list-style: none;
   text-align: initial;
   position: relative;
-  & > li {
+
+  &>li {
     width: 70%;
+
     &:nth-child(1) {
       margin-top: 0;
     }
+
     &:nth-child(odd) {
       margin-left: 5%;
     }
+
     &:nth-child(even) {
       margin-left: 100% - 70 - 5;
     }
   }
+
   h3 {
     font-size: 40px;
   }
+
   .icon {
     position: relative;
     top: 15px;
   }
+
   .text {
     margin: 0 20px;
     border-radius: 25px;
     text-align: center;
   }
+}
+
+.and-more {
+  font-weight: bold;
+  display: inline-block;
+
+  margin: 20px 0 0 0;
+  font-size: 40px;
+  a {
+    display: block;
+    padding: 0 10px;
+    text-decoration: none;
+    color: #2e8b57;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 10%;
+      width: 80%;
+      height: 4px;
+      background: #2e8b57;
+      transition: all 0.3s;
+      transform: scale(0, 1);
+      transform-origin: center top;
+    }
+    
+    &:hover::after {
+      transform: scale(1, 1);
+    }
+  }
+
 }
 </style>
