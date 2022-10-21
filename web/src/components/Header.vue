@@ -116,7 +116,7 @@ export default {
 
 
 .logo {
-  margin: 0 0 0 200px;
+  margin: 0 0 0 100px;
   padding: 15px 0 0 0;
   height: 85px;
   width: 300px;
@@ -131,7 +131,7 @@ export default {
 }
 
 .navi {
-  padding: 20px 120px 0 0;
+  padding: 20px 50px 0 0;
   color: $color-text-light;
   // 右寄せ
   display: flex;
