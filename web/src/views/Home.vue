@@ -49,13 +49,7 @@
               <li>
                 <h3>Illust</h3>
                 <div class="text">
-                <div class="pickup">
-                <img src="@/assets/works/illust/2021/7.png" width="400">
-                </div>
-                <ul class="sub">
-                <li><img src="@/assets/works/illust/2022/2.png" width="200"><img src="@/assets/works/illust/2021/6.png" width="200"></li>
-                <li><img src="@/assets/works/illust/2019/7.png" width="200"><img src="@/assets/works/illust/2018/6.png" width="200"></li>
-                </ul>
+                <workillust />
                 </div>
               </li>
               <li>
@@ -86,6 +80,7 @@ import modal from "@/components/Modal.vue";
 import news from "@/components/home/News.vue";
 import changelog from "@/components/home/ChangeLog.vue";
 import mymission from "@/components/home/MyMission.vue";
+import workillust from "@/components/home/WorkIllust.vue";
 import workmusic from "@/components/home/WorkMusic.vue";
 
 export default {
@@ -102,6 +97,7 @@ export default {
     news,
     changelog,
     mymission,
+    workillust,
     workmusic,
   },
 };
@@ -184,7 +180,7 @@ export default {
   margin: 0 0 -20px 0;
 }
 
-.changelog::v-deep {
+.changelog :deep() {
   font-weight: bold;
   display: inline-block;
   a {
@@ -243,12 +239,6 @@ ul.works {
     margin: 0 20px;
     border-radius: 25px;
     text-align: center;
-  }
-  .pickup {
-    float: left;
-  }
-  .sub {
-    list-style: none;
   }
 }
 </style>
