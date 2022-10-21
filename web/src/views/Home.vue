@@ -42,18 +42,21 @@
             <ul class="works">
               <li>
                 <h3>GAME</h3>
+                <img class="icon" src="@/assets/home/icon/mahou.png" width="64">
                 <div class="text">
                 <img src="https://colorfultone.tyanmahou.com/web/img/slide/Screenshot1.png" width="400">
                 </div>
               </li>
               <li>
                 <h3>Illust</h3>
+                <img class="icon" src="@/assets/home/icon/mahou2.png" width="64">
                 <div class="text">
                 <workillust />
                 </div>
               </li>
               <li>
                 <h3>MUSIC</h3>
+                <img class="icon" src="@/assets/home/icon/mahou3.png" width="64">
                 <div class="text">
                 <workmusic width="250" />
                 </div>
@@ -234,6 +237,10 @@ ul.works {
   }
   h3 {
     font-size: 40px;
+  }
+  .icon {
+    position: relative;
+    top: 15px;
   }
   .text {
     margin: 0 20px;
