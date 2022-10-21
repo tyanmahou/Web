@@ -76,13 +76,14 @@ export default {
 
   .tabs {
     overflow: hidden;
-
     li {
-      font-size: 20px;
+      font-weight: bold;
+      font-size: 25px;
       float: left;
       padding: 10px 20px;
+      background-color: $color-theme-sub;
       border: 1px solid $color-theme;
-      border-bottom: none;
+      color: $color-text-light;
       cursor: pointer;
       transition: .3s;
 
@@ -91,10 +92,9 @@ export default {
       }
 
       &.active {
-
-        background-color: $color-theme;
-        border-color: $color-theme;
-        color: #fff;
+        color: $color-theme;
+        border-bottom: none;
+        background-color: $color-mainbg;
         cursor: auto;
       }
     }
