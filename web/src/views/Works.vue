@@ -13,24 +13,16 @@
 
         <ul class="contents">
           <li v-if="isActive === 1">
-            <div class="contents-wrap">
-              Comming Soon
-            </div>
+          <programtab/>
           </li>
           <li v-else-if="isActive === 2">
-            <div class="contents-wrap">
-              Comming Soon
-            </div>          
+            <illusttab/>
           </li>
           <li v-else-if="isActive === 3">
-            <div class="contents-wrap">
-              Comming Soon
-            </div>
+            <musictab/>
           </li>
           <li v-else-if="isActive === 4">
-            <div class="contents-wrap">
-              Comming Soon
-            </div>
+            <goodstab />
           </li>
         </ul>
       </div>
@@ -42,6 +34,13 @@
 <script>
 import myheader from "@/components/Header.vue";
 import foot from "@/components/Foot.vue";
+
+import programtab from "@/components/works/Program.vue";
+import illusttab from "@/components/works/Illust.vue";
+import musictab from "@/components/works/Music.vue";
+import goodstab from "@/components/works/Goods.vue";
+
+
 export default {
   name: "WorksView",
   data() {
@@ -52,6 +51,10 @@ export default {
   components: {
     myheader,
     foot,
+    programtab,
+    illusttab,
+    musictab,
+    goodstab,
   },
   methods: {
     change(num) {
@@ -61,7 +64,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/scss/common.scss";
 
 .works {
