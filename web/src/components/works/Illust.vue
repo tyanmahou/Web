@@ -86,9 +86,19 @@ ul.gallery {
   }
 
   ul {
+    columns: 4;
+
+    @media only screen and (max-width: 900px) {
+      columns: 3;
+    }
+
+    @media only screen and (max-width: 768px) {
+
+      columns: 2;
+    }
+
     margin: 0 0 20px 0;
     width: 100%;
-    columns: 4;
     list-style: none;
     padding: 0;
 
