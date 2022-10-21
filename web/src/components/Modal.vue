@@ -1,5 +1,5 @@
 <template>
-  <a :href="'#'+id" class="modal">
+  <a :href="'#'+id" data-group="gallery" class="modal">
     <slot name="title"></slot>
   </a>
   <section :id="id" style="display: none">
@@ -17,6 +17,7 @@ export default {
     $(".modal").modaal({
       overlay_close: true,
       animation_speed: 200,
+      custom_class: null
     });
   },
 };
