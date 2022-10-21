@@ -15,7 +15,7 @@ const routes = [
     path: '/works',
     name: 'Works',
     component: Works,
-    meta:{title: 'Game'}
+    meta:{title: 'Works'}
   },
   {
     path: '/games',
