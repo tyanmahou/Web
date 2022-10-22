@@ -6,7 +6,7 @@
         <div>
           <ul>
             <li v-for="n of item.count" :key="n">
-              <imagemodal :src="require(`@/assets/works/illust/${item.year}/${n}.png`)" :id="`illust-${item.year}-${n}`"
+              <imagemodal :src="require(`@/assets/works/illust/${item.year}/${item.count - n + 1}.png`)" :id="`illust-${item.year}-${item.count - n + 1}`"
                 :width="300" />
             </li>
           </ul>
