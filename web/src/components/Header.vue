@@ -5,7 +5,11 @@
         <img src="../assets/commons/web_logo.png" width="300" />
       </div>
     </mylink>
-    <div class="navi">
+    <div class="burger">
+      <burger :open="openBurger" v-on:click="openBurger = !openBurger"/>
+    </div>
+    <div v-bind:class="{'burger-area': true, 'burger-open' : openBurger, }">
+      <div class="navi">
       <ul class="core">
         <li v-for="(item, index) in navis" :key="item.name" v-bind:class="current == index ? 'current' : ''">
           <a v-if="item.external" :href="item.url" target="_blank">
@@ -24,11 +28,13 @@
       </ul>
     </div>
   </div>
+    </div>
 </template>
 
 <script>
 import serviceicon from "@/components/ServiceIcon.vue";
 import mylink from "@/components/Link.vue";
+import burger from "@/components/BurgerBtn.vue";
 export default {
   name: "Header",
   props: {
@@ -37,9 +43,11 @@ export default {
   components: {
     serviceicon,
     mylink,
+    burger,
   },
   data() {
     return {
+      openBurger:false,
       navis: [
         {
           name: "TOP",
@@ -103,15 +111,10 @@ export default {
   min-width: $layout-min-width;
   width: 100%;
   height: 60px;
-   
+
   background: $color-theme;
   position: fixed;
-  z-index: 2;
-  @media only screen and (max-width: $layout-min-width){
-    position: relative;
-    height: auto;
-    margin:0;
-  }    
+  z-index: 3;  
 
   .logo {
     margin: 0 0 0 layout-px-lerp(0, 100);
@@ -126,31 +129,54 @@ export default {
 
     &:hover {
       padding: 20px 0 0 0;
-    }
-    @media only screen and (max-width: $layout-min-width){
-      padding: 0px 0 0 0;
-      &:hover {
-        padding: 0px 0 0 0;
-      }      
-      height: auto;
-      width: 100%;
-      border-radius: 0;
-      float: none;
-      text-align: center;
-    }       
+    }     
   }
 
+  .burger {
+    margin: 2px 10px 0 0;
+    display: none;
+
+    @media only screen and (max-width: 850px) {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  .burger-area {
+    display: block;
+    @media only screen and (max-width: 850px) {
+      display: none;
+      &.burger-open {
+        display: block;
+      }
+    }
+  }
   .navi {
     padding: 20px layout-px-lerp(15, 50) 0 0;
     color: $color-text-light;
     // 右寄せ
     display: flex;
     justify-content: flex-end;
-    @media only screen and (max-width: $layout-min-width) {
-      justify-content: center;
+
+    @media only screen and (max-width: 850px) {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 60px);
+      display: initial;
+      background: #000000C0;
+      text-align: center;
+      align-items: center;
+      z-index: -1;
+
+      padding: 100px 0 0 0;
     }
+
     ul.core {
-      display: flex; 
+      display: flex;
+      @media only screen and (max-width: 850px) {
+        display: inline-block;
+      }
       list-style: none;
 
       li {
@@ -196,10 +222,9 @@ export default {
 
     ul.service {
       display: flex;
-
-      @media only screen and (max-width: 850px){
-        display: none;
-      }        
+      @media only screen and (max-width: 850px) {
+        justify-content: center;
+      }     
       list-style: none;
 
       li {

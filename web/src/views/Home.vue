@@ -154,7 +154,7 @@ export default {
   background: #00000080;
   @media only screen and (max-width: $layout-min-width) {
       margin: 0;
-      margin-top: 0px;
+      margin-top: -20px;
       padding-right: 0;
       padding-left: 0;
       width: 100%;
@@ -229,7 +229,10 @@ export default {
   z-index: 1;
   background: #f5f5dc;
   margin: -120px 0 0 0;
-  padding: 40px 0 0 0;  
+  padding: 40px 0 0 0;
+  @media only screen and (max-width: $layout-min-width){
+    margin: -100px 0 0 0;    
+  }    
 }
 
 .home-container {
