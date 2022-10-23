@@ -1,13 +1,16 @@
 <template>
+  <h2>GALLERY</h2>
   <div class="contents-wrap">
     <ul class="gallery">
       <li v-for="(item, index) in gallery" :key="index">
-        <h3>{{item.year}}</h3>
+        <div class="year">
+          <h3>{{item.year}}</h3>
+        </div>
         <div>
           <ul>
             <li v-for="n of item.count" :key="n">
-              <imagemodal :src="require(`@/assets/works/illust/${item.year}/${item.count - n + 1}.png`)" :id="`illust-${item.year}-${item.count - n + 1}`"
-                :width="300" />
+              <imagemodal :src="require(`@/assets/works/illust/${item.year}/${item.count - n + 1}.png`)"
+                :id="`illust-${item.year}-${item.count - n + 1}`" :width="300" />
             </li>
           </ul>
         </div>
@@ -29,35 +32,35 @@ export default {
         },
         {
           year: 2021,
-          count: 8
-        },
-        {
-          year: 2020,
-          count: 6
-        },
-        {
-          year: 2019,
           count: 9
         },
         {
-          year: 2018,
-          count: 6
+          year: 2020,
+          count: 7
         },
         {
-          year: 2017,
-          count: 11
-        },
-        {
-          year: 2016,
+          year: 2019,
           count: 13
         },
         {
+          year: 2018,
+          count: 9
+        },
+        {
+          year: 2017,
+          count: 15
+        },
+        {
+          year: 2016,
+          count: 14
+        },
+        {
           year: 2015,
-          count: 16
+          count: 20
         },
         {
           year: 2014,
-          count: 18
+          count: 22
         }
       ]
     };
@@ -76,25 +79,29 @@ ul.gallery {
   padding: 0 15px;
   list-style: none;
 
-  h3 {
-    position: absolute;
-    left: 0;
-    padding-left: 10px;
-    display: inline;
-    text-align: initial;
-    font-size: 30px;
+  .year {
+    text-align: left;
+
+    h3 {
+      margin-left: -15px;
+      padding: 0 10px;
+      position: relative;
+      display: inline;
+      font-size: 30px;
+    }
+    padding-bottom: 10px;    
   }
 
   ul {
-    columns: 4;
+    columns: 5;
 
     @media only screen and (max-width: 1100px) {
-      columns: 3;
+      columns: 4;
     }
 
     @media only screen and (max-width: 850px) {
 
-      columns: 2;
+      columns: 3;
     }
 
     margin: 0 0 20px 0;
