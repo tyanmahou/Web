@@ -106,7 +106,12 @@ export default {
    
   background: $color-theme;
   position: fixed;
-  z-index: 2;  
+  z-index: 2;
+  @media only screen and (max-width: $layout-min-width){
+    position: relative;
+    height: auto;
+    margin:0;
+  }    
 
   .logo {
     margin: 0 0 0 layout-px-lerp(0, 100);
@@ -122,6 +127,17 @@ export default {
     &:hover {
       padding: 20px 0 0 0;
     }
+    @media only screen and (max-width: $layout-min-width){
+      padding: 0px 0 0 0;
+      &:hover {
+        padding: 0px 0 0 0;
+      }      
+      height: auto;
+      width: 100%;
+      border-radius: 0;
+      float: none;
+      text-align: center;
+    }       
   }
 
   .navi {
@@ -130,7 +146,9 @@ export default {
     // 右寄せ
     display: flex;
     justify-content: flex-end;
-
+    @media only screen and (max-width: $layout-min-width) {
+      justify-content: center;
+    }
     ul.core {
       display: flex; 
       list-style: none;
