@@ -8,15 +8,15 @@
       <li v-on:click="changeCategory('other')" v-bind:class="{'active': category === 'other'}">OTHER</li>
     </ul>
     <ul class="gallery">
-      <li v-for="(item, index) in filteredGallery" :key="index">
+      <li v-for="item in filteredGallery" :key="item.year">
         <div class="year">
           <h3>{{item.year}}</h3>
         </div>
         <div>
           <ul>
-            <li v-for="(img, index2) in item.data" :key="index2">
-              <imagemodal :src="require(`@/assets/works/illust/${item.year}/${img.src}`)"
-                :id="`illust-${item.year}-${index2}`" width="300" />
+            <li v-for="img in item.data" :key="img.id">
+              <imagemodal :src="require(`@/assets/works/illust/${item.year}/${img.id}.png`)"
+                :id="`illust-${item.year}-${img.id}`" width="300" />
             </li>
           </ul>
         </div>
@@ -35,502 +35,493 @@ export default {
       gallery: [
         {
           year: 2022,
-          count: 3,
           data: [
             {
-              src: '3.png',
+              id: 3,
               category: 'original',
             },
             {
-              src: '2.png',
+              id: 2,
               category: 'original',
             },
             {
-              src: '1.png',
+              id: 1,
               category: 'original',
             },
           ],
         },
         {
           year: 2021,
-          count: 9,
           data: [
             {
-              src: '9.png',
+              id: 9,
               category: 'original',
             },
             {
-              src: '8.png',
+              id: 8,
               category: 'original',
             },
             {
-              src: '7.png',
+              id: 7,
               category: 'original',
             },
             {
-              src: '6.png',
+              id: 6,
               category: 'original',
             },
             {
-              src: '5.png',
+              id: 5,
               category: 'fanfic',
             },
             {
-              src: '4.png',
+              id: 4,
               category: 'original',
             },
             {
-              src: '3.png',
+              id: 3,
               category: 'fanfic',
             },
             {
-              src: '2.png',
+              id: 2,
               category: 'original',
             },
             {
-              src: '1.png',
+              id: 1,
               category: 'fanfic',
             },
           ],
         },
         {
           year: 2020,
-          count: 7,
           data: [
             {
-              src: '7.png',
+              id: 7,
               category: 'original',
             },
             {
-              src: '6.png',
+              id: 6,
               category: 'original',
             },
             {
-              src: '5.png',
+              id: 5,
               category: 'fanfic',
             },
             {
-              src: '4.png',
+              id: 4,
               category: 'original',
             },
             {
-              src: '3.png',
+              id: 3,
               category: 'original',
             },
             {
-              src: '2.png',
+              id: 2,
               category: 'original',
             },
             {
-              src: '1.png',
+              id: 1,
               category: 'original',
             },
           ],
         },
         {
           year: 2019,
-          count: 13,
           data: [
             {
-              src: '13.png',
+              id: 13,
               category: 'original',
             },
             {
-              src: '12.png',
+              id: 12,
               category: 'original',
             },
             {
-              src: '11.png',
+              id: 11,
               category: 'original',
             },
             {
-              src: '10.png',
+              id: 10,
               category: 'original',
             },
             {
-              src: '9.png',
+              id: 9,
               category: 'other',
             },
             {
-              src: '8.png',
+              id: 8,
               category: 'original',
             },
             {
-              src: '7.png',
+              id: 7,
               category: 'original',
             },
             {
-              src: '6.png',
+              id: 6,
               category: 'original',
             },
             {
-              src: '5.png',
+              id: 5,
               category: 'original',
             },
             {
-              src: '4.png',
+              id: 4,
               category: 'original',
             },
             {
-              src: '3.png',
+              id: 3,
               category: 'original',
             },
             {
-              src: '2.png',
+              id: 2,
               category: 'original',
             },
             {
-              src: '1.png',
+              id: 1,
               category: 'original',
             },
           ],
         },
         {
           year: 2018,
-          count: 9,
           data: [
             {
-              src: '9.png',
+              id: 9,
               category: 'original',
             },
             {
-              src: '8.png',
+              id: 8,
               category: 'original',
             },
             {
-              src: '7.png',
+              id: 7,
               category: 'original',
             },
             {
-              src: '6.png',
+              id: 6,
               category: 'original',
             },
             {
-              src: '5.png',
+              id: 5,
               category: 'fanfic',
             },
             {
-              src: '4.png',
+              id: 4,
               category: 'original',
             },
             {
-              src: '3.png',
+              id: 3,
               category: 'fanfic',
             },
             {
-              src: '2.png',
+              id: 2,
               category: 'fanfic',
             },
             {
-              src: '1.png',
+              id: 1,
               category: 'fanfic',
             },
           ],
         },
         {
           year: 2017,
-          count: 15,
           data: [
             {
-              src: '15.png',
+              id: 15,
               category: 'original',
             },
             {
-              src: '14.png',
+              id: 14,
               category: 'original',
             },
             {
-              src: '13.png',
+              id: 13,
               category: 'original',
             },
             {
-              src: '12.png',
+              id: 12,
               category: 'original',
             },
             {
-              src: '11.png',
+              id: 11,
               category: 'original',
             },
             {
-              src: '10.png',
+              id: 10,
               category: 'original',
             },
             {
-              src: '9.png',
+              id: 9,
               category: 'original',
             },
             {
-              src: '8.png',
+              id: 8,
               category: 'original',
             },
             {
-              src: '7.png',
+              id: 7,
               category: 'original',
             },
             {
-              src: '6.png',
+              id: 6,
               category: 'original',
             },
             {
-              src: '5.png',
+              id: 5,
               category: 'original',
             },
             {
-              src: '4.png',
+              id: 4,
               category: 'original',
             },
             {
-              src: '3.png',
+              id: 3,
               category: 'original',
             },
             {
-              src: '2.png',
+              id: 2,
               category: 'fanfic',
             },
             {
-              src: '1.png',
+              id: 1,
               category: 'original',
             },
           ],
         },
         {
           year: 2016,
-          count: 14,
           data: [
             {
-              src: '14.png',
+              id: 14,
               category: 'original',
             },
             {
-              src: '13.png',
+              id: 13,
               category: 'original',
             },
             {
-              src: '12.png',
+              id: 12,
               category: 'original',
             },
             {
-              src: '11.png',
+              id: 11,
               category: 'original',
             },
             {
-              src: '10.png',
+              id: 10,
               category: 'fanfic',
             },
             {
-              src: '9.png',
+              id: 9,
               category: 'fanfic',
             },
             {
-              src: '8.png',
+              id: 8,
               category: 'fanfic',
             },
             {
-              src: '7.png',
+              id: 7,
               category: 'fanfic',
             },
             {
-              src: '6.png',
+              id: 6,
               category: 'fanfic',
             },
             {
-              src: '5.png',
+              id: 5,
               category: 'original',
             },
             {
-              src: '4.png',
+              id: 4,
               category: 'original',
             },
             {
-              src: '3.png',
+              id: 3,
               category: 'original',
             },
             {
-              src: '2.png',
+              id: 2,
               category: 'fanfic',
             },
             {
-              src: '1.png',
+              id: 1,
               category: 'fanfic',
             },
           ],
         },
         {
           year: 2015,
-          count: 20,
           data: [
             {
-              src: '20.png',
+              id: 20,
               category: 'original',
             },
             {
-              src: '19.png',
+              id: 19,
               category: 'fanfic',
             },
             {
-              src: '18.png',
+              id: 18,
               category: 'original',
             },
             {
-              src: '17.png',
+              id: 17,
               category: 'original',
             },
             {
-              src: '16.png',
+              id: 16,
               category: 'fanfic',
             },
             {
-              src: '15.png',
+              id: 15,
               category: 'original',
             },
             {
-              src: '14.png',
+              id: 14,
               category: 'original',
             },
             {
-              src: '13.png',
+              id: 13,
               category: 'original',
             },
             {
-              src: '12.png',
+              id: 12,
               category: 'fanfic',
             },
             {
-              src: '11.png',
+              id: 11,
               category: 'fanfic',
             },
             {
-              src: '10.png',
+              id: 10,
               category: 'original',
             },
             {
-              src: '9.png',
+              id: 9,
               category: 'fanfic',
             },
             {
-              src: '8.png',
+              id: 8,
               category: 'fanfic',
             },
             {
-              src: '7.png',
+              id: 7,
               category: 'original',
             },
             {
-              src: '6.png',
+              id: 6,
               category: 'original',
             },
             {
-              src: '5.png',
+              id: 5,
               category: 'original',
             },
             {
-              src: '4.png',
+              id: 4,
               category: 'original',
             },
             {
-              src: '3.png',
+              id: 3,
               category: 'fanfic',
             },
             {
-              src: '2.png',
+              id: 2,
               category: 'original',
             },
             {
-              src: '1.png',
+              id: 1,
               category: 'original',
             },
           ],
         },
         {
           year: 2014,
-          count: 22,
           data: [
             {
-              src: '22.png',
+              id: 22,
               category: 'original',
             },
             {
-              src: '21.png',
+              id: 21,
               category: 'fanfic',
             },
             {
-              src: '20.png',
+              id: 20,
               category: 'fanfic',
             },
             {
-              src: '19.png',
+              id: 19,
               category: 'fanfic',
             },
             {
-              src: '18.png',
+              id: 18,
               category: 'fanfic',
             },
             {
-              src: '17.png',
+              id: 17,
               category: 'original',
             },
             {
-              src: '16.png',
+              id: 16,
               category: 'original',
             },
             {
-              src: '15.png',
+              id: 15,
               category: 'original',
             },
             {
-              src: '14.png',
+              id: 14,
               category: 'original',
             },
             {
-              src: '13.png',
+              id: 13,
               category: 'fanfic',
             },
             {
-              src: '12.png',
+              id: 12,
               category: 'fanfic',
             },
             {
-              src: '11.png',
+              id: 11,
               category: 'fanfic',
             },
             {
-              src: '10.png',
+              id: 10,
               category: 'fanfic',
             },
             {
-              src: '9.png',
+              id: 9,
               category: 'fanfic',
             },
             {
-              src: '8.png',
+              id: 8,
               category: 'fanfic',
             },
             {
-              src: '7.png',
+              id: 7,
               category: 'fanfic',
             },
             {
-              src: '6.png',
+              id: 6,
               category: 'fanfic',
             },
             {
-              src: '5.png',
+              id: 5,
               category: 'fanfic',
             },
             {
-              src: '4.png',
+              id: 4,
               category: 'fanfic',
             },
             {
-              src: '3.png',
+              id: 3,
               category: 'fanfic',
             },
             {
-              src: '2.png',
+              id: 2,
               category: 'fanfic',
             },
             {
-              src: '1.png',
+              id: 1,
               category: 'fanfic',
             },
           ],
