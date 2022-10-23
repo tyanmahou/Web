@@ -169,14 +169,14 @@ export default {
     position: absolute;
     top: 0;
     bottom: 0;
-    @media only screen and (max-width: 900px){
+    @media only screen and (max-width: $layout-mid-width){
       position: relative;
       width: 100%;
     }     
   }
   &-right {
     margin: 0 0 0 300px;
-    @media only screen and (max-width: 900px){
+    @media only screen and (max-width: $layout-mid-width){
       margin: 0;
     }   
     &-down {
@@ -184,7 +184,7 @@ export default {
         width: 45%;
         float: left;
 
-        @media only screen and (max-width: 900px){
+        @media only screen and (max-width: $layout-mid-width){
           width: 100%;
           float: none;
         }        
@@ -194,7 +194,7 @@ export default {
       }
       &-2 {
         margin: 0 0 0 50%;
-        @media only screen and (max-width: 900px){
+        @media only screen and (max-width: $layout-mid-width){
           margin: 0;
           float: none;
         }             
@@ -215,7 +215,7 @@ export default {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    @media only screen and (max-width: 900px){
+    @media only screen and (max-width: $layout-mid-width){
       position: relative;
       top: initial;
       left: initial;

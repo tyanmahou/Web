@@ -22,35 +22,14 @@
             <mymission class="word" />
           </div>
         </div>
-        <!-- <div class="mission">
-          <div class="mission-text">
-            <h1>MISSION</h1>
-            <mymission class="word" />
-          </div>
-          <div class="header-right">
-            <div class="profile">
-              <div class="profile-core">
-                <mylink url="/about">
-                  <div class="profile-icon">
-                    <img src="../assets/commons/avatar.png" width="200" />
-                  </div>
-                </mylink>
-                <div class="profile-text">
-                  <h3>TYANMAHOU</h3>
-                  <span>GAME PROGRAMMER</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
       </div>
     </header>
     <div class="home-container-outer">
       <div class="home-container">
         <div class="main-container">
-          <h2>NEWS</h2>
+          <!-- <h2>NEWS</h2>
           <div class="contents-wrap">
-            <!-- <news /> -->
+            <news />
             <div class="changelog">
               <modal id="modal-changelog">
                 <template #title> 更新履歴 </template>
@@ -59,7 +38,7 @@
                 </template>
               </modal>
             </div>
-          </div>
+          </div> -->
           <h2>WORKS</h2>
           <div class="contents-wrap">
             <ul class="works">
@@ -136,7 +115,10 @@ export default {
 .header-container {
   position: fixed;
   padding: 100px 0 0 0;
-  @media only screen and (max-width: 900px){
+  @media only screen and (max-width: 959px){
+      padding-top: 50px;
+  } 
+  @media only screen and (max-width: $layout-min-width){
       padding: 0 0;
       position: relative;
   } 
@@ -165,11 +147,12 @@ export default {
 
 .profile {
   position: relative;
-  margin: 0 0 0 100px;
-  width: calc(max($layout-min-width, 100vw) - 140px);
+  $margin-left: layout-px-lerp(20, 100);
+  margin: 0 0 0 $margin-left;
+  width: calc(max($layout-min-width, 100%) - ($margin-left + 40));
   padding: 20px;
   background: #00000080;
-  @media only screen and (max-width: 900px){
+  @media only screen and (max-width: $layout-min-width) {
       margin: 0;
       margin-top: -20px;
       padding-right: 0;
@@ -182,7 +165,7 @@ export default {
     bottom: 0;
     right: layout-px-lerp(50, 200);
     text-align: center;
-    @media only screen and (max-width: 900px){
+    @media only screen and (max-width: $layout-min-width){
       position: relative;
       right: initial;
       width: 100%;
@@ -191,7 +174,7 @@ export default {
       position: relative;
       top: 50%;
       transform: translateY(-50%);
-      @media only screen and (max-width: 900px){
+      @media only screen and (max-width: $layout-min-width){
         transform: initial;
         left: 50%;
         transform: translateX(-50%);
@@ -224,7 +207,7 @@ export default {
 
   &-left {
     width: layout-px-lerp(500, 800);
-    @media only screen and (max-width: 900px){
+    @media only screen and (max-width: $layout-min-width){
         padding: 20px;
         width: calc(100% - 40px);
     }  
@@ -235,6 +218,9 @@ export default {
     .word {
       padding: 50px 0 60px 40px;
       font-size: 2.5em;
+      @media only screen and (max-width: $layout-min-width){
+        font-size: 2.3em;
+      }       
     }
   }
 }
@@ -244,7 +230,7 @@ export default {
   background: #f5f5dc;
   margin: -120px 0 0 0;
   padding: 40px 0 0 0;
-  @media only screen and (max-width: 900px){
+  @media only screen and (max-width: $layout-min-width){
     margin: -100px 0 0 0;    
   }    
 }
