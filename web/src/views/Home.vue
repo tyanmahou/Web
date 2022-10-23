@@ -115,7 +115,7 @@ export default {
 .header-container {
   position: fixed;
   padding: 100px 0 0 0;
-  @media only screen and (max-width: 959px){
+  @media only screen and (max-width: 1035px){
       padding-top: 50px;
   } 
   @media only screen and (max-width: $layout-min-width){
@@ -206,7 +206,7 @@ export default {
   }
 
   &-left {
-    width: layout-px-lerp(500, 800);
+    width: layout-px-lerp(500, 850);
     @media only screen and (max-width: $layout-min-width){
         padding: 20px;
         width: calc(100% - 40px);
