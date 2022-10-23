@@ -4,7 +4,7 @@ export default [
     //     text:'',
     // },
     {
-      date: "2022.10.XX",
+      date: "2022.10.24",
       text: "ホームページリニューアル",
     },
     {

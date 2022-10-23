@@ -35,7 +35,7 @@ export default {
     return {
       news: [
         {
-          date: "2022.10.XX",
+          date: "2022.10.24",
           title: "ホームページリニューアル！",
           img: require("@/assets/commons/web_logo.png"),
           text: `ホームページをリニューアルしました。<br>今後ともよろしくお願いいたします。`,
@@ -78,16 +78,22 @@ export default {
 @import "@/scss/common.scss";
 
 ul.news {
+  $layout-fix: 1000px;
+
   list-style: none;
   display: flex;
   justify-content: center;
-
+  flex-wrap:wrap;
+  
   li {
     border: solid;
     border-color: $color-textbg;
     background: $color-textbg;
-    margin: 30px 20px 20px 20px;
+    margin: 30px 5px 20px 5px;
     min-width: 400px;
+    @media only screen and (max-width: $layout-fix) {
+      width: calc(100% - 80px);
+    }    
     position: relative;
     span.date {
       position: absolute;
@@ -106,6 +112,10 @@ ul.news {
       color: $color-text-light;
       margin: 0;
       padding: 15px 0 80px 0;
+      @media only screen and (max-width: $layout-fix) {
+        padding: 15px 10px 15px 330px;
+        font-size: 100%;
+      }      
     }
     figure {
       position: relative;
@@ -115,6 +125,10 @@ ul.news {
       padding: auto;
       margin: -80px 0 5px 0;
       min-width: 300px;
+      @media only screen and (max-width: $layout-fix) {
+        margin: -55px 0 0 0;
+        width: 300px;
+      }      
       height: 200px;
       overflow: hidden;
 
@@ -138,6 +152,15 @@ ul.news {
         transform: translate(-50%, -50%) scale(1.1);
       }
     }
+    @media only screen and (max-width: $layout-fix) {
+      .text {
+        height: 145px;
+        p {
+          margin: -130px 0 0 0;
+          padding: 0 0 0px 330px;
+        }        
+      }
+    }     
   }
 }
 </style>

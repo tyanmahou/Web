@@ -27,7 +27,7 @@
     <div class="home-container-outer">
       <div class="home-container">
         <div class="main-container">
-          <!-- <h2>NEWS</h2>
+          <h2>NEWS</h2>
           <div class="contents-wrap">
             <news />
             <div class="changelog">
@@ -38,7 +38,7 @@
                 </template>
               </modal>
             </div>
-          </div> -->
+          </div>
           <h2>WORKS</h2>
           <div class="contents-wrap">
             <ul class="works">
