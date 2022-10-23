@@ -129,11 +129,19 @@ export default {
 
     &:hover {
       padding: 20px 0 0 0;
-    }     
+    }   
+    @media only screen and (max-width: $layout-min-width) {
+      padding: 0;
+      height: 60px;
+      border-radius: 0;
+      &:hover {
+        padding: 5px 0 0 0;
+      }       
+    }      
   }
 
   .burger {
-    margin: 2px 10px 0 0;
+    margin: 2px 20px 0 0;
     display: none;
 
     @media only screen and (max-width: 850px) {
