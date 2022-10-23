@@ -103,10 +103,10 @@ export default {
   min-width: $layout-min-width;
   width: 100%;
   height: 60px;
+   
   background: $color-theme;
   position: fixed;
-  z-index: 2;
-
+  z-index: 2;  
 
   .logo {
     margin: 0 0 0 layout-px-lerp(0, 100);
@@ -132,7 +132,7 @@ export default {
     justify-content: flex-end;
 
     ul.core {
-      display: flex;
+      display: flex; 
       list-style: none;
 
       li {
@@ -178,6 +178,10 @@ export default {
 
     ul.service {
       display: flex;
+
+      @media only screen and (max-width: 850px){
+        display: none;
+      }        
       list-style: none;
 
       li {
