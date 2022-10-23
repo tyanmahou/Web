@@ -1,5 +1,5 @@
 <template>
-  <h2>MUSIC</h2>
+  <h2>TRACKS</h2>
   <div class="contents-wrap">
     <div class="text">
     <tracks width="100%" height="500"/>
