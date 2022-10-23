@@ -17,7 +17,7 @@ body {
 .app { 
     color: $color-text;    
     background: $color-mainbg;
-    min-width: 850px;   
+    min-width: $layout-min-width;   
     min-height: 100vh;
     height: auto;
     position: relative;

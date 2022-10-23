@@ -24,3 +24,12 @@ $color-textbg: #ffffff;
         }            
     }  
 }
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+      @return $number / ($number * 0 + 1);
+    }
+    @return $number;
+  }
+@function layoutlerp($min, $max, $min-vw: $layout-min-width, $max-vw: 1550px) {
+    @return max($min, calc($min + strip-unit($max - $min) * (100vw - $min-vw) / strip-unit($max-vw - $min-vw)));
+}

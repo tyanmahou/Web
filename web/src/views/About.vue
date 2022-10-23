@@ -165,7 +165,6 @@ export default {
   text-align: initial;
   padding: 20px;
   &-left {
-    position: relative;
     float: left;
     width: 300px;
 
@@ -180,12 +179,21 @@ export default {
       &-1 {
         width: 45%;
         float: left;
+
+        @media only screen and (max-width: 900px){
+          width: 100%;
+          float: none;
+        }        
         .text {
           min-height: 65px;
         }
       }
       &-2 {
         margin: 0 0 0 50%;
+        @media only screen and (max-width: 900px){
+          margin: 0;
+          float: none;
+        }             
       }
     }
   }
