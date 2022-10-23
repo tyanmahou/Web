@@ -4,22 +4,45 @@
     <header class="home-header">
       <div class="header-container">
         <div class="profile">
-          <div class="profile-core">
-            <mylink url="/about">
-              <div class="profile-icon">
-                <img src="../assets/commons/avatar.png" width="200" />
+          <div class="profile-right">
+            <div class="profile-right-wrap">
+              <mylink url="/about">
+                <div class="profile-icon">
+                  <img src="../assets/commons/avatar.png" width="200" />
+                </div>
+              </mylink>
+              <div class="profile-text">
+                <h3>TYANMAHOU</h3>
+                <span>GAME PROGRAMMER</span>
               </div>
-            </mylink>
-            <div class="profile-text">
-              <h3>TYANMAHOU</h3>
-              <span>GAME PROGRAMMER</span>
             </div>
           </div>
+          <div class="profile-left">
+            <h1>MISSION</h1>
+            <mymission class="word" />
+          </div>
         </div>
-        <div class="mission">
-          <h1>MISSION</h1>
-          <mymission class="word" />
-        </div>
+        <!-- <div class="mission">
+          <div class="mission-text">
+            <h1>MISSION</h1>
+            <mymission class="word" />
+          </div>
+          <div class="header-right">
+            <div class="profile">
+              <div class="profile-core">
+                <mylink url="/about">
+                  <div class="profile-icon">
+                    <img src="../assets/commons/avatar.png" width="200" />
+                  </div>
+                </mylink>
+                <div class="profile-text">
+                  <h3>TYANMAHOU</h3>
+                  <span>GAME PROGRAMMER</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
       </div>
     </header>
     <div class="home-container-outer">
@@ -27,7 +50,7 @@
         <div class="main-container">
           <h2>NEWS</h2>
           <div class="contents-wrap">
-            <news />
+            <!-- <news /> -->
             <div class="changelog">
               <modal id="modal-changelog">
                 <template #title> 更新履歴 </template>
@@ -108,12 +131,18 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@import "@/scss/common.scss";
+
 .header-container {
   position: fixed;
-
   padding: 100px 0 0 0;
+  @media only screen and (max-width: 900px){
+      padding: 0 0;
+      position: relative;
+  } 
+  min-width: $layout-min-width;
   width: 100%;
-  color: #ffffff;
+  color: $color-text-light;
 }
 
 .home-header {
@@ -135,57 +164,89 @@ export default {
 }
 
 .profile {
-  display: flex;
-  justify-content: flex-end;
-  text-align: center;
-  padding: 20px 200px 0 0;
-  margin: 0 0;
-  float: right;
-}
-
-.profile-icon {
-  margin: auto;
-  background: #fffafa;
-  min-width: 200px;
-  width: 200px;
-  min-height: 200px;
-  height: 200px;
-  border-radius: 100px;
-  overflow: hidden;
-
-  transition: all 0.3s;
-
-  &:hover {
-    transform: scale(1.1);
-  }
-}
-
-.profile-text {
-  margin: 10px 0 0 0;
-  background: #00000080;
-}
-
-.mission {
+  position: relative;
   margin: 0 0 0 100px;
+  width: calc(max($layout-min-width, 100vw) - 140px);
   padding: 20px;
   background: #00000080;
+  @media only screen and (max-width: 900px){
+      margin: 0;
+      margin-top: -20px;
+      padding-right: 0;
+      padding-left: 0;
+      width: 100%;
+  } 
+  &-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: layout-px-lerp(50, 200);
+    text-align: center;
+    @media only screen and (max-width: 900px){
+      position: relative;
+      right: initial;
+      width: 100%;
+    }  
+    &-wrap {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      @media only screen and (max-width: 900px){
+        transform: initial;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+      }  
+    }
 
-  h1 {
-    text-decoration: underline;
+    .profile-icon {
+      margin: auto;
+      background: #fffafa;
+      min-width: 200px;
+      width: 200px;
+      min-height: 200px;
+      height: 200px;
+      border-radius: 100px;
+      overflow: hidden;
+
+      transition: all 0.3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .profile-text {
+      margin: 10px 0 0 0;
+      background: #00000080;
+    }
   }
 
-  .word {
-    padding: 50px 0 60px 40px;
-    font-size: 2.5em;
+  &-left {
+    width: layout-px-lerp(500, 800);
+    @media only screen and (max-width: 900px){
+        padding: 20px;
+        width: calc(100% - 40px);
+    }  
+    h1 {
+      text-decoration: underline;
+    }
+
+    .word {
+      padding: 50px 0 60px 40px;
+      font-size: 2.5em;
+    }
   }
 }
-
 .home-container-outer {
   position: relative;
   z-index: 1;
   background: #f5f5dc;
   margin: -120px 0 0 0;
   padding: 40px 0 0 0;
+  @media only screen and (max-width: 900px){
+    margin: -100px 0 0 0;    
+  }    
 }
 
 .home-container {
@@ -275,6 +336,7 @@ ul.works {
 
   margin: 20px 0 0 0;
   font-size: 40px;
+
   a {
     display: block;
     padding: 0 10px;
@@ -294,7 +356,7 @@ ul.works {
       transform: scale(0, 1);
       transform-origin: center top;
     }
-    
+
     &:hover::after {
       transform: scale(1, 1);
     }
