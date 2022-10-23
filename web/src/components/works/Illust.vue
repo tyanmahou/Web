@@ -2,7 +2,7 @@
   <h2>GALLERY</h2>
   <div class="contents-wrap">
     <ul class="filter">
-      <li v-on:click="changeCategory('')" v-bind:class="{'active': category === ''}">全て</li>
+      <li v-on:click="changeCategory('')" v-bind:class="{'active': category === ''}">ALL</li>
       <li v-on:click="changeCategory('original')" v-bind:class="{'active': category === 'original'}">ORIGINAL</li>
       <li v-on:click="changeCategory('fanfic')" v-bind:class="{'active': category === 'fanfic'}">FANFIC</li>
       <li v-on:click="changeCategory('other')" v-bind:class="{'active': category === 'other'}">OTHER</li>
@@ -561,6 +561,21 @@ export default {
 <style lang="scss" scoped>
 @import "@/scss/common.scss";
 
+ul.filter {
+  list-style: none;
+  li {
+    display: inline-block;
+    margin: 5px;  
+    padding: 5px 10px;  
+    border-radius: 20px;
+    color: $color-text-light;
+    background: $color-theme-sub;
+    transition: .3s;
+    &.active {
+      background: $color-theme;
+    }
+  }
+}
 ul.gallery {
   margin: 0;
   padding: 0 15px;
