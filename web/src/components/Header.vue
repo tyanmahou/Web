@@ -108,6 +108,7 @@ export default {
 // ヘッダー
 .header {
     margin: 0% 0 40px 0;
+    min-width: $layout-min-width;
     width: 100%;
     height: 60px;
     background: $color-theme;
@@ -116,7 +117,7 @@ export default {
 
 
 .logo {
-  margin: 0 0 0 100px;
+  margin: 0 0 0 max(0px, calc(100 * (100vw - 850px) / 700));
   padding: 15px 0 0 0;
   height: 85px;
   width: 300px;
@@ -131,7 +132,7 @@ export default {
 }
 
 .navi {
-  padding: 20px 50px 0 0;
+  padding: 20px max(10px, calc(50 * (100vw - 850px) / 700)) 0 0;
   color: $color-text-light;
   // 右寄せ
   display: flex;
