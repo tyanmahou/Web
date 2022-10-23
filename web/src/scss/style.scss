@@ -17,7 +17,6 @@ body {
 .app { 
     color: $color-text;    
     background: $color-mainbg;
-    // min-width: $layout-min-width;   
     min-height: 100vh;
     height: auto;
     position: relative;
@@ -31,7 +30,7 @@ body {
 }
 .main-container {   
     $padding-left: layout-px-lerp(20, 110);
-    padding: 10px 20px 50px 20px;
+    padding: 10px $padding-left 50px $padding-left;
     text-align: center;
     h1 {
         text-align: initial;
