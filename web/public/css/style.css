@@ -27,7 +27,7 @@ body {
 }
 
 .main-container {
-  padding: 10px 7% 50px 7%;
+  padding: 10px max(10px, 10px + 100 * (100vw - 850px) / 700) 50px max(10px, 10px + 100 * (100vw - 850px) / 700);
   text-align: center;
 }
 .main-container h1 {

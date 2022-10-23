@@ -165,16 +165,20 @@ export default {
   text-align: initial;
   padding: 20px;
   &-left {
-    float: left;
     width: 300px;
-
     position: absolute;
     top: 0;
     bottom: 0;
+    @media only screen and (max-width: 900px){
+      position: relative;
+      width: 100%;
+    }     
   }
   &-right {
     margin: 0 0 0 300px;
-
+    @media only screen and (max-width: 900px){
+      margin: 0;
+    }   
     &-down {
       &-1 {
         width: 45%;
@@ -211,6 +215,12 @@ export default {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    @media only screen and (max-width: 900px){
+      position: relative;
+      top: initial;
+      left: initial;
+      transform: translate(0%, 0%);      
+    } 
   }
 
   span.name {

@@ -30,7 +30,8 @@ body {
     padding: 80px 0 90pt 0;
 }
 .main-container {
-    padding: 10px 7% 50px 7%;
+    $padding-left: layout-px-lerp(10, 110);
+    padding: 10px $padding-left 50px $padding-left;
     text-align: center;
     h1 {
         text-align: initial;

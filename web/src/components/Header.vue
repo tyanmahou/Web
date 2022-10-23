@@ -117,7 +117,7 @@ export default {
 
 
 .logo {
-  margin: 0 0 0 layoutlerp(0px, 100px);
+  margin: 0 0 0 layout-px-lerp(0, 100);
   padding: 15px 0 0 0;
   height: 85px;
   width: 300px;
@@ -132,7 +132,7 @@ export default {
 }
 
 .navi {
-  padding: 20px layoutlerp(10px, 50px) 0 0;
+  padding: 20px layout-px-lerp(10, 50) 0 0;
   color: $color-text-light;
   // 右寄せ
   display: flex;

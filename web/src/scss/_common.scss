@@ -30,6 +30,6 @@ $color-textbg: #ffffff;
     }
     @return $number;
   }
-@function layoutlerp($min, $max, $min-vw: $layout-min-width, $max-vw: 1550px) {
-    @return max($min, calc($min + strip-unit($max - $min) * (100vw - $min-vw) / strip-unit($max-vw - $min-vw)));
+@function layout-px-lerp($min, $max, $min-vw: $layout-min-width, $max-vw: 1550px) {
+    @return max(1px * $min, calc(1px * $min + ($max - $min) * (100vw - $min-vw) / strip-unit($max-vw - $min-vw)));
 }
