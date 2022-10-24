@@ -60,7 +60,7 @@ export default {
 
   @media only screen and (max-width: $layout-mobile) {
       :deep(iframe) {
-      height: 120px;
+      height: 150px;
     }
   }  
 }
