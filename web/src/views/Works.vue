@@ -90,13 +90,13 @@ export default {
       cursor: pointer;
       transition: .3s;
 
-      @media only screen and (max-width: $layout-mobile) {
+      @media only screen and (max-width: $layout-min-width) {
         float: none;
         border: 1px solid $color-theme;
       } 
       &:not(:first-child) {
         border-left: none;
-        @media only screen and (max-width: $layout-mobile) {
+        @media only screen and (max-width: $layout-min-width) {
           border: 1px solid $color-theme;
         }         
       }
@@ -106,7 +106,7 @@ export default {
         border-bottom: none;
         background-color: $color-mainbg;
         cursor: auto;
-        @media only screen and (max-width: $layout-mobile) {
+        @media only screen and (max-width: $layout-min-width) {
           border: 1px solid $color-theme;
         }           
       }

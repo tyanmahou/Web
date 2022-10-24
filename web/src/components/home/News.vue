@@ -84,10 +84,11 @@ ul.news {
   display: flex;
   justify-content: center;
   flex-wrap:wrap;
-  @media only screen and (max-width: $layout-mobile){
+  @media only screen and (max-width: $layout-fix){
     flex-wrap:initial;
     overflow: auto;
     justify-content: left;
+    margin-bottom: 10px;
   }  
   li {
     border: solid;
@@ -95,10 +96,10 @@ ul.news {
     background: $color-textbg;
     margin: 30px 5px 20px 5px;
     min-width: 400px;
-    @media only screen and (max-width: $layout-mobile) {
+    @media only screen and (max-width: $layout-fix) {
       margin-left: 5px;
       margin-right: 5px;
-      min-width: calc(100% - 10px);
+      min-width: min(400px, calc(100% - 10px));
     }    
     position: relative;
     span.date {
@@ -111,7 +112,7 @@ ul.news {
       color: $color-text-light;
       background: $color-theme;
       padding: 5px;
-      @media only screen and (max-width: $layout-mobile) {
+      @media only screen and (max-width: $layout-fix) {
         left: -2px;
       }         
     }
@@ -121,7 +122,7 @@ ul.news {
       color: $color-text-light;
       margin: 0;
       padding: 15px 0 80px 0;  
-      @media only screen and (max-width: $layout-mobile) {
+      @media only screen and (max-width: $layout-fix) {
         font-size: 100%;
       }         
     }
@@ -139,7 +140,7 @@ ul.news {
       border: 1px solid;
       border-color: $color-theme-sub;
       border-radius: 50px;
-      @media only screen and (max-width: $layout-mobile) {
+      @media only screen and (max-width: $layout-fix) {
         min-width: 0px;
       }  
       img {
@@ -158,7 +159,7 @@ ul.news {
         transform: translate(-50%, -50%) scale(1.1);
       }
     }
-    @media only screen and (max-width: $layout-mobile) {
+    @media only screen and (max-width: $layout-fix) {
         .text {
           padding-left: 10px;
           padding-right: 10px;

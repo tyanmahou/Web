@@ -130,6 +130,9 @@ export default {
 .home-header {
   width: 100%;
   height: 100vh;
+  @media only screen and (max-width: $layout-min-width){
+    height: 100%;
+  }   
   position: relative;
 }
 
@@ -155,9 +158,10 @@ export default {
   @media only screen and (max-width: $layout-min-width) {
       margin: 0;
       margin-top: -20px;
+      width: 100vw;
+      //height: 100vh;
       padding-right: 0;
       padding-left: 0;
-      width: 100vw;
   } 
   @media only screen and (max-width: $layout-mobile) {
     margin-top: 10px;
@@ -230,7 +234,7 @@ export default {
       }    
       @media only screen and (max-width: $layout-mobile) {
         padding: 20px 30px;
-        font-size: 2.0em;
+        font-size: 100%;
       } 
     }
   }
@@ -242,7 +246,7 @@ export default {
   margin: -120px 0 0 0;
   padding: 40px 0 0 0;
   @media only screen and (max-width: $layout-min-width){
-    margin: 20px 0 0 0;    
+    margin: 0px 0 0 0;
   }    
 }
 

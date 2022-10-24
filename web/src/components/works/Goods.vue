@@ -40,8 +40,8 @@ ul {
   list-style: none;
   li {
       width: 390px;
-      @media only screen and (max-width: $layout-mobile) {
-        width: 100%;
+      @media only screen and (max-width: $layout-min-width) {
+        width: min(390px, 100%);
         img {
           width: 100%;
         }
