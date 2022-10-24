@@ -79,6 +79,10 @@ export default {
 
   .tabs {
     overflow: hidden;
+    @media only screen and (max-width: $layout-min-width) {
+        columns: 2;
+        column-gap: 0;
+    } 
     li {
       font-weight: bold;
       font-size: 25px;
@@ -89,10 +93,15 @@ export default {
       color: $color-text-light;
       cursor: pointer;
       transition: .3s;
-
+      overflow: hidden;
       @media only screen and (max-width: $layout-min-width) {
         float: none;
-        border: 1px solid $color-theme;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        font-size: 23px;
+
+        box-sizing: border-box;        
       } 
       &:not(:first-child) {
         border-left: none;
