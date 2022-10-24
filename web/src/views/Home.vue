@@ -112,7 +112,7 @@ export default {
 <style lang="scss" scoped>
 @import "@/scss/common.scss";
 $fix-height: 480px;
-
+$bg-height: min(100vh, 1000px);
 .header-container {
   position: fixed;
   padding: 0 0 0 0;
@@ -130,7 +130,7 @@ $fix-height: 480px;
 
 .home-header {
   width: 100%;
-  height: 100vh;
+  height: $bg-height;
 
   @media only screen and (max-width: $layout-min-width), (max-height: $fix-height) {
     height: 100%;
@@ -146,7 +146,7 @@ $fix-height: 480px;
   left: 0;
   z-index: -1;
   width: 100%;
-  height: 100vh;
+  height: $bg-height;
   background: url("../assets/commons/home_top.jpg") no-repeat center;
   background-size: cover;
 }
