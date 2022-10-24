@@ -6,19 +6,20 @@
 }
 
 html {
-    height: 100vh;
+    height: 100%;
+    background: #000;
 }
 
 body {
-    min-width: $layout-min-width;
-    height: 100vh;
+    height: 100%;
 }
 
 .app { 
     color: $color-text;    
     background: $color-mainbg;
+    //min-width: $layout-min-width;
     min-height: 100vh;
-    height: auto;
+    height: 100%;
     position: relative;
     z-index: 0;
 }
@@ -27,6 +28,10 @@ body {
 .main {
     margin: 0 0 0 0;
     padding: 80px 0 90pt 0;  
+
+    @media only screen and (max-width: $layout-mobile) {
+        padding-top: 40px;
+    }      
 }
 .main-container {   
     $padding-left: layout-px-lerp(20, 110);
@@ -37,9 +42,14 @@ body {
         color: $color-theme;
         font-size: 70px;
         text-decoration: underline;
-        
+        @media only screen and (max-width: $layout-mobile) {
+            font-size: 35px;
+        }        
         &::first-letter{
             font-size: 120px;
+            @media only screen and (max-width: $layout-mobile) {
+                font-size: 70px;
+            }            
         }
     }
 
@@ -50,8 +60,11 @@ body {
         margin: 10px 0;
         padding: 0.5em 6em;
         background: $color-theme;
-
         font-size: 24px;
+        @media only screen and (max-width: $layout-mobile) {
+            padding: 0.5em 0;
+            width: 100%;
+        }        
     }
 
     h3 {

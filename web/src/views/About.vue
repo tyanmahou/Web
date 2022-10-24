@@ -57,7 +57,7 @@
       </div>
       <h2>MISSION</h2>
       <div class="mission">
-        <mymission class="word"/>
+        <mymission class="word" />
         <div class="what">
           <h3>WHAT?</h3>
           <p class="text">
@@ -158,49 +158,59 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/scss/common.scss";
+@import "@/scss/common";
+
 .profile {
   position: relative;
   display: block;
   text-align: initial;
   padding: 20px;
+
   &-left {
     width: 300px;
     position: absolute;
     top: 0;
     bottom: 0;
-    @media only screen and (max-width: $layout-mid-width){
+
+    @media only screen and (max-width: $layout-mid-width) {
       position: relative;
       width: 100%;
-    }     
+    }
   }
+
   &-right {
     margin: 0 0 0 300px;
-    @media only screen and (max-width: $layout-mid-width){
+
+    @media only screen and (max-width: $layout-mid-width) {
       margin: 0;
-    }   
+    }
+
     &-down {
       &-1 {
         width: 45%;
         float: left;
 
-        @media only screen and (max-width: $layout-mid-width){
+        @media only screen and (max-width: $layout-mid-width) {
           width: 100%;
           float: none;
-        }        
+        }
+
         .text {
           min-height: 65px;
         }
       }
+
       &-2 {
         margin: 0 0 0 50%;
-        @media only screen and (max-width: $layout-mid-width){
+
+        @media only screen and (max-width: $layout-mid-width) {
           margin: 0;
           float: none;
-        }             
+        }
       }
     }
   }
+
   &-icon {
     margin: auto;
     background: #fffafa;
@@ -215,23 +225,42 @@ export default {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    @media only screen and (max-width: $layout-mid-width){
+
+    @media only screen and (max-width: $layout-mid-width) {
       position: relative;
       top: initial;
       left: initial;
-      transform: translate(0%, 0%);      
-    } 
+      transform: translate(0%, 0%);
+    }
   }
 
-  span.name {
-    font-size: 60px;
-    padding: 10px 0 0 0;
-  }
-  span.aka {
-    font-size: 30px;
-    padding: 10px 0 0 0;
+  span {
+    &.name {
+      font-size: 60px;
+      padding: 10px 0 0 0;
+
+    
+      @media only screen and (max-width: $layout-mobile) {
+        text-align: center;
+        display: block;
+        font-size: 40px;
+      }       
+    }
+
+    &.aka {
+      font-size: 30px;
+      padding: 10px 0 0 0;
+
+      @media only screen and (max-width: $layout-mobile) {
+        text-align: center;
+        display: block;
+        font-size: 25px;
+        margin-top: -20px;
+      }        
+    }
   }
 }
+
 .account {
   ul.service {
     list-style: none;
@@ -241,48 +270,61 @@ export default {
       margin: 0 2px;
 
       transition: all 0.3s;
+
       &:hover {
         transform: scale(0.9);
       }
     }
   }
 }
+
 .skill {
   ul {
     padding: 20px 0;
     list-style: none;
+
     li {
-      margin:2px;
+      margin: 2px;
       display: inline-block;
     }
   }
 }
+
 .mission {
   padding: 20px;
+
   .word {
     padding: 0;
     font-size: 2em;
   }
+
   .what {
     text-align: initial;
     margin-left: 50%;
     transform: translateX(-50%);
-    width: max(50%, 500px);
+    width: min(100%, max(50%, 500px));
   }
 }
+
 .contact {
   margin-left: 50%;
   transform: translateX(-50%);
-  width: max(50%, 500px);
+  width: min(100%, max(50%, 500px));
+
   table {
     font-size: 25px;
+    @media only screen and (max-width: $layout-mobile) {
+      font-size: 20px;
+    }
     th {
       text-align: left;
       width: 100px;
     }
+
     td {
       text-align: left;
     }
+
     @include normal-link;
   }
 }

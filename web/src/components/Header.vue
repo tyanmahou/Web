@@ -108,7 +108,7 @@ export default {
 // ヘッダー
 .header {
   margin: 0% 0 40px 0;
-  min-width: $layout-min-width;
+  //min-width: $layout-min-width;
   width: 100%;
   height: 60px;
 
@@ -142,12 +142,14 @@ export default {
 
   .burger {
     margin: 2px 20px 0 0;
-    display: none;
-
+    display: none; 
     @media only screen and (max-width: 850px) {
       display: flex;
       justify-content: flex-end;
     }
+    @media only screen and (max-width: 420px) {
+      margin-right: 5px;
+    }       
   }
   .burger-area {
     display: block;

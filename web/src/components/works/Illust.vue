@@ -603,10 +603,11 @@ ul.gallery {
     }
 
     @media only screen and (max-width: 850px) {
-
       columns: 3;
     }
-
+    @media only screen and (max-width: $layout-mobile) {
+      columns: 2;
+    }
     margin: 0 0 20px 0;
     width: 100%;
     list-style: none;

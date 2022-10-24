@@ -27,6 +27,8 @@ export default {
 </script>
   
 <style lang="scss" scoped>
+@import "@/scss/common";
+
 a img {
   transition: all 0.3s;
 
@@ -38,6 +40,12 @@ ul {
   list-style: none;
   li {
       width: 390px;
+      @media only screen and (max-width: $layout-mobile) {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
   }
 }
 </style>

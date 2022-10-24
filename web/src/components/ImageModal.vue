@@ -55,6 +55,7 @@ export default {
         margin: 0;
         padding: 0;
         img {
+            max-width: 95vw;
             max-height: 95vh;
         }
     }
