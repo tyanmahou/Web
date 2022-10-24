@@ -2,7 +2,7 @@
   <h2>TRACKS</h2>
   <div class="contents-wrap">
     <div class="text">
-    <tracks width="100%" height="500"/>
+      <tracks width="100%" height="500" />
     </div>
   </div>
 </template>
@@ -23,6 +23,12 @@ export default {
 </script>
   
 <style lang="scss" scoped>
+@import "@/scss/common.scss";
 
+@media only screen and (max-width: $layout-mobile) {
+  .text {
+    all: initial;
+  }
+}
 </style>
   
