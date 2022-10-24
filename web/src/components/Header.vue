@@ -6,29 +6,29 @@
       </div>
     </mylink>
     <div class="burger">
-      <burger :open="openBurger" v-on:click="openBurger = !openBurger"/>
+      <burger :open="openBurger" v-on:click="openBurger = !openBurger" />
     </div>
     <div v-bind:class="{'burger-area': true, 'burger-open' : openBurger, }">
       <div class="navi">
-      <ul class="core">
-        <li v-for="(item, index) in navis" :key="item.name" v-bind:class="current == index ? 'current' : ''">
-          <a v-if="item.external" :href="item.url" target="_blank">
-            {{ item.name }}
-            <img src="@/assets/commons/icon/external_link.png" width="15" />
-          </a>
-          <mylink v-else :url="current == index ? '#' : item.url" :absolute="current == index">
-            {{ item.name }}
-          </mylink>
-        </li>
-      </ul>
-      <ul class="service">
-        <li v-for="item in services">
-          <serviceicon :url="item.url" :icon="item.icon" />
-        </li>
-      </ul>
+        <ul class="core">
+          <li v-for="(item, index) in navis" :key="item.name" v-bind:class="current == index ? 'current' : ''">
+            <a v-if="item.external" :href="item.url" target="_blank">
+              {{ item.name }}
+              <img src="@/assets/commons/icon/external_link.png" width="15" />
+            </a>
+            <mylink v-else :url="current == index ? '#' : item.url" :absolute="current == index">
+              {{ item.name }}
+            </mylink>
+          </li>
+        </ul>
+        <ul class="service">
+          <li v-for="item in services">
+            <serviceicon :url="item.url" :icon="item.icon" />
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
-    </div>
 </template>
 
 <script>
@@ -47,7 +47,7 @@ export default {
   },
   data() {
     return {
-      openBurger:false,
+      openBurger: false,
       navis: [
         {
           name: "TOP",
@@ -114,7 +114,7 @@ export default {
 
   background: $color-theme;
   position: fixed;
-  z-index: 3;  
+  z-index: 3;
 
   .logo {
     margin: 0 0 0 layout-px-lerp(0, 100);
@@ -129,44 +129,51 @@ export default {
 
     &:hover {
       padding: 20px 0 0 0;
-    }   
+    }
+
     @media only screen and (max-width: $layout-min-width) {
       padding: 0;
       height: 60px;
       border-radius: 0;
+
       &:hover {
         padding: 5px 0 0 0;
-      }       
-    }      
+      }
+    }
   }
 
   .burger {
-    margin: 2px 20px 0 0;
-    display: none; 
+    margin: 2px layout-px-lerp(5, 20, 420px, 850px) 0 0;
+    display: none;
+
     @media only screen and (max-width: 850px) {
       display: flex;
       justify-content: flex-end;
     }
+
     @media only screen and (max-width: 420px) {
       margin-right: 5px;
-    }       
+    }
   }
+
   .burger-area {
     display: block;
+
     @media only screen and (max-width: 850px) {
       display: none;
+
       &.burger-open {
         display: block;
       }
     }
   }
+
   .navi {
     padding: 20px layout-px-lerp(15, 50) 0 0;
     color: $color-text-light;
     // 右寄せ
     display: flex;
     justify-content: flex-end;
-
     @media only screen and (max-width: 850px) {
       position: absolute;
       top: 60px;
@@ -178,15 +185,20 @@ export default {
       text-align: center;
       align-items: center;
       z-index: -1;
+      overflow: auto;
 
-      padding: 100px 0 0 0;
+      padding: 50px 0 0 0;
     }
-
+    @media only screen and (max-width: $layout-min-width) {
+      padding: 0px 0 0 0;
+    }
     ul.core {
       display: flex;
+
       @media only screen and (max-width: 850px) {
-        display: inline-block;
+        display: block;
       }
+
       list-style: none;
 
       li {
@@ -219,6 +231,9 @@ export default {
           /*X方向0、Y方向1*/
           transform-origin: center top;
           /*上部中央基点*/
+          @media only screen and (max-width: 850px) {
+            display: none;
+          }           
         }
 
         /*現在地とhoverの設定*/
@@ -227,14 +242,34 @@ export default {
           transform: scale(1, 1);
           /*X方向にスケール拡大*/
         }
+     
+        @media only screen and (max-width: 850px) {
+          font-size: 20px;
+          margin: 0;
+          padding: 15px 0;
+          border-bottom: 1px solid $color-theme;
+          a {
+            width: 100%;
+            height: 100%;
+          }
+          &:hover{
+            background: mix($color-theme, #ffffff20, 50%);
+          }
+        }        
       }
     }
 
     ul.service {
       display: flex;
+
       @media only screen and (max-width: 850px) {
+        margin-top: 20px;
         justify-content: center;
-      }     
+        :deep(img) {
+          width: 40px;
+        }
+      }
+
       list-style: none;
 
       li {
@@ -246,6 +281,9 @@ export default {
         &:hover {
           transform: scale(0.9);
         }
+        @media only screen and (max-width: 850px) {
+          padding: 0 10px;
+        }        
       }
     }
   }
