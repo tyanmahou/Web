@@ -162,7 +162,7 @@ export default {
   width: calc(max($layout-min-width, 100%) - ($margin-left + 40));
   padding: 20px;
   background: #00000080;
-  
+
   @media only screen and (max-width: $layout-min-width) {
     margin: 0;
     margin-top: -20px;
@@ -361,7 +361,7 @@ ul.works {
     text-align: center;
 
     @media only screen and (max-width: $layout-mobile) {
-      margin: 0;
+      all:initial;
     }
 
     @media only screen and (max-width: $layout-min-width) {

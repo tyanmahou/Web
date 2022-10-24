@@ -1,11 +1,11 @@
 <template>
   <div class="music">
     <div class="pickup">
-      <mysound :id="pickup.id" :width="pickup.width" :height="pickup.height" />
+      <mysound :id="pickup.id" :width="pickup.width" :height="pickup.height" :visual="this.visual"/>
     </div>
     <ul class="sub">
       <li v-for="id in sub.list">
-        <mysound :id="id" :width="sub.width" :height="sub.height" />
+        <mysound :id="id" :width="sub.width" :height="sub.height" :visual="this.visual"/>
       </li>
     </ul>
   </div>
@@ -23,6 +23,7 @@ export default {
   },
   data() {
     return {
+      visual: false,
       pickup: {
         id: 1356820102,
         width: "100%",
@@ -35,24 +36,32 @@ export default {
       }
     };
   },
+  mounted() {
+    this.visual = window.matchMedia('(max-width: 420px)').matches;
+    window.addEventListener('resize', ()=>{
+      this.visual = window.matchMedia('(max-width: 420px)').matches;
+    });
+  },
 };
 </script>
 
 <style lang="scss" scoped>
+@import "@/scss/common";
 .music {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   max-width: 820px;
-  // .pickup {
-  //   float: right;
-  // }
 
   ul.sub {
     list-style: none;
-    // &>li {
-    //   display: inline-block;
-    // }
   }
+
+
+  @media only screen and (max-width: $layout-mobile) {
+      :deep(iframe) {
+      height: 120px;
+    }
+  }  
 }
 </style>
