@@ -153,7 +153,7 @@ $bg-height: min(100vh, 1000px);
 
 .profile {
   position: relative;
-  transform: translateY(max(30px, calc(-20px + 40vh - 50%)));
+  transform: translateY(max(30px, calc(-20px + $bg-height * 0.4 - 50%)));
   $margin-left: layout-px-lerp(20, 100);
   margin: 0 0 0 $margin-left;
   width: calc(max($layout-min-width, 100%) - ($margin-left + 40));

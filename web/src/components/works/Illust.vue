@@ -563,23 +563,30 @@ export default {
 
 ul.filter {
   list-style: none;
+
   li {
     display: inline-block;
-    margin: 5px;  
-    padding: 5px 10px;  
+    margin: 5px;
+    padding: 5px 10px;
     border-radius: 20px;
     color: $color-text-light;
     background: $color-theme-sub;
     transition: .3s;
+
     &.active {
       background: $color-theme;
     }
   }
 }
+
 ul.gallery {
   margin: 0;
   padding: 0 15px;
   list-style: none;
+
+  @media only screen and (max-width: $layout-mobile) {
+    padding: 0 0px;
+  }
 
   .year {
     text-align: left;
@@ -602,12 +609,17 @@ ul.gallery {
       columns: 4;
     }
 
-    @media only screen and (max-width: 850px) {
+    @media only screen and (max-width: $layout-mid-width) {
       columns: 3;
     }
-    @media only screen and (max-width: $layout-mobile) {
+    @media only screen and (max-width: $layout-min-width) {
       columns: 2;
     }
+
+    @media only screen and (max-width: $layout-mobile) {
+      column-gap: 5px;
+    }
+
     margin: 0 0 20px 0;
     width: 100%;
     list-style: none;
@@ -615,6 +627,10 @@ ul.gallery {
 
     li {
       margin-bottom: 20px;
+
+      @media only screen and (max-width: $layout-mobile) {
+        margin-bottom: 5px;
+      }
     }
   }
 }

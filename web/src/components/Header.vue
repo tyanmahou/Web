@@ -181,7 +181,7 @@ export default {
       width: 100%;
       height: calc(100vh - 60px);
       display: initial;
-      background: #000000C0;
+      background: #000000E0;
       text-align: center;
       align-items: center;
       z-index: -1;
