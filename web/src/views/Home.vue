@@ -115,24 +115,31 @@ export default {
 .header-container {
   position: fixed;
   padding: 100px 0 0 0;
-  @media only screen and (max-width: 1035px){
-      padding-top: 50px;
-  } 
-  @media only screen and (max-width: $layout-min-width){
-      padding: 0 0;
-      position: relative;
-  } 
   min-width: $layout-min-width;
   width: 100%;
+
+  @media only screen and (max-width: 1035px) {
+    padding-top: 50px;
+  }
+
+  @media only screen and (max-width: $layout-min-width) {
+
+    position: relative;
+    padding: 0 0;
+    min-width: initial;
+  }
+
   color: $color-text-light;
 }
 
 .home-header {
   width: 100%;
   height: 100vh;
-  @media only screen and (max-width: $layout-min-width){
+
+  @media only screen and (max-width: $layout-min-width) {
     height: 100%;
-  }   
+  }
+
   position: relative;
 }
 
@@ -155,39 +162,44 @@ export default {
   width: calc(max($layout-min-width, 100%) - ($margin-left + 40));
   padding: 20px;
   background: #00000080;
+  
   @media only screen and (max-width: $layout-min-width) {
-      margin: 0;
-      margin-top: -20px;
-      width: 100vw;
-      //height: 100vh;
-      padding-right: 0;
-      padding-left: 0;
-  } 
+    margin: 0;
+    margin-top: -20px;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
   @media only screen and (max-width: $layout-mobile) {
     margin-top: 10px;
     width: 100vw;
-  }  
+  }
+
   &-right {
     position: absolute;
     top: 0;
     bottom: 0;
     right: layout-px-lerp(50, 200);
     text-align: center;
-    @media only screen and (max-width: $layout-min-width){
+
+    @media only screen and (max-width: $layout-min-width) {
       position: relative;
       right: initial;
       width: 100%;
     }
+
     &-wrap {
       position: relative;
       top: 50%;
       transform: translateY(-50%);
-      @media only screen and (max-width: $layout-min-width){
+
+      @media only screen and (max-width: $layout-min-width) {
         transform: initial;
         left: 50%;
         transform: translateX(-50%);
         width: 200px;
-      }  
+      }
     }
 
     .profile-icon {
@@ -215,39 +227,46 @@ export default {
 
   &-left {
     width: layout-px-lerp(500, 850);
-    @media only screen and (max-width: $layout-min-width){
-        padding: 20px;
-        width: calc(100% - 40px);
-    }  
+
+    @media only screen and (max-width: $layout-min-width) {
+      padding: 20px;
+      width: calc(100% - 40px);
+    }
+
     h1 {
       text-decoration: underline;
+
       @media only screen and (max-width: $layout-mobile) {
         font-size: 25px;
-      }  
+      }
     }
 
     .word {
       padding: 50px 0 60px 40px;
       font-size: 2.5em;
-      @media only screen and (max-width: $layout-min-width){
+
+      @media only screen and (max-width: $layout-min-width) {
         font-size: 2.3em;
-      }    
+      }
+
       @media only screen and (max-width: $layout-mobile) {
         padding: 20px 30px;
         font-size: 100%;
-      } 
+      }
     }
   }
 }
+
 .home-container-outer {
   position: relative;
   z-index: 1;
   background: #f5f5dc;
   margin: -120px 0 0 0;
   padding: 40px 0 0 0;
-  @media only screen and (max-width: $layout-min-width){
+
+  @media only screen and (max-width: $layout-min-width) {
     margin: 0px 0 0 0;
-  }    
+  }
 }
 
 .home-container {
@@ -302,26 +321,30 @@ ul.works {
 
   &>li {
     width: 70%;
-    @media only screen and (max-width: $layout-min-width){
+
+    @media only screen and (max-width: $layout-min-width) {
       width: min(450px, 100%);
-    }   
+    }
+
     &:nth-child(1) {
       margin-top: 0;
     }
 
     &:nth-child(odd) {
-      margin-left: 5%;      
+      margin-left: 5%;
+
       @media only screen and (max-width: $layout-min-width) {
         margin-left: 0%;
-      }     
+      }
     }
 
     &:nth-child(even) {
       margin-left: 100% - 70 - 5;
-      @media only screen and (max-width: $layout-min-width){
-         margin-left: calc(100% - min(450px, 100%));
+
+      @media only screen and (max-width: $layout-min-width) {
+        margin-left: calc(100% - min(450px, 100%));
       }
-    }     
+    }
   }
 
   h3 {
@@ -336,14 +359,16 @@ ul.works {
   .text {
     margin: 0 20px;
     text-align: center;
-    @media only screen and (max-width: $layout-mobile){
+
+    @media only screen and (max-width: $layout-mobile) {
       margin: 0;
-    }       
-    @media only screen and (max-width: $layout-min-width){
-    img {
-      width: 100%;
-    } 
-  } 
+    }
+
+    @media only screen and (max-width: $layout-min-width) {
+      img {
+        width: 100%;
+      }
+    }
   }
 
 }
