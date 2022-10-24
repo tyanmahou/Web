@@ -84,15 +84,21 @@ ul.news {
   display: flex;
   justify-content: center;
   flex-wrap:wrap;
-  
+  @media only screen and (max-width: $layout-mobile){
+    flex-wrap:initial;
+    overflow: auto;
+    justify-content: left;
+  }  
   li {
     border: solid;
     border-color: $color-textbg;
     background: $color-textbg;
     margin: 30px 5px 20px 5px;
     min-width: 400px;
-    @media only screen and (max-width: $layout-fix) {
-      width: calc(100% - 80px);
+    @media only screen and (max-width: $layout-mobile) {
+      margin-left: 5px;
+      margin-right: 5px;
+      min-width: calc(100% - 10px);
     }    
     position: relative;
     span.date {
@@ -105,17 +111,19 @@ ul.news {
       color: $color-text-light;
       background: $color-theme;
       padding: 5px;
+      @media only screen and (max-width: $layout-mobile) {
+        left: -2px;
+      }         
     }
     h3 {
       display: block;
       background: $color-theme-sub;
       color: $color-text-light;
       margin: 0;
-      padding: 15px 0 80px 0;
-      @media only screen and (max-width: $layout-fix) {
-        padding: 15px 10px 15px 330px;
+      padding: 15px 0 80px 0;  
+      @media only screen and (max-width: $layout-mobile) {
         font-size: 100%;
-      }      
+      }         
     }
     figure {
       position: relative;
@@ -125,17 +133,15 @@ ul.news {
       padding: auto;
       margin: -80px 0 5px 0;
       min-width: 300px;
-      @media only screen and (max-width: $layout-fix) {
-        margin: -55px 0 0 0;
-        width: 300px;
-      }      
       height: 200px;
       overflow: hidden;
 
       border: 1px solid;
       border-color: $color-theme-sub;
       border-radius: 50px;
-
+      @media only screen and (max-width: $layout-mobile) {
+        min-width: 0px;
+      }  
       img {
         margin: 0;
         position: absolute;
@@ -152,15 +158,12 @@ ul.news {
         transform: translate(-50%, -50%) scale(1.1);
       }
     }
-    @media only screen and (max-width: $layout-fix) {
-      .text {
-        height: 145px;
-        p {
-          margin: -130px 0 0 0;
-          padding: 0 0 0px 330px;
-        }        
-      }
-    }     
+    @media only screen and (max-width: $layout-mobile) {
+        .text {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+    }
   }
 }
 </style>

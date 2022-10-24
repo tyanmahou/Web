@@ -1,16 +1,11 @@
 <template>
   <div class="illust">
     <div class="pickup">
-      <imagemodal
-      :src="require(`@/assets/works/illust/${pickup.id}`)"
-      id="work-illust-pick"
-      :width="pickup.width"
-      />
+      <imagemodal :src="require(`@/assets/works/illust/${pickup.id}`)" id="work-illust-pick" :width="pickup.width" />
     </div>
     <ul class="sub">
       <li v-for="(id,index) in sub.list">
-        <imagemodal
-        :src="require(`@/assets/works/illust/${id}`)" :id="`work-illust-sub${index}`" :width="sub.width" />
+        <imagemodal :src="require(`@/assets/works/illust/${id}`)" :id="`work-illust-sub${index}`" :width="sub.width" />
       </li>
     </ul>
   </div>
@@ -42,6 +37,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/scss/common";
+
 .illust {
   position: relative;
   left: 50%;
@@ -50,6 +47,12 @@ export default {
 
   .pickup {
     float: right;
+
+    @media only screen and (max-width: $layout-min-width) {
+      :deep(img) {
+        width: 100%;
+      }
+    }
   }
 
   ul.sub {
@@ -57,7 +60,17 @@ export default {
 
     &>li {
       display: inline-block;
+
+      @media only screen and (max-width: $layout-min-width) {
+        & :deep() {
+          width: 50%;
+          img {
+            width: 100%;
+          }
+        }
+      }
     }
   }
+
 }
 </style>

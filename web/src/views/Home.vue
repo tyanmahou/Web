@@ -157,8 +157,12 @@ export default {
       margin-top: -20px;
       padding-right: 0;
       padding-left: 0;
-      width: 100%;
+      width: 100vw;
   } 
+  @media only screen and (max-width: $layout-mobile) {
+    margin-top: 10px;
+    width: 100vw;
+  }  
   &-right {
     position: absolute;
     top: 0;
@@ -169,7 +173,7 @@ export default {
       position: relative;
       right: initial;
       width: 100%;
-    }  
+    }
     &-wrap {
       position: relative;
       top: 50%;
@@ -213,6 +217,9 @@ export default {
     }  
     h1 {
       text-decoration: underline;
+      @media only screen and (max-width: $layout-mobile) {
+        font-size: 25px;
+      }  
     }
 
     .word {
@@ -220,7 +227,11 @@ export default {
       font-size: 2.5em;
       @media only screen and (max-width: $layout-min-width){
         font-size: 2.3em;
-      }       
+      }    
+      @media only screen and (max-width: $layout-mobile) {
+        padding: 20px 30px;
+        font-size: 2.0em;
+      } 
     }
   }
 }
@@ -231,7 +242,7 @@ export default {
   margin: -120px 0 0 0;
   padding: 40px 0 0 0;
   @media only screen and (max-width: $layout-min-width){
-    margin: -100px 0 0 0;    
+    margin: 20px 0 0 0;    
   }    
 }
 
@@ -287,18 +298,26 @@ ul.works {
 
   &>li {
     width: 70%;
-
+    @media only screen and (max-width: $layout-min-width){
+      width: min(450px, 100%);
+    }   
     &:nth-child(1) {
       margin-top: 0;
     }
 
     &:nth-child(odd) {
-      margin-left: 5%;
+      margin-left: 5%;      
+      @media only screen and (max-width: $layout-min-width) {
+        margin-left: 0%;
+      }     
     }
 
     &:nth-child(even) {
       margin-left: 100% - 70 - 5;
-    }
+      @media only screen and (max-width: $layout-min-width){
+         margin-left: calc(100% - min(450px, 100%));
+      }
+    }     
   }
 
   h3 {
@@ -313,7 +332,16 @@ ul.works {
   .text {
     margin: 0 20px;
     text-align: center;
+    @media only screen and (max-width: $layout-mobile){
+      margin: 0;
+    }       
+    @media only screen and (max-width: $layout-min-width){
+    img {
+      width: 100%;
+    } 
+  } 
   }
+
 }
 
 .and-more {
