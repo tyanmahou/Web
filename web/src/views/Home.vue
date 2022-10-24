@@ -111,18 +111,14 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "@/scss/common.scss";
+$fix-height: 480px;
 
 .header-container {
   position: fixed;
-  padding: 100px 0 0 0;
+  padding: 0 0 0 0;
   min-width: $layout-min-width;
   width: 100%;
-
-  @media only screen and (max-width: 1035px) {
-    padding-top: 50px;
-  }
-
-  @media only screen and (max-width: $layout-min-width) {
+  @media only screen and (max-width: $layout-min-width), (max-height: $fix-height) {
 
     position: relative;
     padding: 0 0;
@@ -136,7 +132,7 @@ export default {
   width: 100%;
   height: 100vh;
 
-  @media only screen and (max-width: $layout-min-width) {
+  @media only screen and (max-width: $layout-min-width), (max-height: $fix-height) {
     height: 100%;
   }
 
@@ -157,13 +153,20 @@ export default {
 
 .profile {
   position: relative;
+  transform: translateY(max(30px, calc(-20px + 40vh - 50%)));
   $margin-left: layout-px-lerp(20, 100);
   margin: 0 0 0 $margin-left;
   width: calc(max($layout-min-width, 100%) - ($margin-left + 40));
   padding: 20px;
   background: #00000080;
-
+  @media only screen and (max-height: $fix-height) {
+    top: 30px;
+    margin-bottom: 40px;
+    transform: initial;    
+  }  
   @media only screen and (max-width: $layout-min-width) {
+    top:0;
+    transform: initial;
     margin: 0;
     margin-top: -20px;
     width: 100%;
@@ -263,8 +266,7 @@ export default {
   background: #f5f5dc;
   margin: -120px 0 0 0;
   padding: 40px 0 0 0;
-
-  @media only screen and (max-width: $layout-min-width) {
+  @media only screen and (max-width: $layout-min-width), (max-height: $fix-height) {
     margin: 0px 0 0 0;
   }
 }
@@ -274,7 +276,7 @@ export default {
   margin: 0 0 -20px 0;
 }
 
-.changelog :deep() {
+:deep(.changelog) {
   font-weight: bold;
   display: inline-block;
 
