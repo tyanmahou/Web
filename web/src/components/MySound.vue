@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import soundcloudEmbed from "@/components/widgets/SoundCloud/Sound.vue";
+import soundcloudEmbed from "@/components/widgets/SoundCloud/Embed.vue";
 
 export default {
   name: "MySound",

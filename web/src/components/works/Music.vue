@@ -8,7 +8,7 @@
 </template>
   
 <script>
-import tracks from "@/components/widgets/SoundCloud/Tracks.vue";
+import tracks from "@/components/MyTracks.vue";
 
 export default {
   name: "Music",
@@ -17,7 +17,7 @@ export default {
     };
   },
   components: {
-    tracks,
+    tracks
   },
 };
 </script>
