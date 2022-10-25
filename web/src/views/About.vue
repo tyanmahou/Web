@@ -91,8 +91,8 @@ import foot from "@/components/Foot.vue";
 import mycode from "@/components/Code.vue";
 import serviceicon from "@/components/ServiceIcon.vue";
 import skillicon from "@/components/SkillIcon.vue";
-import skillsets from "@/views/data/skillsets";
-import mottocode from "@/views/data/mottocode";
+import skillsets from "@/data/skillsets";
+import mottocode from "@/data/mottocode";
 import mymission from "@/components/home/MyMission.vue";
 
 export default {

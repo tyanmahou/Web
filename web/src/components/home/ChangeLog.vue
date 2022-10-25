@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import changelog from "@/views/data/changelog";
+import changelog from "@/data/changelog";
 export default {
   name: "ChangeLog",
   data() {
