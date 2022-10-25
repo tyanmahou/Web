@@ -1,18 +1,18 @@
 <template>
   <div class="music">
     <div class="pickup">
-      <mysound :id="pickup.id" :width="pickup.width" :height="pickup.height" :visual="this.visual"/>
+      <mysound :url="pickup.url" :width="pickup.width" :height="pickup.height" :visual="this.visual"/>
     </div>
     <ul class="sub">
-      <li v-for="id in sub.list">
-        <mysound :id="id" :width="sub.width" :height="sub.height" :visual="this.visual"/>
+      <li v-for="url in sub.list">
+        <mysound :url="url" :width="sub.width" :height="sub.height" :visual="this.visual"/>
       </li>
     </ul>
   </div>
 </template>
 
 <script>
-import mysound from "@/components/widgets/SoundCloud/MySound.vue";
+import mysound from "@/components/MySound.vue";
 
 export default {
   name: "WorkMusic",
@@ -25,14 +25,19 @@ export default {
     return {
       visual: false,
       pickup: {
-        id: 1356820102,
+        url: "https://soundcloud.com/tyanmahou/cqd8kyc7mxr1",
         width: "100%",
         height: "170",
       },
       sub: {
         width: "100%",
         height: "100",
-        list: [685584331, 720784921, 1290148249, 439877295],
+        list: [
+          "https://soundcloud.com/tyanmahou/chip-seekers",
+          "https://soundcloud.com/tyanmahou/wqtvlbqiqgzo",
+          "https://soundcloud.com/tyanmahou/neo-the-city",
+          "https://soundcloud.com/tyanmahou/code-of-eden",
+        ],
       }
     };
   },
