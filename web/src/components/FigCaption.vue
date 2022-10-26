@@ -32,6 +32,7 @@ figure {
   }
   
   figcaption {
+    text-align: center;
     h4,
     p {
       position: absolute;
