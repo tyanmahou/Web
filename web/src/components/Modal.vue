@@ -1,5 +1,5 @@
 <template>
-  <a @click.self="open(true)" class="modal-button">
+  <a @click="open(true)" class="modal-button">
     <slot name="title"></slot>
   </a>
   <teleport to="body">

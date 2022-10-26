@@ -1,11 +1,11 @@
 <template>
   <div class="illust">
     <div class="pickup">
-      <imagemodal :src="require(`@/assets/works/illust/${pickup.id}`)" id="work-illust-pick" :width="pickup.width" />
+      <imagemodal :src="require(`@/assets/works/illust/${pickup.id}`)" :width="pickup.width" />
     </div>
     <ul class="sub">
       <li v-for="(id,index) in sub.list">
-        <imagemodal :src="require(`@/assets/works/illust/${id}`)" :id="`work-illust-sub${index}`" :width="sub.width" />
+        <imagemodal :src="require(`@/assets/works/illust/${id}`)" :width="sub.width" />
       </li>
     </ul>
   </div>

@@ -1,17 +1,21 @@
 <template>
-  <a :href="'#'+id" class="image-modal">
-    <img :src="src" :width="width" :height="height">
-  </a>
-  <section :id="id" style="display: none">
-    <img :src="src" class="custom-class"/>
-  </section>
+    <modal>
+        <template #title>
+            <img :src="src" :width="width" :height="height" class="image-modal" />
+        </template>
+        <template #contents>
+            <img :src="src" class="wrap" />
+        </template>
+    </modal>
 </template>
+
 <script>
+import modal from "@/components/Modal.vue"
+
 export default {
     name: "ImageModal",
     props: {
         src: String,
-        id: String,
         width: {
             type: String,
             default: null
@@ -21,43 +25,28 @@ export default {
             default: null
         }
     },
-    mounted() {
-        $(".image-modal").modaal({
-            //type: "image",
-            overlay_close: true,
-            animation_speed: 200,
-            custom_class: "image-modal-custom"      
-        });
-    },
+    components: {
+        modal
+    }
 };
 </script>
 
 <style lang="scss" scoped>
-.image-modal {
-    img {
-      transition: all 0.3s;
-      &:hover {
+img.image-modal {
+    transition: all 0.3s;
+
+    &:hover {
         transform: scale(0.95);
-      }          
-    }     
+    }
 }
-</style>
-<style lang="scss">
-.image-modal-custom {
-    .modaal-container{
-        all: initial;
-        display: inline-block;
-        margin: 0;
-        padding: 0;
-    }
-    .modaal-content-container{
-        text-align: center;
-        margin: 0;
-        padding: 0;
-        img {
-            max-width: 97%;
-            max-height: 97%;
-        }
-    }
+
+img.wrap {
+    max-width: 97%;
+    max-height: 97%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
 }
 </style>

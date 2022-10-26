@@ -16,7 +16,7 @@
           <ul>
             <li v-for="img in item.data" :key="img.id">
               <imagemodal :src="require(`@/assets/works/illust/${item.year}/${img.id}.png`)"
-                :id="`illust-${item.year}-${img.id}`" width="300" />
+                width="300" />
             </li>
           </ul>
         </div>
@@ -144,7 +144,7 @@ ul.gallery {
 }
 
 
-:deep(.image-modal img) {
+:deep(img.image-modal) {
   background-color: #fff;
   width: 100%;
   height: auto;
