@@ -1,38 +1,74 @@
 <template>
-  <a :href="'#'+id" data-group="gallery" class="modal">
+  <a @click.self="open(true)" class="modal-button">
     <slot name="title"></slot>
   </a>
-  <section :id="id" style="display: none">
-    <slot name="contents"></slot>  
-  </section>
+  <teleport to="body">
+    <transition name="fade" 
+    @before-enter="beforeEnter"
+    @after-leave="afterLeave"> 
+      <div v-if="isOpen" class="modal-window" @click.self="open(false)">
+        <div class="modal-content">
+          <slot name="contents"></slot>
+        </div>
+      </div>
+    </transition>
+  </teleport>
 </template>
 
 <script>
 export default {
-  name: "Modal",
+  name: 'ModalWindow',
   props: {
-    id: String
   },
-  mounted() {
-    $(".modal").modaal({
-      overlay_close: true,
-      animation_speed: 200,
-      custom_class: null
-    });
+
+  data() {
+    return {
+      isOpen: false,
+    };
   },
+  methods: {
+    open(isOpen) {
+      this.isOpen = isOpen;
+    },
+    beforeEnter(el) {
+      document.body.setAttribute("style", `overflow: hidden`);
+    },    
+    afterLeave(el) {
+      document.body.setAttribute("style", `overflow: scroll`);
+    }
+  }
 };
 </script>
 
-<style lang="scss">
-.modaal-close:after,
-.modaal-close:before {
-  background: #ccc;
+<style lang="scss" scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
 }
 
-.modaal-close:focus:after,
-.modaal-close:focus:before,
-.modaal-close:hover:after,
-.modaal-close:hover:before {
-  background: #2e8b57;
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.modal-button {
+  cursor: pointer;
+}
+
+.modal-window {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  overflow: scroll;
+  text-align: center;
+
+  & .modal-content {
+    display: inline-block;    
+    margin: 60px 20px 60px 20px;
+  }
 }
 </style>

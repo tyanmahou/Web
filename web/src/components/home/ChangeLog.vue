@@ -1,13 +1,15 @@
 <template>
-  <div class="changelog">
-    <ul>
-      <li v-for="item in items">
-        <span class="date">{{ item.date }}</span>
-        <div class="text" style="white-space: pre-wrap">
-          {{ item.text }}
-        </div>
-      </li>
-    </ul>
+  <div class="wrap">
+    <div class="changelog">
+      <ul>
+        <li v-for="item in items">
+          <span class="date">{{ item.date }}</span>
+          <div class="text" style="white-space: pre-wrap">
+            {{ item.text }}
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -24,14 +26,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/scss/common.scss";
+@import "@/scss/common";
 
+.wrap {
+  text-align: left;
+  width: calc(100% - 60px);
+  padding: 30px;
+  background: $color-textbg;
+}
 .changelog {
   width: 100%;
   background: $color-theme-sub;
+
   ul {
     list-style: none;
     padding: 5px 0 5px 0;
+
     li {
       color: $color-text;
       border: solid;
@@ -41,6 +51,7 @@ export default {
       padding: 10px;
       position: relative;
       font-weight: normal;
+
       span.date {
         position: absolute;
         top: -30px;
