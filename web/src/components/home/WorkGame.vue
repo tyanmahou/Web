@@ -24,6 +24,11 @@ export default {
 </script>
   
 <style lang="scss" scoped>
-
+@import "@/scss/common";
+@media only screen and (max-width: $layout-min-width) {
+    img {
+        width: 100%;
+    }
+}
 </style>
   
