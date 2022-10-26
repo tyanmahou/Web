@@ -46,9 +46,7 @@
                 <h3>GAME</h3>
                 <img class="icon" src="@/assets/home/icon/mahou.png" width="64">
                 <div class="text">
-                  <mylink url="https://colorfultone.tyanmahou.com/web/" absolute target="_blank">
-                    <img src="https://colorfultone.tyanmahou.com/web/img/slide/Screenshot1.png" width="400">
-                  </mylink>
+                  <workgame />
                 </div>
               </li>
               <li>
@@ -87,6 +85,7 @@ import modal from "@/components/Modal.vue";
 import news from "@/components/home/News.vue";
 import changelog from "@/components/home/ChangeLog.vue";
 import mymission from "@/components/home/MyMission.vue";
+import workgame from "@/components/home/WorkGame.vue";
 import workillust from "@/components/home/WorkIllust.vue";
 import workmusic from "@/components/home/WorkMusic.vue";
 
@@ -104,6 +103,7 @@ export default {
     news,
     changelog,
     mymission,
+    workgame,
     workillust,
     workmusic,
   },
