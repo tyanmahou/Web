@@ -4,7 +4,7 @@
   </a>
   <teleport to="body">
     <transition name="fade" @before-enter="beforeEnter" @after-leave="afterLeave">
-      <div v-if="isOpen" class="modal-window" @click="open(false)">
+      <div v-if="isOpen" class="modal-window" @click.self="open(false)">
         <div class="modal-content">
           <slot name="contents"></slot>
         </div>
@@ -36,7 +36,7 @@ export default {
       document.body.setAttribute("style", `overflow: hidden`);
     },
     afterLeave(el) {
-      document.body.setAttribute("style", `overflow: scroll`);
+      document.body.setAttribute("style", `overflow: auto`);
     }
   }
 };
@@ -67,9 +67,8 @@ export default {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1000;
-  overflow: scroll;
+  overflow: auto;
   text-align: center;
-
   & .modal-content {
     display: inline-block;
     margin: 60px 20px 60px 20px;
