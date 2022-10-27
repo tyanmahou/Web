@@ -17,7 +17,7 @@
             <a href="https://colorfultone.tyanmahou.com/web/" target="_blank">https://colorfultone.tyanmahou.com/web/</a>
         </div>
         <div class="to-left">
-            <h3>制作期間</h3>
+            <h3>DEVELOP</h3>
         </div>
         <div class="text">
             2020 (1ヵ月程度)

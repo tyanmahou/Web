@@ -16,13 +16,13 @@
             <a href="https://tyanmahou.com" target="_blank">https://tyanmahou.com</a>
         </div>
         <div class="to-left">
-            <h3>ソースコード</h3>
+            <h3>REPOSITORY</h3>
         </div>
         <div class="text">
             <a href="https://github.com/tyanmahou/Web" target="_blank">https://github.com/tyanmahou/Web</a>
         </div>
         <div class="to-left">
-            <h3>制作期間</h3>
+            <h3>DEVELOP</h3>
         </div>
         <div class="text">
             2007～<br>
