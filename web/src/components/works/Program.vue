@@ -15,11 +15,18 @@
   <div class="contents-wrap" id="web-wrap">
     <ul id="web-ul">
       <li v-for="item in web">
-        <mycaption :title="item.title" :caption="item.caption">
+        <mymodel>
+        <template #title>
+          <mycaption :title="item.title" :caption="item.caption">
           <div class="work">
             <img :src="item.img" width="300">
           </div>
-        </mycaption>
+        </mycaption>        
+        </template>
+        <template #contents>
+          <component :is="item.detail"/>
+        </template>
+        </mymodel>
       </li>
     </ul>
   </div>
@@ -38,7 +45,11 @@
 </template>
   
 <script>
+import mymodel from "@/components/Modal.vue"
 import mycaption from "@/components/FigCaption.vue"
+
+// Web
+import webHomePage from "@/components/works/program/web/HomePage.vue"
 
 export default {
   name: "Program",
@@ -56,6 +67,13 @@ export default {
           title: "チャンマホウのHP",
           caption: "ホームページ",
           img: require("@/assets/commons/web_logo.png"),
+          detail: webHomePage,
+        },
+        {
+          title: "ColorfulTone",
+          caption: "公式ページ",
+          img: require("@/assets/works/program/web/ColorfulTone/logo.png"),
+          detail: webHomePage,
         },
       ],
       library: [
@@ -64,7 +82,8 @@ export default {
     };
   },
   components: {
-    mycaption
+    mymodel,
+    mycaption,
   },
   mounted() {
     const updateContentMargin = (id) => {

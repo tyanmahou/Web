@@ -96,5 +96,8 @@ body {
 .main-container .text a:active {
   color: #66cdaa;
 }
+.main-container a {
+  overflow-wrap: anywhere;
+}
 
 /*# sourceMappingURL=style.css.map */
