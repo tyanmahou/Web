@@ -5,129 +5,129 @@ export default [
     // 2: 何かしら自分で作ってる
     // 1: かじったことある
     {
-      name:"C++", category:"lang", level:5
+      name:"C++", level:5
     },
     {
-      name:"C", category:"lang", level:2
+      name:"C", level:2
     },        
     {
-      name:"DirectX", category:"framework", level:2
+      name:"DirectX", level:2
     },
     {
-      name:"Windows API", category:"framework", level:2
+      name:"Windows API", level:2
     },
     {
-      name:"Siv3D", category:"framework", level:5
+      name:"Siv3D", level:5
     },
     {
-      name:"HLSL", category:"lang", level:3
+      name:"HLSL", level:3
     },
     {
-      name:"C#", category:"lang", level:4
+      name:"C#", level:4
     },
     {
-      name:"Unity", category:"framework", level:3
+      name:"Unity", level:3
     },
     {
-      name:"GLSL", category:"lang", level:2
+      name:"GLSL", level:2
     },        
     {
-      name:"Visual Studio", category:"tool", level:4
+      name:"Visual Studio", level:4
     },
     {
-      name:"VS Code", category:"tool", level:3
+      name:"VS Code", level:3
     },
     {
-      name:"Git", category:"system", level:4
+      name:"Git", level:4
     },
     {
-      name:"GitHub", category:"service", level:4
+      name:"GitHub", level:4
     },
     {
-      name:"SVN", category:"system", level:3
+      name:"SVN", level:3
     },
     {
-      name:"Docker", category:"system", level:3
+      name:"Docker", level:3
     },    
     {
-      name:"Vagrant", category:"system", level:1
+      name:"Vagrant", level:1
     },             
     {
-      name:"PHP", category:"lang", level:4
+      name:"PHP", level:4
     },
     {
-      name:"Phalcon", category:"framework", level:1
+      name:"Phalcon", level:1
     },
     {
-      name:"Laravel", category:"framework", level:1
+      name:"Laravel", level:1
     },
     {
-      name:"Zephir", category:"lang", level:1
+      name:"Zephir", level:1
     },        
     {
-      name:"IntelliJ", category:"tool", level:3
+      name:"IntelliJ", level:3
     },   
     {
-      name:"SQL", category:"lang", level:4
+      name:"SQL", level:4
     },             
     {
-      name:"MySQL", category:"system", level:3
+      name:"MySQL", level:3
     },
     {
-      name:"SQLite", category:"system", level:3
+      name:"SQLite", level:3
     },
     {
-      name:"Redis", category:"system", level:2
+      name:"Redis", level:2
     },
     {
-      name:"AWS", category:"service", level:1
+      name:"AWS", level:1
     },
     {
-      name:"CircleCI", category:"service", level:2
+      name:"CircleCI", level:2
     },
     {
-      name:"HTML", category:"lang", level:3
+      name:"HTML", level:3
     },
     {
-      name:"css", category:"lang", level:3
+      name:"css", level:3
     },
     {
-      name:"sass", category:"lang", level:3
+      name:"sass", level:3
     },
     {
-      name:"JavaScript", category:"lang", level:3
+      name:"JavaScript", level:3
     },
     {
-      name:"Vue.js", category:"framework", level:3
+      name:"Vue.js", level:3
     },
     {
-      name:"Go", category:"lang", level:2
+      name:"Go", level:2
     },
     {
-      name:"Java", category:"lang", level:3
+      name:"Java", level:3
     },
     {
-      name:"Android Studio", category:"tool", level:2
+      name:"Android Studio", level:2
     },
     {
-      name:"cocos2d-x", category:"framework", level:1
+      name:"cocos2d-x", level:1
     },            
     {
-      name:"XCode", category:"tool", level:2
+      name:"XCode", level:2
     },            
     {
-      name:"CocosCreater", category:"framework", level:2
+      name:"CocosCreater", level:2
     },
     {
-      name:"Microsoft 365", category:"tool", level:3
+      name:"Microsoft 365", level:3
     },       
     {
-      name:"MATLAB", category:"lang", level:1
+      name:"MATLAB", level:1
     },                  
     {
-      name:"Prolog", category:"lang", level:1
+      name:"Prolog", level:1
     },
     {
-      name:"Perl", category:"lang", level:1
+      name:"Perl", level:1
     },         
   ];

@@ -47,9 +47,7 @@
           <div>
             <ul>
               <li v-for="item in skills">
-                <skillicon :category="item.category" :level="item.level">
-                  {{item.name}}
-                </skillicon>
+                <skillicon :name="item.name" :level="item.level" />
               </li>
             </ul>
           </div>
@@ -90,7 +88,7 @@ import myheader from "@/components/Header.vue";
 import foot from "@/components/Foot.vue";
 import mycode from "@/components/Code.vue";
 import serviceicon from "@/components/ServiceIcon.vue";
-import skillicon from "@/components/SkillIcon.vue";
+import skillicon from "@/components/SkillIconAutoCategory.vue";
 import skillsets from "@/data/skillsets";
 import mottocode from "@/data/mottocode";
 import mymission from "@/components/home/MyMission.vue";
