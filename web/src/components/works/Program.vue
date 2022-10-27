@@ -16,16 +16,16 @@
     <ul id="web-ul">
       <li v-for="item in web">
         <mymodel>
-        <template #title>
-          <mycaption :title="item.title" :caption="item.caption">
-          <div class="work">
-            <img :src="item.img" width="300">
-          </div>
-        </mycaption>        
-        </template>
-        <template #contents>
-          <component :is="item.detail"/>
-        </template>
+          <template #title>
+            <mycaption :title="item.title" :caption="item.caption">
+              <div class="work">
+                <img :src="item.img" width="300">
+              </div>
+            </mycaption>
+          </template>
+          <template #contents>
+            <component :is="item.detail" />
+          </template>
         </mymodel>
       </li>
     </ul>
@@ -34,17 +34,21 @@
   <div class="contents-wrap" id="library-wrap">
     <ul id="library-ul">
       <li v-for="item in library">
-        <mycaption :title="item.title" :caption="item.caption">
-          <div class="work">
-            <img :src="item.img" width="300">
-          </div>
-        </mycaption>
+        <mylink :url="item.detail" absolute target="_blank">
+          <mycaption :title="item.lang" :caption="item.caption">
+            <div class="work-library">
+              <img v-if="item.img" :src="item.img" width="300">
+              <p v-else>{{item.title}}</p>
+            </div>
+          </mycaption>
+        </mylink>
       </li>
     </ul>
   </div>
 </template>
   
 <script>
+import mylink from "@/components/Link.vue"
 import mymodel from "@/components/Modal.vue"
 import mycaption from "@/components/FigCaption.vue"
 
@@ -78,24 +82,54 @@ export default {
         },
       ],
       library: [
-
+        {
+          title: "Mkanta",
+          lang: "C++20",
+          caption: "Reflection Library",
+          detail: "https://github.com/tyanmahou/Mkanta",
+        },
+        {
+          title: "Emaject",
+          lang: "C++20",
+          caption: "Dependency Injection Library",
+          detail: "https://github.com/tyanmahou/Emaject",
+        },
+        {
+          title: "Magico",
+          lang: "C++17",
+          caption: "Concept Library",
+          detail: "https://github.com/tyanmahou/Magico",
+        },
+        {
+          title: "S3DTiled",
+          lang: "C++/OpenSiv3D",
+          caption: "Tiled Support",
+          detail: "https://github.com/tyanmahou/S3DTiled",
+        },
+        {
+          title: "SQLite-for-Siv3D",
+          lang: "C++/OpenSiv3D",          
+          caption: "SQLite Support",
+          detail: "https://github.com/tyanmahou/SQLite-for-Siv3D",
+        },
       ],
     };
   },
   components: {
+    mylink,
     mymodel,
     mycaption,
   },
   mounted() {
     const updateContentMargin = (id) => {
       if (window.matchMedia('(max-width: 420px)').matches) {
-          document.getElementById(`${id}-ul`).setAttribute("style", `margin-left: 0px`);
-          return;
-        }
-        const width = document.getElementById(`${id}-wrap`).clientWidth - 20;
-        const itemNum = Math.floor(width / 310);
-        const left = (width - itemNum * 310) / 2;
-        document.getElementById(`${id}-ul`).setAttribute("style", `margin-left: ${left}px`);
+        document.getElementById(`${id}-ul`).setAttribute("style", `margin-left: 0px`);
+        return;
+      }
+      const width = document.getElementById(`${id}-wrap`).clientWidth - 20;
+      const itemNum = Math.floor(width / 310);
+      const left = (width - itemNum * 310) / 2;
+      document.getElementById(`${id}-ul`).setAttribute("style", `margin-left: ${left}px`);
     };
 
     {
@@ -138,6 +172,20 @@ ul {
   height: 225px;
   overflow: hidden;
   text-align: center;
+}
+
+.work-library {
+  display: table-cell;
+  vertical-align: middle;
+  width: 300px;
+  height: 125px;
+  text-align: center;
+  background: $color-text;
+  p {
+    color: $color-text-light;
+    font-weight: bold;
+    font-size: 30px;
+  }
 }
 </style>
   
