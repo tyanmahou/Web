@@ -50,6 +50,7 @@ import mycaption from "@/components/FigCaption.vue"
 
 // Web
 import webHomePage from "@/components/works/program/web/HomePage.vue"
+import webColorfulTone from "@/components/works/program/web/ColorfulTone.vue"
 
 export default {
   name: "Program",
@@ -71,9 +72,9 @@ export default {
         },
         {
           title: "ColorfulTone",
-          caption: "公式ページ",
+          caption: "公式サイト",
           img: require("@/assets/works/program/web/ColorfulTone/logo.png"),
-          detail: webHomePage,
+          detail: webColorfulTone,
         },
       ],
       library: [
