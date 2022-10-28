@@ -16,22 +16,21 @@
             <h3>WEB</h3>
         </div>
         <div class="text">
-            <a href="https://colorfultone.tyanmahou.com/web/"
-                target="_blank">https://colorfultone.tyanmahou.com/web/</a>
+        <autolink url="https://colorfultone.tyanmahou.com/web/" />
         </div>
         <div class="to-left">
             <h3>PLAY</h3>
         </div>
         <div class="text">
-            <a href="https://www.freem.ne.jp/win/game/14167" target="_blank">https://www.freem.ne.jp/win/game/14167</a>
+            <autolink url="https://www.freem.ne.jp/win/game/14167" />
         </div>
         <div class="to-left">
             <h3>REPOSITORY</h3>
         </div>
         <div class="text">
         <ul>
-        <li><a href="https://github.com/tyanmahou/ColorfulTone" target="_blank">https://github.com/tyanmahou/ColorfulTone</a></li>
-        <li><a href="https://github.com/tyanmahou/ColorfulTone_API" target="_blank">https://github.com/tyanmahou/ColorfulTone_API</a></li>
+        <li><autolink url="https://github.com/tyanmahou/ColorfulTone" /></li>
+        <li><autolink url="https://github.com/tyanmahou/ColorfulTone_API" /></li>
         </ul>
         </div>        
         <div class="to-left">
@@ -69,6 +68,7 @@
     
 <script>
 import workbase from "@/components/works/program/WorkBase.vue"
+import autolink from "@/components/AutoLink.vue"
 import skillicon from "@/components/SkillIconAutoCategory.vue"
 
 export default {
@@ -83,6 +83,7 @@ export default {
         };
     },
     components: {
+        autolink,
         skillicon,
         workbase
     }

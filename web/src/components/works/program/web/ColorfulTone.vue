@@ -14,7 +14,7 @@
             <h3>URL</h3>
         </div>
         <div class="text">
-            <a href="https://colorfultone.tyanmahou.com/web/" target="_blank">https://colorfultone.tyanmahou.com/web/</a>
+            <autolink url="https://colorfultone.tyanmahou.com/web/" />
         </div>
         <div class="to-left">
             <h3>DEVELOP</h3>
@@ -27,6 +27,7 @@
     
 <script>
 import workbase from "@/components/works/program/WorkBase.vue"
+import autolink from "@/components/AutoLink.vue"
 import skillicon from "@/components/SkillIconAutoCategory.vue"
 
 export default {
@@ -42,6 +43,7 @@ export default {
         };
     },
     components: {
+        autolink,
         skillicon,
         workbase
     }

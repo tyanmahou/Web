@@ -13,13 +13,13 @@
             <h3>URL</h3>
         </div>
         <div class="text">
-            <a href="https://tyanmahou.com" target="_blank">https://tyanmahou.com</a>
+            <autolink url="https://tyanmahou.com"/>
         </div>
         <div class="to-left">
             <h3>REPOSITORY</h3>
         </div>
         <div class="text">
-            <a href="https://github.com/tyanmahou/Web" target="_blank">https://github.com/tyanmahou/Web</a>
+            <autolink url="https://github.com/tyanmahou/Web"/>
         </div>
         <div class="to-left">
             <h3>DEVELOP</h3>
@@ -77,6 +77,7 @@
     
 <script>
 import workbase from "@/components/works/program/WorkBase.vue"
+import autolink from "@/components/AutoLink.vue"
 import skillicon from "@/components/SkillIconAutoCategory.vue"
 
 export default {
@@ -93,6 +94,7 @@ export default {
         };
     },
     components: {
+        autolink,
         skillicon,
         workbase
     }
