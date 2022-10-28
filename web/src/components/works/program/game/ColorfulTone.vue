@@ -3,6 +3,7 @@
         <h2>ColorfulTone</h2>
         <div>
         <img src="@/assets/works/program/game/ColorfulTone/logo.png" width="300">
+        <slideshow />
         </div>
         <div class="skill">
             <skillicon v-for="s in skills" :name="s" />
@@ -70,6 +71,7 @@
 import workbase from "@/components/works/program/WorkBase.vue"
 import autolink from "@/components/AutoLink.vue"
 import skillicon from "@/components/SkillIconAutoCategory.vue"
+import slideshow from "@/components/Slideshow.vue"
 
 export default {
     name: "ColorfulTone",
@@ -85,6 +87,7 @@ export default {
     components: {
         autolink,
         skillicon,
+        slideshow,
         workbase
     }
 };

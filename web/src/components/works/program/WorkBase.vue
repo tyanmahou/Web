@@ -24,7 +24,6 @@ export default {
 }
 
 :deep(.work-contents) {
-    max-width: 900px;
     
     .skill {
         margin: 5px 0 10px 0;
