@@ -100,10 +100,5 @@ export default {
 </script>
     
 <style lang="scss" scoped>
-@import "@/scss/common";
-
-ul {
-    text-align: left;
-}
 </style>
     

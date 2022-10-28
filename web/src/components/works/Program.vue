@@ -3,11 +3,18 @@
   <div class="contents-wrap" id="game-wrap">
     <ul id="game-ul">
       <li v-for="item in game">
-        <mycaption :title="item.title" :caption="item.caption">
-          <div class="work">
-            <img :src="item.img" width="300">
-          </div>
-        </mycaption>
+        <mymodel>
+          <template #title>
+            <mycaption :title="item.title" :caption="item.caption">
+              <div class="work">
+                <img :src="item.img" width="300">
+              </div>
+            </mycaption>
+          </template>
+          <template #contents>
+            <component :is="item.detail" />
+          </template>
+        </mymodel>
       </li>
     </ul>
   </div>
@@ -52,6 +59,9 @@ import mylink from "@/components/Link.vue"
 import mymodel from "@/components/Modal.vue"
 import mycaption from "@/components/FigCaption.vue"
 
+// Game
+import gameColorfulTone from "@/components/works/program/game/ColorfulTone.vue"
+
 // Web
 import webHomePage from "@/components/works/program/web/HomePage.vue"
 import webColorfulTone from "@/components/works/program/web/ColorfulTone.vue"
@@ -64,7 +74,8 @@ export default {
         {
           title: "ColorfulTone",
           caption: "音楽ゲーム",
-          img: "https://colorfultone.tyanmahou.com/web/img/slide/Screenshot1.png",
+          img: require("@/assets/works/program/game/ColorfulTone/Screenshot1.png"),
+          detail: gameColorfulTone,
         },
       ],
       web: [

@@ -2,7 +2,7 @@
     <div class="wrap">
         <div class="work-contents">
             <div class="main-container">
-            <slot />
+                <slot />
             </div>
         </div>
     </div>
@@ -25,7 +25,7 @@ export default {
 
 :deep(.work-contents) {
     max-width: 900px;
-
+    
     .skill {
         margin: 5px 0 10px 0;
     }
@@ -37,6 +37,14 @@ export default {
 
     .to-left {
         text-align: left;
+    }
+
+    ul {
+        text-align: left;
+
+        li {
+            margin-left: 15px;
+        }
     }
 }
 </style>

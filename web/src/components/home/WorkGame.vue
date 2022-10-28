@@ -1,7 +1,7 @@
 <template>
     <mycaption title="ColorfulTone" caption="音楽ゲーム">
         <mylink url="https://colorfultone.tyanmahou.com/web/" absolute target="_blank">
-            <img src="https://colorfultone.tyanmahou.com/web/img/slide/Screenshot1.png" width="400">
+            <img src="@/assets/works/program/game/ColorfulTone/Screenshot1.png" width="400">
         </mylink>
     </mycaption>
 </template>
