@@ -3,7 +3,7 @@
         <h2>ColorfulTone</h2>
         <div>
         <img src="@/assets/works/program/game/ColorfulTone/logo.png" width="300">
-        <slideshow />
+        <slideshow width ="900" :slide="slide" />
         </div>
         <div class="skill">
             <skillicon v-for="s in skills" :name="s" />
@@ -77,6 +77,14 @@ export default {
     name: "ColorfulTone",
     data() {
         return {
+            slide: [
+                require("@/assets/works/program/game/ColorfulTone/Screenshot1.png"),
+                require("@/assets/works/program/game/ColorfulTone/Screenshot2.png"),
+                require("@/assets/works/program/game/ColorfulTone/Screenshot3.png"),
+                require("@/assets/works/program/game/ColorfulTone/Screenshot4.png"),
+                require("@/assets/works/program/game/ColorfulTone/Screenshot5.png"),
+                require("@/assets/works/program/game/ColorfulTone/Screenshot6.png"),
+            ],            
             skills: [
                 "C++",
                 "Siv3D",
