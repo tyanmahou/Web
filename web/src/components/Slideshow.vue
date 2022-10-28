@@ -33,6 +33,7 @@
 export default {
     name: 'Slideshow',
     props: {
+        slide: Array,
         width: {
             type: Number,
             default: 900
@@ -54,14 +55,6 @@ export default {
         return {
             pageNo: 0,
             isAnimating: false,
-            slide: [
-                require("@/assets/works/program/game/ColorfulTone/Screenshot1.png"),
-                require("@/assets/works/program/game/ColorfulTone/Screenshot2.png"),
-                require("@/assets/works/program/game/ColorfulTone/Screenshot3.png"),
-                require("@/assets/works/program/game/ColorfulTone/Screenshot4.png"),
-                require("@/assets/works/program/game/ColorfulTone/Screenshot5.png"),
-                require("@/assets/works/program/game/ColorfulTone/Screenshot6.png"),
-            ],
             timer: null,
         }
     },
@@ -91,9 +84,9 @@ export default {
             }, this.interval);
         },
         listStlye() {
-            const left = -this.contentPercent * this.slide.length * (this.slide.length <= 1 ? 2 : 1)
-                + (100 - this.contentPercent) / 2
-                - this.contentPercent * this.pageNo;
+            const left = -this.fixedPercent() * this.slide.length * (this.slide.length <= 1 ? 2 : 1)
+                + (100 - this.fixedPercent()) / 2
+                - this.fixedPercent() * this.pageNo;
             return {
                 "transition": this.isAnimating ? "left ease .3s" : "none",
                 "left": `${left}%`,
@@ -101,7 +94,7 @@ export default {
         },
         imageStlye(index) {
             return {
-                "max-width": `${this.contentPercent}%`,
+                "max-width": `${this.fixedPercent()}%`,
                 "transition": this.isAnimating ? "all ease .3s" : "none",
                 "transform": `scale(${this.pageNo == index ? 1 : 0.8})`,
                 "opacity": `${this.pageNo == index ? 1 : 0.5}`
@@ -113,6 +106,12 @@ export default {
 
             clearInterval(this.timer);
             this.startTimer();
+        },
+        fixedPercent() {
+            if (window.matchMedia('(max-width: 420px)').matches){
+                return Math.max(100, this.contentPercent);
+            }
+            return this.contentPercent;
         },
     },
     computed: {
@@ -176,6 +175,10 @@ export default {
         color: $color-text-light;
         background-color: #00000040;
     }
+    @media only screen and (max-width: $layout-mobile) {
+        font-size: 20px;
+        width: 30px;
+    }      
 }
 
 .prev-btn {

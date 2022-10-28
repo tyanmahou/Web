@@ -3,7 +3,7 @@
         <h2>ColorfulTone</h2>
         <div>
         <img src="@/assets/works/program/game/ColorfulTone/logo.png" width="300">
-        <slideshow width ="900" :slide="slide" />
+        <slideshow width ="900" :slide="slide"/>
         </div>
         <div class="skill">
             <skillicon v-for="s in skills" :name="s" />
@@ -97,7 +97,8 @@ export default {
         skillicon,
         slideshow,
         workbase
-    }
+    },
+    
 };
 </script>
     
