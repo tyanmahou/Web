@@ -44,6 +44,7 @@ export default {
                 require("@/assets/works/program/game/AbyssDream/pic01.png"),
                 require("@/assets/works/program/game/AbyssDream/pic02.png"),
                 require("@/assets/works/program/game/AbyssDream/pic03.png"),
+                require("@/assets/works/program/game/AbyssDream/pic04.png"),
             ],
             skills: [
                 "C++",
