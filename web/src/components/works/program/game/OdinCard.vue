@@ -2,7 +2,7 @@
     <workbase>
         <h2>OdinCard</h2>
         <div>
-            <img src="@/assets/works/program/game/OdinCard/pic99.gif" />
+            <img src="@/assets/works/program/game/OdinCard/pic99.gif" width ="600"/>
             <slideshow width="900" :slide="slide" />
         </div>
         <div class="skill">

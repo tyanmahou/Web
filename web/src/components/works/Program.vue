@@ -60,10 +60,11 @@ import mymodel from "@/components/Modal.vue"
 import mycaption from "@/components/FigCaption.vue"
 
 // Game
-import gameColorfulTone from "@/components/works/program/game/ColorfulTone.vue"
 import gamei19vsi8 from "@/components/works/program/game/i19vsi8.vue"
+import gameTimeTravelerHohei from "@/components/works/program/game/TimeTravelerHohei.vue"
 import gameOdinCard from "@/components/works/program/game/OdinCard.vue"
 import gameSoldGrow from "@/components/works/program/game/SoldGrow.vue"
+import gameColorfulTone from "@/components/works/program/game/ColorfulTone.vue"
 
 // Web
 import webHomePage from "@/components/works/program/web/HomePage.vue"
@@ -85,6 +86,12 @@ export default {
           caption: "放置ゲーム",
           img: require("@/assets/works/program/game/SoldGrow/pic01.png"),
           detail: gameSoldGrow,
+        },        
+        {
+          title: "タイムトラベラー歩兵",
+          caption: "縦スクロールクソゲー",
+          img: require("@/assets/works/program/game/TimeTravelerHohei/pic01.png"),
+          detail: gameTimeTravelerHohei,
         },        
         {
           title: "OdinCard",

@@ -2,7 +2,7 @@
     <workbase>
         <h2>伊19VS伊8</h2>
         <div>
-        <img src="@/assets/works/program/game/i19vsi8/pic99.gif"/>
+        <img src="@/assets/works/program/game/i19vsi8/pic99.gif" width ="600"/>
         <slideshow width ="900" :slide="slide"/>
         </div>
         <div class="skill">
