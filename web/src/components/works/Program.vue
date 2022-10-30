@@ -61,9 +61,10 @@ import mycaption from "@/components/FigCaption.vue"
 
 // Game
 import gamei19vsi8 from "@/components/works/program/game/i19vsi8.vue"
+import gameOdinCard from "@/components/works/program/game/OdinCard.vue"
 import gameTimeTravelerHohei from "@/components/works/program/game/TimeTravelerHohei.vue"
 import gamePercent5 from "@/components/works/program/game/Percent5.vue"
-import gameOdinCard from "@/components/works/program/game/OdinCard.vue"
+import gameAbyssDream from "@/components/works/program/game/AbyssDream.vue"
 import gameSoldGrow from "@/components/works/program/game/SoldGrow.vue"
 import gameMoguMoguSTG from "@/components/works/program/game/MoguMoguSTG.vue"
 import gameColorfulTone from "@/components/works/program/game/ColorfulTone.vue"
@@ -95,6 +96,12 @@ export default {
           img: require("@/assets/works/program/game/SoldGrow/pic01.png"),
           detail: gameSoldGrow,
         },  
+        {
+          title: "AbyssDream",
+          caption: "横スクロールアクションゲーム",
+          img: require("@/assets/works/program/game/AbyssDream/pic01.png"),
+          detail: gameAbyssDream,
+        },         
         {
           title: "%5",
           caption: "落ちものパズルゲーム",
