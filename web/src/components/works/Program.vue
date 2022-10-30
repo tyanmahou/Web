@@ -62,6 +62,7 @@ import mycaption from "@/components/FigCaption.vue"
 // Game
 import gamei19vsi8 from "@/components/works/program/game/i19vsi8.vue"
 import gameTimeTravelerHohei from "@/components/works/program/game/TimeTravelerHohei.vue"
+import gamePercent5 from "@/components/works/program/game/Percent5.vue"
 import gameOdinCard from "@/components/works/program/game/OdinCard.vue"
 import gameSoldGrow from "@/components/works/program/game/SoldGrow.vue"
 import gameMoguMoguSTG from "@/components/works/program/game/MoguMoguSTG.vue"
@@ -93,7 +94,13 @@ export default {
           caption: "放置ゲーム",
           img: require("@/assets/works/program/game/SoldGrow/pic01.png"),
           detail: gameSoldGrow,
-        },        
+        },  
+        {
+          title: "%5",
+          caption: "落ちものパズルゲーム",
+          img: require("@/assets/works/program/game/%5/pic01.png"),
+          detail: gamePercent5,
+        },               
         {
           title: "タイムトラベラー歩兵",
           caption: "縦スクロールクソゲー",
