@@ -2,21 +2,13 @@
     <div class="slideshow">
         <div class="main-slide" :style="`max-width: ${width}px;`">
             <div class="list" :style="listStlye()" @transitionend="onTransitionEnd">
-                <template v-if="slide.length <= 1" v-for="(e, index) in slide" :key="index">
-                    <img :src="e" :width="width" :style="imageStlye(index - this.slide.length * 2)">
-                </template>
-                <template v-for="(e, index) in slide" :key="index">
-                    <img :src="e" :width="width" :style="imageStlye(index - this.slide.length)">
-                </template>
+                <img :src="slide[(2 * this.slide.length - 2) % this.slide.length]" :width="width" :style="imageStlye(-2)">
+                <img :src="slide[(2 * this.slide.length - 1) % this.slide.length]" :width="width" :style="imageStlye(-1)">                
                 <template v-for="(e, index) in slide" :key="index">
                     <img :src="e" :width="width" :style="imageStlye(index)">
                 </template>
-                <template v-for="(e, index) in slide" :key="index">
-                    <img :src="e" :width="width" :style="imageStlye(index + this.slide.length)">
-                </template>
-                <template v-if="slide.length <= 1" v-for="(e, index) in slide" :key="index">
-                    <img :src="e" :width="width" :style="imageStlye(index + this.slide.length * 2)">
-                </template>
+                <img :src="slide[(this.slide.length) % this.slide.length]" :width="width" :style="imageStlye(this.slide.length)">
+                <img :src="slide[(this.slide.length + 1) % this.slide.length]" :width="width" :style="imageStlye(this.slide.length + 1)">                
             </div>
             <span class="prev-btn" @click="changePage(pageNo - 1)" />
             <span class="next-btn" @click="changePage(pageNo + 1)" />
@@ -84,9 +76,10 @@ export default {
             }, this.interval);
         },
         listStlye() {
-            const left = -this.fixedPercent() * this.slide.length * (this.slide.length <= 1 ? 2 : 1)
-                + (100 - this.fixedPercent()) / 2
-                - this.fixedPercent() * this.pageNo;
+            const percent = this.fixedPercent();
+            const left = -percent * 2
+                + (100 - percent) / 2
+                - percent * this.pageNo;
             return {
                 "transition": this.isAnimating ? "left ease .3s" : "none",
                 "left": `${left}%`,
