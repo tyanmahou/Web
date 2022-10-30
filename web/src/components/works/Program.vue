@@ -61,6 +61,7 @@ import mycaption from "@/components/FigCaption.vue"
 
 // Game
 import gameColorfulTone from "@/components/works/program/game/ColorfulTone.vue"
+import gamei19vsi8 from "@/components/works/program/game/i19vsi8.vue"
 
 // Web
 import webHomePage from "@/components/works/program/web/HomePage.vue"
@@ -76,6 +77,12 @@ export default {
           caption: "音楽ゲーム",
           img: require("@/assets/works/program/game/ColorfulTone/Screenshot1.png"),
           detail: gameColorfulTone,
+        },
+        {
+          title: "伊19VS伊8",
+          caption: "クソゲー",
+          img: require("@/assets/works/program/game/i19vsi8/pic01.png"),
+          detail: gamei19vsi8,
         },
       ],
       web: [
@@ -183,6 +190,11 @@ ul {
   height: 225px;
   overflow: hidden;
   text-align: center;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;    
+  }
 }
 
 .work-library {
