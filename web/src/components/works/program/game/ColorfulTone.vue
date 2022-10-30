@@ -39,7 +39,7 @@
         </div>
         <div class="text">
             2016～2022<br /><br />
-            プログラマー:mahou<br />
+            プログラマー：mahou<br />
             デザイン：mahou, CIWS<br />
             音楽：ShinaLi, arisan<br />
             譜面：mahou, arisan, kotobuki<br />

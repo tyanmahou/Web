@@ -38,7 +38,7 @@ import skillicon from "@/components/SkillIconAutoCategory.vue"
 import slideshow from "@/components/Slideshow.vue"
 
 export default {
-    name: "ColorfulTone",
+    name: "i19vsi8",
     data() {
         return {
             slide: [
