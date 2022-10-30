@@ -66,6 +66,7 @@ import gameTimeTravelerHohei from "@/components/works/program/game/TimeTravelerH
 import gamePercent5 from "@/components/works/program/game/Percent5.vue"
 import gameAbyssDream from "@/components/works/program/game/AbyssDream.vue"
 import gameSoldGrow from "@/components/works/program/game/SoldGrow.vue"
+import gameFishGame from "@/components/works/program/game/FishGame.vue"
 import gameMoguMoguSTG from "@/components/works/program/game/MoguMoguSTG.vue"
 import gameColorfulTone from "@/components/works/program/game/ColorfulTone.vue"
 
@@ -90,6 +91,12 @@ export default {
           img: require("@/assets/works/program/game/MoguMoguSTG/pic01.png"),
           detail: gameMoguMoguSTG,
         },        
+        {
+          title: "【ハッカソン】FishGame",
+          caption: "横スクロールゲーム",
+          img: require("@/assets/works/program/game/FishGame/pic01.png"),
+          detail: gameFishGame,
+        },         
         {
           title: "【未完成】SoldGrow",
           caption: "放置ゲーム",
