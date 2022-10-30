@@ -2,7 +2,7 @@
     <workbase>
         <h2>もぐもぐSTG</h2>
         <div>
-            <iframe src="https://www.youtube.com/embed/A94zoT6p80k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <youtube url="https://www.youtube.com/embed/A94zoT6p80k" />
         <slideshow width ="900" :slide="slide"/>
         </div>
         <div class="skill">
@@ -27,6 +27,7 @@ import workbase from "@/components/works/program/WorkBase.vue"
 import autolink from "@/components/AutoLink.vue"
 import skillicon from "@/components/SkillIconAutoCategory.vue"
 import slideshow from "@/components/Slideshow.vue"
+import youtube from "@/components/widgets/Youtube/Embed.vue"
 
 export default {
     name: "MoguMoguSTG",
@@ -47,6 +48,7 @@ export default {
         autolink,
         skillicon,
         slideshow,
+        youtube,
         workbase
     },
     
