@@ -64,6 +64,7 @@ import gamei19vsi8 from "@/components/works/program/game/i19vsi8.vue"
 import gameTimeTravelerHohei from "@/components/works/program/game/TimeTravelerHohei.vue"
 import gameOdinCard from "@/components/works/program/game/OdinCard.vue"
 import gameSoldGrow from "@/components/works/program/game/SoldGrow.vue"
+import gameMoguMoguSTG from "@/components/works/program/game/MoguMoguSTG.vue"
 import gameColorfulTone from "@/components/works/program/game/ColorfulTone.vue"
 
 // Web
@@ -81,6 +82,12 @@ export default {
           img: require("@/assets/works/program/game/ColorfulTone/Screenshot1.png"),
           detail: gameColorfulTone,
         },
+        {
+          title: "【未完成】もぐもぐSTG",
+          caption: "縦シューティングゲーム",
+          img: require("@/assets/works/program/game/MoguMoguSTG/pic01.png"),
+          detail: gameMoguMoguSTG,
+        },        
         {
           title: "【未完成】SoldGrow",
           caption: "放置ゲーム",
