@@ -63,6 +63,7 @@ import mycaption from "@/components/FigCaption.vue"
 import gameColorfulTone from "@/components/works/program/game/ColorfulTone.vue"
 import gamei19vsi8 from "@/components/works/program/game/i19vsi8.vue"
 import gameOdinCard from "@/components/works/program/game/OdinCard.vue"
+import gameSoldGrow from "@/components/works/program/game/SoldGrow.vue"
 
 // Web
 import webHomePage from "@/components/works/program/web/HomePage.vue"
@@ -79,6 +80,12 @@ export default {
           img: require("@/assets/works/program/game/ColorfulTone/Screenshot1.png"),
           detail: gameColorfulTone,
         },
+        {
+          title: "【未完成】SoldGrow",
+          caption: "放置ゲーム",
+          img: require("@/assets/works/program/game/SoldGrow/pic01.png"),
+          detail: gameSoldGrow,
+        },        
         {
           title: "OdinCard",
           caption: "テーブルゲーム",

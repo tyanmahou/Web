@@ -2,6 +2,7 @@
     <workbase>
         <h2>伊19VS伊8</h2>
         <div>
+        <img src="@/assets/works/program/game/i19vsi8/pic99.gif"/>
         <slideshow width ="900" :slide="slide"/>
         </div>
         <div class="skill">
@@ -47,7 +48,6 @@ export default {
                 require("@/assets/works/program/game/i19vsi8/pic03.png"),
                 require("@/assets/works/program/game/i19vsi8/pic04.png"),
                 require("@/assets/works/program/game/i19vsi8/pic05.png"),
-                require("@/assets/works/program/game/i19vsi8/pic99.gif"),
             ],            
             skills: [
                 "C",

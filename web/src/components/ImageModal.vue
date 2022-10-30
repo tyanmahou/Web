@@ -1,5 +1,5 @@
 <template>
-    <modal>
+    <modal :el="el">
         <template #title>
             <img :src="src" :width="width" :height="height" class="image-modal" />
         </template>
@@ -16,6 +16,10 @@ export default {
     name: "ImageModal",
     props: {
         src: String,
+        el: {
+            type: Object,
+            default: null,
+        },
         width: {
             type: String,
             default: null

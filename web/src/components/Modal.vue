@@ -21,6 +21,10 @@
 export default {
   name: 'ModalWindow',
   props: {
+    el: {
+      type: Object,
+      default: null,
+    },
   },
 
   data() {
@@ -33,10 +37,18 @@ export default {
       this.isOpen = isOpen;
     },
     beforeEnter(el) {
-      document.body.setAttribute("style", `overflow: hidden`);
+      if (this.el) {
+        this.el.setAttribute("style", `overflow: hidden`);
+      } else {
+        document.body.setAttribute("style", `overflow: hidden`);
+      }
     },
     afterLeave(el) {
-      document.body.setAttribute("style", `overflow: auto`);
+      if (this.el) {
+        this.el.setAttribute("style", `overflow: auto`);
+      } else {
+        document.body.setAttribute("style", `overflow: auto`);
+      }
     }
   }
 };
@@ -69,6 +81,7 @@ export default {
   z-index: 1000;
   overflow: auto;
   text-align: center;
+
   & .modal-content {
     display: inline-block;
     margin: 60px 20px 60px 20px;
@@ -84,13 +97,15 @@ export default {
   border-radius: 25px;
   cursor: pointer;
   transition: all .3s;
-  &:hover{
+
+  &:hover {
     background: $color-text-light;
 
     span {
       background: $color-theme;
     }
   }
+
   span {
     display: inline-block;
 

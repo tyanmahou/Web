@@ -2,17 +2,18 @@
     <workbase>
         <h2>OdinCard</h2>
         <div>
-        <slideshow width ="900" :slide="slide"/>
+            <img src="@/assets/works/program/game/OdinCard/pic99.gif" />
+            <slideshow width="900" :slide="slide" />
         </div>
         <div class="skill">
             <skillicon v-for="s in skills" :name="s" />
         </div>
         <div class="text">
-            1つのPCで2人対戦するじゃんけん系の心理戦テーブルゲームです。<br/><br/>
+            1つのPCで2人対戦するじゃんけん系の心理戦テーブルゲームです。<br /><br />
 
-            毎ターン互いに手持ちのカードから1枚選んで勝負します。<br/>
-            各カードに強さがあり、相手の王のカードを倒すと勝利になります。<br/>
-            また、プレイヤーが任意で特殊能力を持ったカードを1枚選ぶことができます。<br/>
+            毎ターン互いに手持ちのカードから1枚選んで勝負します。<br />
+            各カードに強さがあり、相手の王のカードを倒すと勝利になります。<br />
+            また、プレイヤーが任意で特殊能力を持ったカードを1枚選ぶことができます。<br />
             こちらの作品は、部活動として「U-22 プログラミング・コンテスト2014」に提出しています。
         </div>
         <div class="to-left">
@@ -33,11 +34,13 @@ import workbase from "@/components/works/program/WorkBase.vue"
 import autolink from "@/components/AutoLink.vue"
 import skillicon from "@/components/SkillIconAutoCategory.vue"
 import slideshow from "@/components/Slideshow.vue"
+import imageModal from "@/components/ImageModal.vue"
 
 export default {
     name: "OdinCard",
     data() {
         return {
+            self: null,
             slide: [
                 require("@/assets/works/program/game/OdinCard/pic01.png"),
                 require("@/assets/works/program/game/OdinCard/pic02.png"),
@@ -46,8 +49,7 @@ export default {
                 require("@/assets/works/program/game/OdinCard/pic05.png"),
                 require("@/assets/works/program/game/OdinCard/pic06.png"),
                 require("@/assets/works/program/game/OdinCard/pic07.png"),
-                require("@/assets/works/program/game/OdinCard/pic99.gif"),
-            ],            
+            ],
             skills: [
                 "C",
                 "Windows API",
@@ -58,9 +60,13 @@ export default {
         autolink,
         skillicon,
         slideshow,
-        workbase
+        workbase,
+        imageModal
     },
-    
+    mounted() {
+        console.log(this.$el);
+        this.self = this.$el;
+    }
 };
 </script>
     
