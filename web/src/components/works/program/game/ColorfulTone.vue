@@ -2,7 +2,7 @@
     <workbase>
         <h2>ColorfulTone</h2>
         <div>
-        <img src="@/assets/works/program/game/ColorfulTone/logo.png" width="300">
+        <youtube url="https://www.youtube.com/embed/JRdIV9unlnw"/>
         <slideshow width ="900" :slide="slide"/>
         </div>
         <div class="skill">
@@ -72,6 +72,7 @@ import workbase from "@/components/works/program/WorkBase.vue"
 import autolink from "@/components/AutoLink.vue"
 import skillicon from "@/components/SkillIconAutoCategory.vue"
 import slideshow from "@/components/Slideshow.vue"
+import youtube from "@/components/widgets/Youtube/Embed.vue"
 
 export default {
     name: "ColorfulTone",
@@ -96,7 +97,8 @@ export default {
         autolink,
         skillicon,
         slideshow,
-        workbase
+        workbase,
+        youtube
     },
     
 };
