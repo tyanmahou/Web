@@ -1,9 +1,9 @@
 <template>
-    <mycaption title="ColorfulTone" caption="音楽ゲーム">
-        <mylink url="https://colorfultone.tyanmahou.com/web/" absolute target="_blank">
+    <mylink url="https://colorfultone.tyanmahou.com/web/" absolute target="_blank">
+        <mycaption title="ColorfulTone" caption="音楽ゲーム">
             <img src="@/assets/works/program/game/ColorfulTone/Screenshot1.png" width="400">
-        </mylink>
-    </mycaption>
+        </mycaption>
+    </mylink>
 </template>
   
 <script>
@@ -25,6 +25,7 @@ export default {
   
 <style lang="scss" scoped>
 @import "@/scss/common";
+
 @media only screen and (max-width: $layout-min-width) {
     img {
         width: 100%;

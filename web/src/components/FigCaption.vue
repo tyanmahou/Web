@@ -2,8 +2,10 @@
   <figure>
     <slot />
     <figcaption>
-      <h4>{{title}}</h4>
-      <p>{{caption}}</p>
+      <div class="inner">
+        <h4>{{ title }}</h4>
+        <p>{{ caption }}</p>
+      </div>
     </figcaption>
   </figure>
 </template>
@@ -30,37 +32,35 @@ figure {
   :deep(img) {
     vertical-align: middle;
   }
-  
+
   figcaption {
+    position: absolute;
     text-align: center;
-    h4,
-    p {
-      position: absolute;
-      left: 0;
-      z-index: 2;
-      width: 100%;
-      min-height: 40px;
-      line-height: 40px;
-      background: rgba(0, 0, 0, .6);
-      transition: all .3s;
-    }
+    background: rgba(0, 0, 0, .9);
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+    opacity: 0;
+    transition: all .3s;
+    white-space: pre-line;
 
-    h4 {
-      top: -40px;
-    }
+    .inner {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
 
-    p {
-      bottom: -40px;
+      h4 {
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+      }
     }
   }
-
-  &:hover figcaption {
-    h4 {
-      top: 0;
-    }
-
-    p {
-      bottom: 0;
+  &:hover {
+    figcaption {
+      opacity: 1;
     }
   }
 }
