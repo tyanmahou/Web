@@ -68,6 +68,7 @@ import gameAbyssDream from "@/components/works/program/game/AbyssDream.vue"
 import gameSoldGrow from "@/components/works/program/game/SoldGrow.vue"
 import gameFishGame from "@/components/works/program/game/FishGame.vue"
 import gameplane from "@/components/works/program/game/plane.vue"
+import gameDokiMemoElderlys from "@/components/works/program/game/DokiMemoElderlys.vue"
 import gameMoguMoguSTG from "@/components/works/program/game/MoguMoguSTG.vue"
 import gameColorfulTone from "@/components/works/program/game/ColorfulTone.vue"
 
@@ -86,6 +87,12 @@ export default {
           img: require("@/assets/works/program/game/ColorfulTone/Screenshot1.png"),
           detail: gameColorfulTone,
         },
+        {
+          title: "【ゲームジャム】どきどきメモリアル",
+          caption: "恋愛ノベルゲーム",
+          img: require("@/assets/works/program/game/DokiMemoElderlys/pic01.png"),
+          detail: gameDokiMemoElderlys,
+        }, 
         {
           title: "【未完成】もぐもぐSTG",
           caption: "縦シューティングゲーム",

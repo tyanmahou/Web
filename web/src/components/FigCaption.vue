@@ -39,7 +39,7 @@ figure {
       left: 0;
       z-index: 2;
       width: 100%;
-      height: 40px;
+      min-height: 40px;
       line-height: 40px;
       background: rgba(0, 0, 0, .6);
       transition: all .3s;
