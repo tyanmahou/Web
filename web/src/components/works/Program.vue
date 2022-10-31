@@ -79,6 +79,7 @@ import gameSeiseki from "@/components/works/program/game/Seiseki.vue"
 import gameOtomeNoTome from "@/components/works/program/game/OtomeNoTome.vue"
 import gameMoneyWars from "@/components/works/program/game/MoneyWars.vue"
 import gameEggAndShark from "@/components/works/program/game/EggAndShark.vue"
+import game10secDraw from "@/components/works/program/game/10secDraw.vue"
 import gameGoatGhost from "@/components/works/program/game/GoatGhost.vue"
 import gameSAGASUTyping from "@/components/works/program/game/SAGASUTyping.vue"
 import gameColorfulTone from "@/components/works/program/game/ColorfulTone.vue"
@@ -111,7 +112,13 @@ export default {
           detail: gameGoatGhost,
         },          
         {
-          title: "ゆでたまごとさめ",
+          title: "【ゲームジャム】Siv3Dくん版深夜のお絵かき10秒一本勝負",
+          caption: "お絵描き",
+          img: require("@/assets/works/program/game/10secDraw/pic01.png"),
+          detail: game10secDraw,
+        },        
+        {
+          title: "【ゲームジャム】ゆでたまごとさめ",
           caption: "ミニゲーム",
           img: require("@/assets/works/program/game/EggAndShark/pic01.png"),
           detail: gameEggAndShark,

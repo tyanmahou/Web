@@ -1,0 +1,78 @@
+<template>
+    <workbase>
+        <h2>Siv3Dくん版深夜のお絵かき10秒一本勝負</h2>
+        <div>
+            <img src="@/assets/works/program/game/10secDraw/pic99.gif" width ="600"/>
+            <slideshow width="900" :slide="slide" />
+        </div>
+        <div class="skill">
+            <skillicon v-for="s in skills" :name="s" />
+        </div>
+        <div class="text">
+            10秒でどれだけうまくかけるか！<br/>
+            ※Twitter連携を利用します。<br/><br/>
+			10秒で「Siv3Dくん」を描いて類似度で点数を付けます。<br>
+            <br/>
+            「第10回Siv3dGameJam」投稿作品です。<br/>
+        </div>
+        <div class="to-left">
+            <h3>PLAY</h3>
+        </div>
+        <div class="text">
+            <a href="http://ux.getuploader.com/tyanmahou_game/download/4/10secDraw.zip" target="blank">ダウンロード</a>
+        </div>        
+        <div class="to-left">
+            <h3>REPOSITORY</h3>
+        </div>
+        <div class="text">
+            <autolink url="https://github.com/tyanmahou/Siv3dGameJam10"/>
+        </div>
+        <div class="to-left">
+            <h3>DEVELOP</h3>
+        </div>
+        <div class="text">
+            2016 (1日)<br /><br/>
+            プログラマー：mahou<br>
+            サウンド：mahou<br/>
+            スペシャルサンクス：Siv3D
+        </div>
+    </workbase>
+</template>
+    
+<script>
+import workbase from "@/components/works/program/WorkBase.vue"
+import autolink from "@/components/AutoLink.vue"
+import skillicon from "@/components/SkillIconAutoCategory.vue"
+import youtube from "@/components/widgets/Youtube/Embed.vue"
+import slideshow from "@/components/Slideshow.vue"
+
+export default {
+    name: "10secDraw",
+    data() {
+        return {
+            slide: [
+                require("@/assets/works/program/game/10secDraw/pic01.png"),
+                require("@/assets/works/program/game/10secDraw/pic02.png"),
+                require("@/assets/works/program/game/10secDraw/pic03.png"),
+            ],
+            skills: [
+                "C++",
+                "Siv3D",
+            ],
+        };
+    },
+    components: {
+        autolink,
+        skillicon,
+        slideshow,
+        youtube,
+        workbase
+    },
+
+};
+</script>
+    
+<style lang="scss" scoped>
+
+</style>
+    
