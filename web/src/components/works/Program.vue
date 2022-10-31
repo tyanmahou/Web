@@ -72,6 +72,7 @@ import gameDokiMemoElderlys from "@/components/works/program/game/DokiMemoElderl
 import gameMoguMoguSTG from "@/components/works/program/game/MoguMoguSTG.vue"
 import gameDiceDeveloper from "@/components/works/program/game/DiceDeveloper.vue"
 import gameKanCore from "@/components/works/program/game/KanCore.vue"
+import gameTansakuYusha from "@/components/works/program/game/TansakuYusha.vue"
 import gameColorfulTone from "@/components/works/program/game/ColorfulTone.vue"
 
 // Web
@@ -89,6 +90,12 @@ export default {
           img: require("@/assets/works/program/game/ColorfulTone/Screenshot1.png"),
           detail: gameColorfulTone,
         },
+        {
+          title: "探索勇者",
+          caption: "探索アルゴリズムゲーム",
+          img: require("@/assets/works/program/game/TansakuYusha/pic01.png"),
+          detail: gameTansakuYusha,
+        }, 
         {
           title: "KanCore",
           caption: "クリックゲーム",
