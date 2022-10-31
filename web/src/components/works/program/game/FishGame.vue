@@ -18,7 +18,8 @@
             <h3>DEVELOP</h3>
         </div>
         <div class="text">
-            2014 (8時間)
+            2014 (8時間)<br/><br/>
+            担当：プログラマ
         </div>
     </workbase>
 </template>

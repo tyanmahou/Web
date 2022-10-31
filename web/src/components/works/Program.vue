@@ -67,6 +67,7 @@ import gamePercent5 from "@/components/works/program/game/Percent5.vue"
 import gameAbyssDream from "@/components/works/program/game/AbyssDream.vue"
 import gameSoldGrow from "@/components/works/program/game/SoldGrow.vue"
 import gameFishGame from "@/components/works/program/game/FishGame.vue"
+import gameplane from "@/components/works/program/game/plane.vue"
 import gameMoguMoguSTG from "@/components/works/program/game/MoguMoguSTG.vue"
 import gameColorfulTone from "@/components/works/program/game/ColorfulTone.vue"
 
@@ -90,7 +91,13 @@ export default {
           caption: "縦シューティングゲーム",
           img: require("@/assets/works/program/game/MoguMoguSTG/pic01.png"),
           detail: gameMoguMoguSTG,
-        },        
+        }, 
+        {
+          title: "【ハッカソン】くうこう",
+          caption: "横スクロールゲーム",
+          img: require("@/assets/works/program/game/plane/pic01.png"),
+          detail: gameplane,
+        },                
         {
           title: "【ハッカソン】FishGame",
           caption: "横スクロールゲーム",
