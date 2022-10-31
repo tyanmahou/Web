@@ -31,7 +31,7 @@ import youtube from "@/components/widgets/Youtube/Embed.vue"
 import slideshow from "@/components/Slideshow.vue"
 
 export default {
-    name: "DiceDeveloper",
+    name: "KanCore",
     data() {
         return {
             slide: [
