@@ -81,6 +81,7 @@ import gameMoneyWars from "@/components/works/program/game/MoneyWars.vue"
 import gameEggAndShark from "@/components/works/program/game/EggAndShark.vue"
 import gameToyboxAndLava from "@/components/works/program/game/ToyboxAndLava.vue"
 import game10secDraw from "@/components/works/program/game/10secDraw.vue"
+import gamebabekyaaaaaa from "@/components/works/program/game/babekyaaaaaa.vue"
 import gameGoatGhost from "@/components/works/program/game/GoatGhost.vue"
 import gamePerfectPlayer from "@/components/works/program/game/PerfectPlayer.vue"
 import gameSAGASUTyping from "@/components/works/program/game/SAGASUTyping.vue"
@@ -146,7 +147,13 @@ export default {
           caption: "横スクロールアクション",
           img: require("@/assets/works/program/game/GoatGhost/pic01.jpg"),
           detail: gameGoatGhost,
-        },          
+        },   
+        {
+          title: "バーベきゃ～",
+          caption: "ミニゲーム\n【ハッカソン】",
+          img: require("@/assets/works/program/game/babekyaaaaaa/pic01.png"),
+          detail: gamebabekyaaaaaa,
+        },                
         {
           title: "Siv3Dくん版\n深夜のお絵かき10秒一本勝負",
           caption: "高速お絵描きゲーム\n【ゲームジャム】",
