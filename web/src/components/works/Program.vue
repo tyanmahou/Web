@@ -84,6 +84,7 @@ import game10secDraw from "@/components/works/program/game/10secDraw.vue"
 import gameGoatGhost from "@/components/works/program/game/GoatGhost.vue"
 import gameSAGASUTyping from "@/components/works/program/game/SAGASUTyping.vue"
 import gameJustRoll from "@/components/works/program/game/JustRoll.vue"
+import gameFuFuFuFu from "@/components/works/program/game/FuFuFuFu.vue"
 import gameMathP from "@/components/works/program/game/MathP.vue"
 import gameHakoniA from "@/components/works/program/game/HakoniA.vue"
 import gameColorfulTone from "@/components/works/program/game/ColorfulTone.vue"
@@ -114,7 +115,13 @@ export default {
           caption: "ミニゲーム\n【ゲームジャム】",
           img: require("@/assets/works/program/game/MathP/pic01.png"),
           detail: gameMathP,
-        },        
+        },   
+        {
+          title: "ふふふふ",
+          caption: "カジュアルゲーム\n【ハッカソン】",
+          img: require("@/assets/works/program/game/FuFuFuFu/pic01.jpg"),
+          detail: gameFuFuFuFu,
+        },             
         {
           title: "JustRoll",
           caption: "転がすミニゲーム\n【ゲームジャム】",
