@@ -70,6 +70,7 @@ import gameFishGame from "@/components/works/program/game/FishGame.vue"
 import gameplane from "@/components/works/program/game/plane.vue"
 import gameDokiMemoElderlys from "@/components/works/program/game/DokiMemoElderlys.vue"
 import gameMoguMoguSTG from "@/components/works/program/game/MoguMoguSTG.vue"
+import gameDiceDeveloper from "@/components/works/program/game/DiceDeveloper.vue"
 import gameColorfulTone from "@/components/works/program/game/ColorfulTone.vue"
 
 // Web
@@ -87,6 +88,12 @@ export default {
           img: require("@/assets/works/program/game/ColorfulTone/Screenshot1.png"),
           detail: gameColorfulTone,
         },
+        {
+          title: "DiceDeveloper",
+          caption: "パズルゲーム",
+          img: require("@/assets/works/program/game/DiceDeveloper/pic01.png"),
+          detail: gameDiceDeveloper,
+        }, 
         {
           title: "【ゲームジャム】どきどきメモリアル",
           caption: "恋愛ノベルゲーム",
@@ -253,10 +260,10 @@ ul {
   height: 225px;
   overflow: hidden;
   text-align: center;
-
   img {
     max-width: 100%;
-    max-height: 100%;    
+    max-height: 100%;
+    object-fit: cover;
   }
 }
 
