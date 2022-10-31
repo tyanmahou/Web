@@ -2,7 +2,7 @@
     <workbase>
         <h2>DiceDeveloper</h2>
         <div>
-            <slideshow width="450" :slide="slide" />
+            <slideshow width="400" :slide="slide" />
         </div>
         <div class="skill">
             <skillicon v-for="s in skills" :name="s" />
