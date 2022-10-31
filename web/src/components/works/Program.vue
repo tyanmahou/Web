@@ -77,6 +77,7 @@ import gameNITMicBrothers from "@/components/works/program/game/NITMicBrothers.v
 import gameTakaraSagashi from "@/components/works/program/game/TakaraSagashi.vue"
 import gameSeiseki from "@/components/works/program/game/Seiseki.vue"
 import gameOtomeNoTome from "@/components/works/program/game/OtomeNoTome.vue"
+import gameMoneyWars from "@/components/works/program/game/MoneyWars.vue"
 import gameColorfulTone from "@/components/works/program/game/ColorfulTone.vue"
 import gameSAGASUTyping from "@/components/works/program/game/SAGASUTyping.vue"
 // Web
@@ -100,6 +101,12 @@ export default {
           img: require("@/assets/works/program/game/ColorfulTone/Screenshot1.png"),
           detail: gameColorfulTone,
         },
+        {
+          title: "お年玉うぉーず",
+          caption: "タワーディフェンス",
+          img: require("@/assets/works/program/game/MoneyWars/pic01.png"),
+          detail: gameMoneyWars,
+        },         
         {
           title: "【ゲームジャム】乙女のトメ",
           caption: "横スクロールゲーム",
