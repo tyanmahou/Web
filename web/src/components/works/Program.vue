@@ -82,6 +82,7 @@ import gameEggAndShark from "@/components/works/program/game/EggAndShark.vue"
 import gameToyboxAndLava from "@/components/works/program/game/ToyboxAndLava.vue"
 import game10secDraw from "@/components/works/program/game/10secDraw.vue"
 import gameGoatGhost from "@/components/works/program/game/GoatGhost.vue"
+import gamePerfectPlayer from "@/components/works/program/game/PerfectPlayer.vue"
 import gameSAGASUTyping from "@/components/works/program/game/SAGASUTyping.vue"
 import gameJustRoll from "@/components/works/program/game/JustRoll.vue"
 import gameFuFuFuFu from "@/components/works/program/game/FuFuFuFu.vue"
@@ -133,7 +134,13 @@ export default {
           caption: "脳トレタイピング",
           img: require("@/assets/works/program/game/SAGASUTyping/pic01.png"),
           detail: gameSAGASUTyping,
-        },      
+        },    
+        {
+          title: "PerfectPlayer",
+          caption: "ミニゲーム\n【ゲームジャム】",
+          img: require("@/assets/works/program/game/PerfectPlayer/pic01.png"),
+          detail: gamePerfectPlayer,
+        },           
         {
           title: "GoatGhost",
           caption: "横スクロールアクション",
