@@ -31,7 +31,7 @@ import skillicon from "@/components/SkillIconAutoCategory.vue"
 import slideshow from "@/components/Slideshow.vue"
 
 export default {
-    name: "FishGame",
+    name: "plane",
     data() {
         return {
             slide: [
