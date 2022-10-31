@@ -79,6 +79,7 @@ import gameSeiseki from "@/components/works/program/game/Seiseki.vue"
 import gameOtomeNoTome from "@/components/works/program/game/OtomeNoTome.vue"
 import gameMoneyWars from "@/components/works/program/game/MoneyWars.vue"
 import gameEggAndShark from "@/components/works/program/game/EggAndShark.vue"
+import gameToyboxAndLava from "@/components/works/program/game/ToyboxAndLava.vue"
 import game10secDraw from "@/components/works/program/game/10secDraw.vue"
 import gameGoatGhost from "@/components/works/program/game/GoatGhost.vue"
 import gameSAGASUTyping from "@/components/works/program/game/SAGASUTyping.vue"
@@ -131,6 +132,12 @@ export default {
           img: require("@/assets/works/program/game/10secDraw/pic01.png"),
           detail: game10secDraw,
         },        
+        {
+          title: "おもちゃ箱と溶岩",
+          caption: "ミニゲーム\n【ゲームジャム】",
+          img: require("@/assets/works/program/game/ToyboxAndLava/pic01.png"),
+          detail: gameToyboxAndLava,
+        },
         {
           title: "ゆでたまごとさめ",
           caption: "ミニゲーム\n【ゲームジャム】",
