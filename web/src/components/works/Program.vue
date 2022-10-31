@@ -79,7 +79,9 @@ import gameSeiseki from "@/components/works/program/game/Seiseki.vue"
 import gameOtomeNoTome from "@/components/works/program/game/OtomeNoTome.vue"
 import gameMoneyWars from "@/components/works/program/game/MoneyWars.vue"
 import gameColorfulTone from "@/components/works/program/game/ColorfulTone.vue"
+import gameGoatGhost from "@/components/works/program/game/GoatGhost.vue"
 import gameSAGASUTyping from "@/components/works/program/game/SAGASUTyping.vue"
+
 // Web
 import webHomePage from "@/components/works/program/web/HomePage.vue"
 import webColorfulTone from "@/components/works/program/web/ColorfulTone.vue"
@@ -94,7 +96,13 @@ export default {
           caption: "脳トレタイピング",
           img: require("@/assets/works/program/game/SAGASUTyping/pic01.png"),
           detail: gameSAGASUTyping,
-        },        
+        },      
+        {
+          title: "GoatGhost",
+          caption: "横スクロールアクション",
+          img: require("@/assets/works/program/game/GoatGhost/pic01.jpg"),
+          detail: gameGoatGhost,
+        },          
         {
           title: "ColorfulTone",
           caption: "音楽ゲーム",
