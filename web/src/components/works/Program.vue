@@ -82,6 +82,7 @@ import gameEggAndShark from "@/components/works/program/game/EggAndShark.vue"
 import game10secDraw from "@/components/works/program/game/10secDraw.vue"
 import gameGoatGhost from "@/components/works/program/game/GoatGhost.vue"
 import gameSAGASUTyping from "@/components/works/program/game/SAGASUTyping.vue"
+import gameJustRoll from "@/components/works/program/game/JustRoll.vue"
 import gameColorfulTone from "@/components/works/program/game/ColorfulTone.vue"
 
 // Web
@@ -98,6 +99,12 @@ export default {
           caption: "音楽ゲーム",
           img: require("@/assets/works/program/game/ColorfulTone/Screenshot1.png"),
           detail: gameColorfulTone,
+        },
+        {
+          title: "JustRoll",
+          caption: "転がすミニゲーム\n【ゲームジャム】",
+          img: require("@/assets/works/program/game/JustRoll/pic01.png"),
+          detail: gameJustRoll,
         },
         {
           title: "saがsuタイピング",
