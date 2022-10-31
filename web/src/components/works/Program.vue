@@ -78,9 +78,10 @@ import gameTakaraSagashi from "@/components/works/program/game/TakaraSagashi.vue
 import gameSeiseki from "@/components/works/program/game/Seiseki.vue"
 import gameOtomeNoTome from "@/components/works/program/game/OtomeNoTome.vue"
 import gameMoneyWars from "@/components/works/program/game/MoneyWars.vue"
-import gameColorfulTone from "@/components/works/program/game/ColorfulTone.vue"
+import gameEggAndShark from "@/components/works/program/game/EggAndShark.vue"
 import gameGoatGhost from "@/components/works/program/game/GoatGhost.vue"
 import gameSAGASUTyping from "@/components/works/program/game/SAGASUTyping.vue"
+import gameColorfulTone from "@/components/works/program/game/ColorfulTone.vue"
 
 // Web
 import webHomePage from "@/components/works/program/web/HomePage.vue"
@@ -91,6 +92,12 @@ export default {
   data() {
     return {
       game: [
+        {
+          title: "ColorfulTone",
+          caption: "音楽ゲーム",
+          img: require("@/assets/works/program/game/ColorfulTone/Screenshot1.png"),
+          detail: gameColorfulTone,
+        },
         {
           title: "saがsuタイピング",
           caption: "脳トレタイピング",
@@ -104,10 +111,10 @@ export default {
           detail: gameGoatGhost,
         },          
         {
-          title: "ColorfulTone",
-          caption: "音楽ゲーム",
-          img: require("@/assets/works/program/game/ColorfulTone/Screenshot1.png"),
-          detail: gameColorfulTone,
+          title: "ゆでたまごとさめ",
+          caption: "ミニゲーム",
+          img: require("@/assets/works/program/game/EggAndShark/pic01.png"),
+          detail: gameEggAndShark,
         },
         {
           title: "お年玉うぉーず",
