@@ -129,5 +129,11 @@ export default [
     },
     {
       name:"Perl", level:1
-    },         
+    }, 
+    {
+      name:"AR", level:2
+    },          
+    {
+      name:"Tobii EyeX", level:2
+    },        
   ];

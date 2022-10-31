@@ -127,5 +127,11 @@ export default{
     },
     "Perl": {
       name:"Perl", category:"lang"
-    },         
+    },   
+    "AR": {
+      name:"AR", category:"device"
+    },            
+    "Tobii EyeX": {
+      name:"Tobii EyeX", category:"device"
+    },       
 };

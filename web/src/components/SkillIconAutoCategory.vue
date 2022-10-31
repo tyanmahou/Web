@@ -1,5 +1,5 @@
 <template>
-  <skillicon :category="master[name].category" :level="level">
+  <skillicon :category="master[name]?.category ?? 'other'" :level="level">
   {{name}}
   </skillicon>
 </template>

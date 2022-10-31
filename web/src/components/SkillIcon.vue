@@ -44,6 +44,10 @@ span {
     color: #ffffff;
     background: #483d8b;
   }
+  &.device {
+    color: #ffffff;
+    background: #b306e7;
+  }  
   &.other {
     color: #ffffff;
     background: #909399;

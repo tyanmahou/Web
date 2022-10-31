@@ -73,6 +73,7 @@ import gameMoguMoguSTG from "@/components/works/program/game/MoguMoguSTG.vue"
 import gameDiceDeveloper from "@/components/works/program/game/DiceDeveloper.vue"
 import gameKanCore from "@/components/works/program/game/KanCore.vue"
 import gameTansakuYusha from "@/components/works/program/game/TansakuYusha.vue"
+import gameTakaraSagashi from "@/components/works/program/game/TakaraSagashi.vue"
 import gameColorfulTone from "@/components/works/program/game/ColorfulTone.vue"
 
 // Web
@@ -90,6 +91,12 @@ export default {
           img: require("@/assets/works/program/game/ColorfulTone/Screenshot1.png"),
           detail: gameColorfulTone,
         },
+        {
+          title: "宝さがし",
+          caption: "視線操作ゲーム",
+          img: require("@/assets/works/program/game/TakaraSagashi/pic01.png"),
+          detail: gameTakaraSagashi,
+        },        
         {
           title: "探索勇者",
           caption: "探索アルゴリズムゲーム",
