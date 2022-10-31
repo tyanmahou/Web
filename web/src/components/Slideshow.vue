@@ -87,6 +87,7 @@ export default {
         },
         imageStlye(index) {
             return {
+                "min-width": `${this.fixedPercent()}%`,
                 "max-width": `${this.fixedPercent()}%`,
                 "transition": this.isAnimating ? "all ease .3s" : "none",
                 "transform": `scale(${this.pageNo == index ? 1 : 0.8})`,
