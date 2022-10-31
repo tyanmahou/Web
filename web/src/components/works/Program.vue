@@ -84,6 +84,7 @@ import game10secDraw from "@/components/works/program/game/10secDraw.vue"
 import gameGoatGhost from "@/components/works/program/game/GoatGhost.vue"
 import gameSAGASUTyping from "@/components/works/program/game/SAGASUTyping.vue"
 import gameJustRoll from "@/components/works/program/game/JustRoll.vue"
+import gameMathP from "@/components/works/program/game/MathP.vue"
 import gameHakoniA from "@/components/works/program/game/HakoniA.vue"
 import gameColorfulTone from "@/components/works/program/game/ColorfulTone.vue"
 
@@ -107,6 +108,12 @@ export default {
           caption: "詰みミニゲーム\n【ゲームジャム】",
           img: require("@/assets/works/program/game/HakoniA/pic01.png"),
           detail: gameHakoniA,
+        },        
+        {
+          title: "数学P",
+          caption: "ミニゲーム\n【ゲームジャム】",
+          img: require("@/assets/works/program/game/MathP/pic01.png"),
+          detail: gameMathP,
         },        
         {
           title: "JustRoll",
