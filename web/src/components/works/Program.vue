@@ -73,8 +73,10 @@ import gameMoguMoguSTG from "@/components/works/program/game/MoguMoguSTG.vue"
 import gameDiceDeveloper from "@/components/works/program/game/DiceDeveloper.vue"
 import gameKanCore from "@/components/works/program/game/KanCore.vue"
 import gameTansakuYusha from "@/components/works/program/game/TansakuYusha.vue"
+import gameNITMicBrothers from "@/components/works/program/game/NITMicBrothers.vue"
 import gameTakaraSagashi from "@/components/works/program/game/TakaraSagashi.vue"
 import gameSeiseki from "@/components/works/program/game/Seiseki.vue"
+import gameOtomeNoTome from "@/components/works/program/game/OtomeNoTome.vue"
 import gameColorfulTone from "@/components/works/program/game/ColorfulTone.vue"
 
 // Web
@@ -93,6 +95,12 @@ export default {
           detail: gameColorfulTone,
         },
         {
+          title: "【ゲームジャム】乙女のトメ",
+          caption: "横スクロールゲーム",
+          img: require("@/assets/works/program/game/OtomeNoTome/pic01.png"),
+          detail: gameOtomeNoTome,
+        },        
+        {
           title: "【ハッカソン】不可を見るな(仮)",
           caption: "視線操作ゲーム",
           img: require("@/assets/works/program/game/Seiseki/pic01.png"),
@@ -103,6 +111,12 @@ export default {
           caption: "視線操作ゲーム",
           img: require("@/assets/works/program/game/TakaraSagashi/pic01.png"),
           detail: gameTakaraSagashi,
+        },        
+        {
+          title: "NITMicじゃんぷばとらーず",
+          caption: "乱闘アクションゲーム",
+          img: require("@/assets/works/program/game/NITMicBrothers/pic01.jpg"),
+          detail: gameNITMicBrothers,
         },        
         {
           title: "探索勇者",
