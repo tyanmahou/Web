@@ -71,6 +71,7 @@ import gameplane from "@/components/works/program/game/plane.vue"
 import gameDokiMemoElderlys from "@/components/works/program/game/DokiMemoElderlys.vue"
 import gameMoguMoguSTG from "@/components/works/program/game/MoguMoguSTG.vue"
 import gameDiceDeveloper from "@/components/works/program/game/DiceDeveloper.vue"
+import gameKanCore from "@/components/works/program/game/KanCore.vue"
 import gameColorfulTone from "@/components/works/program/game/ColorfulTone.vue"
 
 // Web
@@ -88,6 +89,12 @@ export default {
           img: require("@/assets/works/program/game/ColorfulTone/Screenshot1.png"),
           detail: gameColorfulTone,
         },
+        {
+          title: "KanCore",
+          caption: "クリックゲーム",
+          img: require("@/assets/works/program/game/KanCore/pic01.png"),
+          detail: gameKanCore,
+        }, 
         {
           title: "DiceDeveloper",
           caption: "パズルゲーム",
