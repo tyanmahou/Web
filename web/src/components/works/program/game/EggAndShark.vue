@@ -27,7 +27,7 @@
             <h3>DEVELOP</h3>
         </div>
         <div class="text">
-            2017 (1日)<br /><br/>
+            2016 (1日)<br /><br/>
             プログラマー：mahou<br>
             デザイン：udon<br>
             サウンド：naotit
