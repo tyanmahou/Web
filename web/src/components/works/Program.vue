@@ -83,6 +83,7 @@ import game10secDraw from "@/components/works/program/game/10secDraw.vue"
 import gameGoatGhost from "@/components/works/program/game/GoatGhost.vue"
 import gameSAGASUTyping from "@/components/works/program/game/SAGASUTyping.vue"
 import gameJustRoll from "@/components/works/program/game/JustRoll.vue"
+import gameHakoniA from "@/components/works/program/game/HakoniA.vue"
 import gameColorfulTone from "@/components/works/program/game/ColorfulTone.vue"
 
 // Web
@@ -100,6 +101,12 @@ export default {
           img: require("@/assets/works/program/game/ColorfulTone/Screenshot1.png"),
           detail: gameColorfulTone,
         },
+        {
+          title: "箱にア",
+          caption: "詰みミニゲーム\n【ゲームジャム】",
+          img: require("@/assets/works/program/game/HakoniA/pic01.png"),
+          detail: gameHakoniA,
+        },        
         {
           title: "JustRoll",
           caption: "転がすミニゲーム\n【ゲームジャム】",
