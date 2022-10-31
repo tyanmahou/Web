@@ -74,6 +74,7 @@ import gameDiceDeveloper from "@/components/works/program/game/DiceDeveloper.vue
 import gameKanCore from "@/components/works/program/game/KanCore.vue"
 import gameTansakuYusha from "@/components/works/program/game/TansakuYusha.vue"
 import gameTakaraSagashi from "@/components/works/program/game/TakaraSagashi.vue"
+import gameSeiseki from "@/components/works/program/game/Seiseki.vue"
 import gameColorfulTone from "@/components/works/program/game/ColorfulTone.vue"
 
 // Web
@@ -91,6 +92,12 @@ export default {
           img: require("@/assets/works/program/game/ColorfulTone/Screenshot1.png"),
           detail: gameColorfulTone,
         },
+        {
+          title: "【ハッカソン】不可を見るな(仮)",
+          caption: "視線操作ゲーム",
+          img: require("@/assets/works/program/game/Seiseki/pic01.png"),
+          detail: gameSeiseki,
+        },        
         {
           title: "宝さがし",
           caption: "視線操作ゲーム",
