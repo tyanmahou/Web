@@ -2,13 +2,17 @@
     <div class="slideshow">
         <div class="main-slide" :style="`max-width: ${width}px;`">
             <div class="list" :style="listStlye()" @transitionend="onTransitionEnd">
-                <img :src="slide[(2 * this.slide.length - 2) % this.slide.length]" :width="width" :style="imageStlye(-2)">
-                <img :src="slide[(2 * this.slide.length - 1) % this.slide.length]" :width="width" :style="imageStlye(-1)">                
+                <img :src="slide[(2 * this.slide.length - 2) % this.slide.length]" :width="width"
+                    :style="imageStlye(-2)">
+                <img :src="slide[(2 * this.slide.length - 1) % this.slide.length]" :width="width"
+                    :style="imageStlye(-1)">
                 <template v-for="(e, index) in slide" :key="index">
                     <img :src="e" :width="width" :style="imageStlye(index)">
                 </template>
-                <img :src="slide[(this.slide.length) % this.slide.length]" :width="width" :style="imageStlye(this.slide.length)">
-                <img :src="slide[(this.slide.length + 1) % this.slide.length]" :width="width" :style="imageStlye(this.slide.length + 1)">                
+                <img :src="slide[(this.slide.length) % this.slide.length]" :width="width"
+                    :style="imageStlye(this.slide.length)">
+                <img :src="slide[(this.slide.length + 1) % this.slide.length]" :width="width"
+                    :style="imageStlye(this.slide.length + 1)">
             </div>
             <span class="prev-btn" @click="changePage(pageNo - 1)" />
             <span class="next-btn" @click="changePage(pageNo + 1)" />
@@ -48,9 +52,14 @@ export default {
             pageNo: 0,
             isAnimating: false,
             timer: null,
+            isMobile: false,
         }
     },
     mounted() {
+        this.isMobile = window.matchMedia('(max-width: 420px)').matches;
+        window.addEventListener('resize', () => {
+            this.isMobile = window.matchMedia('(max-width: 420px)').matches;
+        });
         if (this.slide.length > 0) {
             this.startTimer();
         }
@@ -102,7 +111,7 @@ export default {
             this.startTimer();
         },
         fixedPercent() {
-            if (window.matchMedia('(max-width: 420px)').matches){
+            if (this.isMobile) {
                 return Math.max(100, this.contentPercent);
             }
             return this.contentPercent;
@@ -122,6 +131,7 @@ export default {
 .slideshow {
     padding: 10px 0;
 }
+
 .main-slide {
     position: relative;
     left: 50%;
@@ -169,10 +179,11 @@ export default {
         color: $color-text-light;
         background-color: #00000040;
     }
+
     @media only screen and (max-width: $layout-mobile) {
         font-size: 20px;
         width: 30px;
-    }      
+    }
 }
 
 .prev-btn {
