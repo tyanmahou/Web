@@ -64,8 +64,6 @@ export default {
 
     {
       updateContentMargin('upcoming');
-      updateContentMargin('web');
-      updateContentMargin('library');
     }
 
     window.addEventListener('resize', () => {
