@@ -58,7 +58,7 @@
 import mylink from "@/components/Link.vue"
 import mymodel from "@/components/Modal.vue"
 import mycaption from "@/components/FigCaption.vue"
-
+import playableicon from "@/components/works/program/PlayableIcon.vue"
 // Game
 import gamei19vsi8 from "@/components/works/program/game/i19vsi8.vue"
 import gameOdinCard from "@/components/works/program/game/OdinCard.vue"
@@ -333,6 +333,7 @@ export default {
     mylink,
     mymodel,
     mycaption,
+    playableicon,
   },
   mounted() {
     const updateContentMargin = (id) => {
