@@ -5,9 +5,6 @@
 <script>
 export default {
     name: "BurgerBtn",
-    model: {
-      prop: 'open'
-    },    
     props: {
         open: Boolean
     },
@@ -15,9 +12,7 @@ export default {
     data() {
         return {
         };
-    },
-    mounted() {
-    },
+    }
 };
 </script>
   
