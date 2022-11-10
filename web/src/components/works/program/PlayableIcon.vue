@@ -26,6 +26,7 @@ export default {
     background: $color-theme; //rgba($color-theme, 1);
     padding: 4px;
     border-radius: 50%;
+    outline: #fff solid 2px;
     img {
         vertical-align: middle;
     }
