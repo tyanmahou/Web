@@ -428,6 +428,7 @@ ul {
     position: absolute;
     bottom: 5px;
     right: 5px;
+    z-index: 3;
   }
 }
 
