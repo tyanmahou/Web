@@ -8,6 +8,7 @@
             <mycaption :title="item.title" :caption="item.caption">
               <div class="work">
                 <img :src="item.img" width="300">
+                <playableicon class="playable-icon" v-if="item.playable"/>
               </div>
             </mycaption>
           </template>
@@ -411,6 +412,7 @@ ul {
 }
 
 .work {
+  position: relative;
   display: table-cell;
   vertical-align: middle;
   width: 300px;
@@ -421,6 +423,11 @@ ul {
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
+  }
+  .playable-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
   }
 }
 
