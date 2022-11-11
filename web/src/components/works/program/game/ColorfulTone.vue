@@ -83,7 +83,6 @@
 import workbase from "@/components/works/program/WorkBase.vue"
 import autolink from "@/components/AutoLink.vue"
 import skillicon from "@/components/SkillIconAutoCategory.vue"
-import slideshow from "@/components/Slideshow.vue"
 import youtube from "@/components/widgets/Youtube/Embed.vue"
 import media from "@/components/works/program/MediaGallery.vue"
 
@@ -109,7 +108,6 @@ export default {
     components: {
         autolink,
         skillicon,
-        slideshow,
         workbase,
         youtube,
         media,

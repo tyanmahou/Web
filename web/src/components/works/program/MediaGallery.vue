@@ -1,13 +1,13 @@
 <template>
     <ul class="media">
-        <li v-for="(path, index) in slide">
+        <li v-for="(path, index) in slide" :class="portrait ? 'portrait' : 'landscape'">
             <modal :el="self">
                 <template #title>
                     <img :src="path">
                 </template>
                 <template #contents>
                     <div class="slide">
-                        <slideshow width="1200" :slide="slide" :auto-paging="false" :init-page="index" />
+                        <slideshow :width="width" :slide="slide" :auto-paging="false" :init-page="index" />
                     </div>
                 </template>
             </modal>
@@ -23,6 +23,14 @@ export default {
     name: "MediaGallery",
     props: {
         slide: Array,
+        width: {
+            type: Number,
+            default: 900
+        },
+        portrait: {
+            type: Boolean,
+            default: false            
+        }
     },
     data() {
         return {
@@ -51,18 +59,35 @@ ul.media {
         display: inline-block;
         margin: 5px;
 
-        width: calc(100% / 4 - 5px * 2);
+        &.portrait {
+            width: calc(100% / 5 - 5px * 2);
 
-        @media only screen and (max-width: $layout-mid-width) {
-            width: calc(100% / 3 - 5px * 2);
+            @media only screen and (max-width: $layout-mid-width) {
+                width: calc(100% / 4 - 5px * 2);
+            }
+
+            @media only screen and (max-width: $layout-min-width) {
+                width: calc(100% / 3 - 5px * 2);
+            }
+
+            @media only screen and (max-width: $layout-mobile) {
+                width: calc(100% / 2 - 5px * 2);
+            }            
         }
+        &.landscape {
+            width: calc(100% / 4 - 5px * 2);
 
-        @media only screen and (max-width: $layout-min-width) {
-            width: calc(100% / 2 - 5px * 2);
-        }
+            @media only screen and (max-width: $layout-mid-width) {
+                width: calc(100% / 3 - 5px * 2);
+            }
 
-        @media only screen and (max-width: $layout-mobile) {
-            width: calc(100% - 5px * 2);
+            @media only screen and (max-width: $layout-min-width) {
+                width: calc(100% / 2 - 5px * 2);
+            }
+
+            @media only screen and (max-width: $layout-mobile) {
+                width: calc(100% - 5px * 2);
+            }
         }
 
         overflow: hidden;

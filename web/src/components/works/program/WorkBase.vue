@@ -53,38 +53,41 @@ export default {
         width: 100%;
         margin: 0 0 10px 0;
 
+
+
+        h3 {
+            all: initial;
+            display: inline-block;
+            font-weight: bold;
+            color: $color-theme;
+            font-size: 50px;
+            text-decoration: underline;
+
+            @media only screen and (max-width: $layout-mid-width) {
+                font-size: 35px;
+            }
+
+            @media only screen and (max-width: $layout-min-width) {
+                font-size: 30px;
+            }
+
+            &::first-letter {
+                font-size: 80px;
+
+                @media only screen and (max-width: $layout-mid-width) {
+                    font-size: 60px;
+                }
+
+                @media only screen and (max-width: $layout-min-width) {
+                    font-size: 50px;
+                }
+            }
+        }
+
         .desc {
             display: table-cell;
             width: 40%;
             vertical-align: top;
-
-            h3 {
-                all: initial;
-                display: inline-block;
-                font-weight: bold;
-                color: $color-theme;
-                font-size: 50px;
-                text-decoration: underline;
-
-                @media only screen and (max-width: $layout-mid-width) {
-                    font-size: 35px;
-                }
-
-                @media only screen and (max-width: $layout-min-width) {
-                    font-size: 30px;
-                }
-                &::first-letter {
-                    font-size: 80px;
-
-                    @media only screen and (max-width: $layout-mid-width) {
-                        font-size: 60px;
-                    }
-
-                    @media only screen and (max-width: $layout-min-width) {
-                        font-size: 50px;
-                    }
-                }
-            }
 
             @media only screen and (max-width: $layout-min-width) {
                 display: inline;
