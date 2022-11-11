@@ -20,6 +20,7 @@ export default {
 
 .wrap {
     width: 100%;
+    max-width: max(calc(100vw - 400px), 900px);
     background: $color-mainbg;
 }
 
@@ -45,6 +46,28 @@ export default {
             margin-left: 15px;
         }
     }
+    ul.media {
+    list-style: none;
+
+    li {
+        display: inline-block;
+        margin: 5px;
+
+        width: calc(100% / 4 - 5px * 2);
+
+        @media only screen and (max-width: $layout-mid-width) {
+            width: calc(100% / 3 - 5px * 2);
+        }
+
+        @media only screen and (max-width: $layout-min-width) {
+            width: calc(100% / 2 - 5px * 2);
+        }
+
+        @media only screen and (max-width: $layout-mobile) {
+            width: calc(100% - 5px * 2);
+        }
+    }
+}    
 }
 </style>
     
