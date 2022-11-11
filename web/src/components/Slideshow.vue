@@ -61,7 +61,7 @@ export default {
     },
     mounted() {
         this.pageNo = this.initPage;
-        
+
         this.isMobile = window.matchMedia('(max-width: 420px)').matches;
         window.addEventListener('resize', () => {
             this.isMobile = window.matchMedia('(max-width: 420px)').matches;
@@ -209,7 +209,6 @@ export default {
     justify-content: center;
     padding: 0;
     margin: 5px;
-
     li {
         list-style-type: none;
         border: 2px solid $color-theme;
@@ -221,6 +220,7 @@ export default {
         &.active {
             background: $color-theme;
         }
+        margin: 5px;
     }
 }
 </style>
