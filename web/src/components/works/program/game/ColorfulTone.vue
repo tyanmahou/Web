@@ -1,23 +1,35 @@
 <template>
     <workbase>
         <h2>ColorfulTone</h2>
-        <div>
-        <youtube url="https://www.youtube.com/embed/JRdIV9unlnw"/>
-        <slideshow width ="900" :slide="slide"/>
-        </div>
+
         <div class="skill">
             <skillicon v-for="s in skills" :name="s" />
         </div>
-        <div class="text">
-            色をテーマにした音楽ゲームが登場！<br/><br/>
-            Siv3DでWindows向けの音楽ゲームを制作<br/>
-            数年にわたり楽曲追加や機能改善の運営を実施しました。<br/>(※現在は非定期更新)
+        <div class="about">
+            <div class="desc">
+                <div class="to-left">
+                    <h3>DESCRIPTION</h3>
+                </div>
+                <div class="text">
+                    色をテーマにした音楽ゲームが登場！<br /><br />
+                    Siv3DでWindows向けの音楽ゲームを制作<br />
+                    数年にわたり楽曲追加や機能改善の運営を実施しました。<br />(※現在は非定期更新)
+                </div>
+            </div>
+            <div class="top-media">
+                <youtube url="https://www.youtube.com/embed/JRdIV9unlnw" />
+            </div>
         </div>
+        <ul class="media">
+            <li v-for="(path, index) in slide">
+                <img :src="path">
+            </li>
+        </ul>
         <div class="to-left">
             <h3>WEB</h3>
         </div>
         <div class="text">
-        <autolink url="https://colorfultone.tyanmahou.com/web/" />
+            <autolink url="https://colorfultone.tyanmahou.com/web/" />
         </div>
         <div class="to-left">
             <h3>PLAY</h3>
@@ -29,11 +41,15 @@
             <h3>REPOSITORY</h3>
         </div>
         <div class="text">
-        <ul>
-        <li><autolink url="https://github.com/tyanmahou/ColorfulTone" /></li>
-        <li><autolink url="https://github.com/tyanmahou/ColorfulTone_API" /></li>
-        </ul>
-        </div>        
+            <ul>
+                <li>
+                    <autolink url="https://github.com/tyanmahou/ColorfulTone" />
+                </li>
+                <li>
+                    <autolink url="https://github.com/tyanmahou/ColorfulTone_API" />
+                </li>
+            </ul>
+        </div>
         <div class="to-left">
             <h3>DEVELOP</h3>
         </div>
@@ -85,7 +101,7 @@ export default {
                 require("@/assets/works/program/game/ColorfulTone/Screenshot4.png"),
                 require("@/assets/works/program/game/ColorfulTone/Screenshot5.png"),
                 require("@/assets/works/program/game/ColorfulTone/Screenshot6.png"),
-            ],            
+            ],
             skills: [
                 "C++",
                 "Siv3D",
@@ -100,7 +116,7 @@ export default {
         workbase,
         youtube
     },
-    
+
 };
 </script>
     
