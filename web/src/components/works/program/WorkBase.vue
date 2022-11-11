@@ -103,31 +103,6 @@ export default {
             }
         }
     }
-
-    ul.media {
-        clear: both;
-        list-style: none;
-        background: $color-containerbg;
-
-        li {
-            display: inline-block;
-            margin: 5px;
-
-            width: calc(100% / 4 - 5px * 2);
-
-            @media only screen and (max-width: $layout-mid-width) {
-                width: calc(100% / 3 - 5px * 2);
-            }
-
-            @media only screen and (max-width: $layout-min-width) {
-                width: calc(100% / 2 - 5px * 2);
-            }
-
-            @media only screen and (max-width: $layout-mobile) {
-                width: calc(100% - 5px * 2);
-            }
-        }
-    }
 }
 </style>
     

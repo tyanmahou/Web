@@ -45,6 +45,10 @@ export default {
         interval: {
             type: Number,
             default: 5000
+        },
+        initPage: {
+            type: Number,
+            default: 0
         }
     },
     data() {
@@ -56,6 +60,8 @@ export default {
         }
     },
     mounted() {
+        this.pageNo = this.initPage;
+        
         this.isMobile = window.matchMedia('(max-width: 420px)').matches;
         window.addEventListener('resize', () => {
             this.isMobile = window.matchMedia('(max-width: 420px)').matches;

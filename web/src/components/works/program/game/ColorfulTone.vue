@@ -20,11 +20,7 @@
                 <youtube url="https://www.youtube.com/embed/JRdIV9unlnw" />
             </div>
         </div>
-        <ul class="media">
-            <li v-for="(path, index) in slide">
-                <img :src="path">
-            </li>
-        </ul>
+        <media :slide="slide" />
         <div class="to-left">
             <h3>WEB</h3>
         </div>
@@ -89,6 +85,7 @@ import autolink from "@/components/AutoLink.vue"
 import skillicon from "@/components/SkillIconAutoCategory.vue"
 import slideshow from "@/components/Slideshow.vue"
 import youtube from "@/components/widgets/Youtube/Embed.vue"
+import media from "@/components/works/program/MediaGallery.vue"
 
 export default {
     name: "ColorfulTone",
@@ -114,9 +111,11 @@ export default {
         skillicon,
         slideshow,
         workbase,
-        youtube
+        youtube,
+        media,
     },
-
+    mounted() {
+    }
 };
 </script>
     
