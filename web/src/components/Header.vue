@@ -114,7 +114,7 @@ export default {
 
   background: $color-theme;
   position: fixed;
-  z-index: 3;
+  z-index: 4;
 
   .logo {
     margin: 0 0 0 layout-px-lerp(0, 100);
