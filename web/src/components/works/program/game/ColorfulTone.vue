@@ -1,7 +1,6 @@
 <template>
     <workbase>
         <h2>ColorfulTone</h2>
-
         <div class="skill">
             <skillicon v-for="s in skills" :name="s" />
         </div>
