@@ -6,17 +6,17 @@
         </div>
         <div class="about">
             <div class="to-left">
-                    <h3>DESCRIPTION</h3>
-                </div>
-                <div class="text">
-                    ふってくるものが<br>
-                    ふるものか<br>
-                    ふるじゃないものか<br>
-                    ふり分けるゲーム<br>
-                    <br />
-                    8時間ハッカソンで作成したものです。<br />
-                    「優勝」作品です。
-                </div>
+                <h3>DESCRIPTION</h3>
+            </div>
+            <div class="text">
+                ふってくるものが<br>
+                ふるものか<br>
+                ふるじゃないものか<br>
+                ふり分けるゲーム<br>
+                <br />
+                8時間ハッカソンで作成したものです。<br />
+                「優勝」作品です。
+            </div>
         </div>
         <media :slide="slide" width="400" portrait />
         <div class="to-left">
