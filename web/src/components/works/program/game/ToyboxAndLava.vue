@@ -1,24 +1,31 @@
 <template>
     <workbase>
         <h2>おもちゃ箱と溶岩</h2>
-        <div>
-            <img src="@/assets/works/program/game/ToyboxAndLava/pic01.png" width ="600"/>
-        </div>
         <div class="skill">
             <skillicon v-for="s in skills" :name="s" />
         </div>
-        <div class="text">
-            上からふってくるおもちゃを上手くキャッチするゲームです。<br/>
-            溶岩にあたらないように注意。<br/>
+        <div class="about">
+            <div class="desc">
+                <div class="to-left">
+                    <h3>DESCRIPTION</h3>
+                </div>
+                <div class="text">
+                    上からふってくるおもちゃを上手くキャッチするゲームです。<br />
+                    溶岩にあたらないように注意。<br />
 
-            <br/>
-            8時間ハッカソンで作成したものです。<br/>
+                    <br />
+                    8時間ハッカソンで作成したものです。<br />
+                </div>
+            </div>
+            <div class="top-media">
+                <img src="@/assets/works/program/game/ToyboxAndLava/pic01.png" width="600" />
+            </div>
         </div>
         <div class="to-left">
             <h3>DEVELOP</h3>
         </div>
         <div class="text">
-            2016 (8時間)<br /><br/>
+            2016 (8時間)<br /><br />
             プログラマー：siguma, direct<br>
             デザイン：mahou<br>
             ※私はデザインのみの担当です。
