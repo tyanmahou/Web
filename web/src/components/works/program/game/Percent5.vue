@@ -1,19 +1,26 @@
 <template>
     <workbase>
         <h2>%5</h2>
-        <div>
-            <img src="@/assets/works/program/game/%5/pic99.gif" width="600" />
-            <slideshow width="900" :slide="slide" />
-        </div>
         <div class="skill">
             <skillicon v-for="s in skills" :name="s" />
         </div>
-        <div class="text">
-            落ちものパズルゲームです。<br /><br />
+        <div class="about">
+            <div class="desc">
+                <div class="to-left">
+                    <h3>DESCRIPTION</h3>
+                </div>
+                <div class="text">
+                    落ちものパズルゲームです。<br /><br />
 
-            十字型に数字の和が5の倍数になったら消えます。<br />
-            同じ数字を5つや、1～5すべてを揃えて消すと高得点です。
+                    十字型に数字の和が5の倍数になったら消えます。<br />
+                    同じ数字を5つや、1～5すべてを揃えて消すと高得点です。
+                </div>
+            </div>
+            <div class="top-media">
+                <img src="@/assets/works/program/game/%5/pic99.gif" width="600" />
+            </div>
         </div>
+        <media :slide="slide" />
         <div class="to-left">
             <h3>DEVELOP</h3>
         </div>
@@ -27,7 +34,7 @@
 import workbase from "@/components/works/program/WorkBase.vue"
 import autolink from "@/components/AutoLink.vue"
 import skillicon from "@/components/SkillIconAutoCategory.vue"
-import slideshow from "@/components/Slideshow.vue"
+import media from "@/components/works/program/MediaGallery.vue"
 
 export default {
     name: "Percent5",
@@ -47,7 +54,7 @@ export default {
     components: {
         autolink,
         skillicon,
-        slideshow,
+        media,
         workbase
     },
 
