@@ -1,18 +1,21 @@
 <template>
     <workbase>
         <h2>SoldGrow</h2>
-        <div>
-        <slideshow width ="900" :slide="slide"/>
-        </div>
         <div class="skill">
             <skillicon v-for="s in skills" :name="s" />
         </div>
-        <div class="text">
-        未完成作品です。<br/><br/>
+        <div class="about">
+            <div class="to-left">
+                <h3>DESCRIPTION</h3>
+            </div>
+            <div class="text">
+                未完成作品です。<br /><br />
 
-        WindowsAPIのダイアログの実験や、リアルタイム取得による連動などを計画していました。<br/>
-        リアルタイムの時間に連動して背景画像が変わります。
+                WindowsAPIのダイアログの実験や、リアルタイム取得による連動などを計画していました。<br />
+                リアルタイムの時間に連動して背景画像が変わります。
+            </div>
         </div>
+        <media :slide="slide" />
         <div class="to-left">
             <h3>DEVELOP</h3>
         </div>
@@ -26,7 +29,7 @@
 import workbase from "@/components/works/program/WorkBase.vue"
 import autolink from "@/components/AutoLink.vue"
 import skillicon from "@/components/SkillIconAutoCategory.vue"
-import slideshow from "@/components/Slideshow.vue"
+import media from "@/components/works/program/MediaGallery.vue"
 
 export default {
     name: "SoldGrow",
@@ -35,7 +38,7 @@ export default {
             slide: [
                 require("@/assets/works/program/game/SoldGrow/pic01.png"),
                 require("@/assets/works/program/game/SoldGrow/pic02.png"),
-            ],            
+            ],
             skills: [
                 "C++",
                 "Windows API",
@@ -45,10 +48,10 @@ export default {
     components: {
         autolink,
         skillicon,
-        slideshow,
+        media,
         workbase
     },
-    
+
 };
 </script>
     
