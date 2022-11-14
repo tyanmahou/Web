@@ -1,19 +1,26 @@
 <template>
     <workbase>
         <h2>不可を見るな(仮)</h2>
-        <div>
-            <img src="@/assets/works/program/game/Seiseki/pic99.gif" width="600" />
-            <slideshow width="900" :slide="slide" />
-        </div>
         <div class="skill">
             <skillicon v-for="s in skills" :name="s" />
         </div>
-        <div class="text">
-            アイトラッキング「TobiiEyeX」を使用して視線操作で遊ぶゲームです。<br><br>
-            成績表の「不可」の単位からはなるべく目をそらして、良い単位だけ見るようにします。<br>
-            ハッカソンでプログラマ3人チ―ムで実装しました。<br>
-            なお、作品名は決まっていなかったので仮名になります。
+        <div class="about">
+            <div class="desc">
+                <div class="to-left">
+                    <h3>DESCRIPTION</h3>
+                </div>
+                <div class="text">
+                    アイトラッキング「TobiiEyeX」を使用して視線操作で遊ぶゲームです。<br><br>
+                    成績表の「不可」の単位からはなるべく目をそらして、良い単位だけ見るようにします。<br>
+                    ハッカソンでプログラマ3人チ―ムで実装しました。<br>
+                    なお、作品名は決まっていなかったので仮名になります。
+                </div>
+            </div>
+            <div class="top-media">
+                <img src="@/assets/works/program/game/Seiseki/pic99.gif" width="600" />
+            </div>
         </div>
+        <media :slide="slide" />
         <div class="to-left">
             <h3>DEVELOP</h3>
         </div>
@@ -30,7 +37,7 @@ import workbase from "@/components/works/program/WorkBase.vue"
 import autolink from "@/components/AutoLink.vue"
 import skillicon from "@/components/SkillIconAutoCategory.vue"
 import youtube from "@/components/widgets/Youtube/Embed.vue"
-import slideshow from "@/components/Slideshow.vue"
+import media from "@/components/works/program/MediaGallery.vue"
 
 export default {
     name: "Seiseki",
@@ -53,7 +60,7 @@ export default {
     components: {
         autolink,
         skillicon,
-        slideshow,
+        media,
         youtube,
         workbase
     },
