@@ -1,25 +1,32 @@
 <template>
     <workbase>
         <h2>GoatGhost</h2>
-        <div>
-            <youtube url="https://www.youtube.com/embed/d0p3fi5PX08" />
-            <slideshow width="900" :slide="slide" />
-        </div>
         <div class="skill">
             <skillicon v-for="s in skills" :name="s" />
         </div>
-        <div class="text">
-            「めちゃくちゃ簡単なんだけど、なんかやってて楽しい横スクロールアクション」をコンセプトにした<br />
-            ボス1ステージ分の横スクロールアクションゲームです。<br /><br />
+        <div class="about">
+            <div class="desc">
+                <div class="to-left">
+                    <h3>DESCRIPTION</h3>
+                </div>
+                <div class="text">
+                    「めちゃくちゃ簡単なんだけど、なんかやってて楽しい横スクロールアクション」をコンセプトにした<br />
+                    ボス1ステージ分の横スクロールアクションゲームです。<br /><br />
 
-            攻撃は発射ボタンをあらかじめ押しておくだけで自動で敵に飛んでいくので<br />
-            プレイヤーは敵の攻撃を避けることだけに集中できます。<br /><br />
-            部活動で学祭に展示した作品です。<br />
-            その際の評価として以下を得ています。
-            <ul>
-            <li>満足度ランキング1位</li>
-            </ul>
+                    攻撃は発射ボタンをあらかじめ押しておくだけで自動で敵に飛んでいくので<br />
+                    プレイヤーは敵の攻撃を避けることだけに集中できます。<br /><br />
+                    部活動で学祭に展示した作品です。<br />
+                    その際の評価として以下を得ています。
+                    <ul>
+                        <li>満足度ランキング1位</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="top-media">
+                <youtube url="https://www.youtube.com/embed/d0p3fi5PX08" />
+            </div>
         </div>
+        <media :slide="slide" />
         <div class="to-left">
             <h3>DEVELOP</h3>
         </div>
@@ -37,7 +44,7 @@ import workbase from "@/components/works/program/WorkBase.vue"
 import autolink from "@/components/AutoLink.vue"
 import skillicon from "@/components/SkillIconAutoCategory.vue"
 import youtube from "@/components/widgets/Youtube/Embed.vue"
-import slideshow from "@/components/Slideshow.vue"
+import media from "@/components/works/program/MediaGallery.vue"
 
 export default {
     name: "GoatGhost",
@@ -58,7 +65,7 @@ export default {
     components: {
         autolink,
         skillicon,
-        slideshow,
+        media,
         youtube,
         workbase
     },
