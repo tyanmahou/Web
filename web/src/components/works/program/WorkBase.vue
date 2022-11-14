@@ -88,10 +88,10 @@ export default {
             display: table-cell;
             width: 40%;
             vertical-align: top;
-
             @media only screen and (max-width: $layout-min-width) {
-                display: inline;
+                display: block;
                 width: 100%;
+                margin: 0 0 10px 0;
             }
         }
 
@@ -101,8 +101,9 @@ export default {
             padding: 20px 0 0px 20px;
 
             @media only screen and (max-width: $layout-min-width) {
-                display: inline;
+                display: block;
                 width: 100%;
+                padding: 0px;
             }
         }
     }
