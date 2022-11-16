@@ -576,7 +576,7 @@ ul.library-list {
 
     .detail {
       position: relative;
-
+      height: 40px;
       .lang {
         color: $color-text;
         font-size: 15px;
