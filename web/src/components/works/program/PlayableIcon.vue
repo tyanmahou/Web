@@ -5,8 +5,6 @@
 </template>
     
 <script>
-import icon from "@/components/ServiceIcon.vue"
-
 export default {
     name: "PlayableIcon",
     data() {

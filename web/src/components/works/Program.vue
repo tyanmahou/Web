@@ -20,7 +20,7 @@
               </p>
               <playableicon class="playable-icon" v-if="item.playable" />
             </div>
-            <hr/>
+            <hr />
           </template>
           <template #contents>
             <component :is="item.detail" />
@@ -49,7 +49,7 @@
                 {{ item.event }}
               </p>
             </div>
-            <hr/>
+            <hr />
           </template>
           <template #contents>
             <component :is="item.detail" />
@@ -59,17 +59,26 @@
     </ul>
   </div>
   <h2>Library</h2>
-  <div class="contents-wrap">
-    <ul class="library-list">
+  <div class="contents-wrap" id="library-wrap">
+    <ul id="library-ul" class="library-list">
       <li v-for="item in library">
-        <mylink class="title" :url="item.detail" absolute target="_blank">
+        <mylink :url="item.detail" absolute target="_blank">
+          <p class="title">
           {{ item.title }}
+          <div class="ex">
+          </div>
+          </p>
+          <div class="detail">
+            <p class="lang">{{ item.lang }}</p>
+            <p class="caption">
+              {{ item.caption }}
+            </p>
+            <div class="icon">
+              <img src="@/assets/commons/icon/web/github.png" width="28" />
+            </div>
+          </div>
         </mylink>
-        <p class="lang">{{ item.lang }}</p>
-        <p class="caption">
-          {{ item.caption }}
-        </p>
-        <hr/>
+        <hr />
       </li>
     </ul>
   </div>
@@ -415,11 +424,13 @@ export default {
     {
       updateContentMargin('game');
       updateContentMargin('web');
+      updateContentMargin('library');
     }
 
     window.addEventListener('resize', () => {
       updateContentMargin('game');
       updateContentMargin('web');
+      updateContentMargin('library');
     });
   }
 };
@@ -427,6 +438,12 @@ export default {
   
 <style lang="scss" scoped>
 @import "@/scss/common";
+
+ul {
+  hr {
+    border-top: 1px solid $color-theme;
+  }
+}
 
 ul.game-list,
 ul.web-list {
@@ -495,7 +512,6 @@ ul.web-list {
         position: absolute;
         top: 28px;
         right: 5px;
-        z-index: 3;
       }
     }
 
@@ -514,33 +530,67 @@ ul.web-list {
       }
     }
   }
-  hr {
-    border-top: 1px solid $color-theme;
-  }  
 }
 
 ul.library-list {
   text-align: left;
 
-  @include normal-link;
+  li {
+    display: inline-block;
+    margin: 5px;
 
-  .title {
-    //color: $color-theme;
-    font-size: 30px;
-    font-weight: bold;
-  }
+    width: 300px;
+    vertical-align: top;
 
-  .lang {
-    font-size: 15px;
-    font-weight: bold;
-    transition: .2s;
-  }
+    a {
+      text-decoration: none;
+    }
 
-  .caption {
-    font-size: 12px;
-  }
-  hr {
-    border-top: 1px solid $color-theme;
+    .title {
+      color: #008080;
+      font-size: 30px;
+      font-weight: bold;
+      transition: .2s;
+
+      .ex {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: #008080;
+        background-blend-mode: multiply;
+        mask-image: url(@/assets/commons/icon/external_link.png);   
+        mask-size:20px; 
+      }
+    }
+
+    .detail {
+      position: relative;
+
+      .lang {
+        color: $color-text;
+        font-size: 15px;
+      }
+
+      .caption {
+        color: $color-text;
+        font-size: 12px;
+      }
+
+      .icon {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+      }
+    }
+
+    &:hover {
+      .title {
+        color: $color-theme;
+        .ex {
+          background-color:$color-theme;
+        }
+      }
+    }
   }
 }
 </style>
