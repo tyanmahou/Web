@@ -52,9 +52,7 @@ export default {
         display: table;
         width: 100%;
         margin: 0 0 10px 0;
-
-
-
+        
         h3 {
             all: initial;
             display: inline-block;

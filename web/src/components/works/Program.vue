@@ -1,21 +1,30 @@
 <template>
   <h2>GAME</h2>
   <div class="contents-wrap" id="game-wrap">
-    <ul id="game-ul">
+    <ul id="game-ul" class="work-list">
       <li v-for="item in game">
         <mymodel>
           <template #title>
-            <mycaption :title="item.title" :caption="item.caption">
-              <div class="work">
-                <img :src="item.img" width="300">
-                <playableicon class="playable-icon" v-if="item.playable"/>
-              </div>
-            </mycaption>
+            <div class="work-img">
+              <img :src="item.img" width="300">
+            </div>
           </template>
           <template #contents>
             <component :is="item.detail" />
           </template>
         </mymodel>
+        <div class="detail">
+          <p class="title">
+            {{ item.title }}
+          </p>
+          <p class="caption">
+            {{ item.caption }}
+          </p>
+          <p v-if="item.event" class="event">
+            {{ item.event }}
+          </p>
+          <playableicon class="playable-icon" v-if="item.playable" />
+        </div>
       </li>
     </ul>
   </div>
@@ -46,7 +55,7 @@
           <mycaption :title="item.lang" :caption="item.caption">
             <div class="work-library">
               <img v-if="item.img" :src="item.img" width="300">
-              <p v-else>{{item.title}}</p>
+              <p v-else>{{ item.title }}</p>
             </div>
           </mycaption>
         </mylink>
@@ -110,30 +119,34 @@ export default {
         },
         {
           title: "箱にア",
-          caption: "詰みミニゲーム\n【ゲームジャム】",
+          caption: "詰みミニゲーム",
           img: require("@/assets/works/program/game/HakoniA/pic01.png"),
           detail: gameHakoniA,
+          event: "ゲームジャム",
           playable: true,
-        },        
+        },
         {
           title: "数学P",
-          caption: "ミニゲーム\n【ゲームジャム】",
+          caption: "ミニゲーム",
           img: require("@/assets/works/program/game/MathP/pic01.png"),
           detail: gameMathP,
+          event: "ゲームジャム",
           playable: true,
-        },   
+        },
         {
           title: "ふふふふ",
-          caption: "カジュアルゲーム\n【ハッカソン】",
+          caption: "カジュアルゲーム",
           img: require("@/assets/works/program/game/FuFuFuFu/pic01.jpg"),
           detail: gameFuFuFuFu,
+          event: "ハッカソン",
           playable: false,
-        },             
+        },
         {
           title: "JustRoll",
-          caption: "転がすミニゲーム\n【ゲームジャム】",
+          caption: "転がすミニゲーム",
           img: require("@/assets/works/program/game/JustRoll/pic01.png"),
           detail: gameJustRoll,
+          event: "ゲームジャム",
           playable: true,
         },
         {
@@ -142,47 +155,52 @@ export default {
           img: require("@/assets/works/program/game/SAGASUTyping/pic01.png"),
           detail: gameSAGASUTyping,
           playable: false,
-        },    
+        },
         {
           title: "PerfectPlayer",
-          caption: "ミニゲーム\n【ゲームジャム】",
+          caption: "ミニゲーム",
           img: require("@/assets/works/program/game/PerfectPlayer/pic01.png"),
           detail: gamePerfectPlayer,
+          event: "ゲームジャム",
           playable: false,
-        },           
+        },
         {
           title: "GoatGhost",
           caption: "横スクロールアクション",
           img: require("@/assets/works/program/game/GoatGhost/pic01.jpg"),
           detail: gameGoatGhost,
           playable: false,
-        },   
+        },
         {
           title: "バーベきゃ～",
-          caption: "ミニゲーム\n【ハッカソン】",
+          caption: "ミニゲーム",
           img: require("@/assets/works/program/game/babekyaaaaaa/pic01.png"),
           detail: gamebabekyaaaaaa,
+          event: "ハッカソン",
           playable: false,
-        },                
+        },
         {
-          title: "Siv3Dくん版\n深夜のお絵かき10秒一本勝負",
-          caption: "高速お絵描きゲーム\n【ゲームジャム】",
+          title: "Siv3Dくん版 深夜のお絵かき10秒一本勝負",
+          caption: "高速お絵描きゲーム",
           img: require("@/assets/works/program/game/10secDraw/pic01.png"),
           detail: game10secDraw,
+          event: "ゲームジャム",
           playable: true,
-        },        
+        },
         {
           title: "おもちゃ箱と溶岩",
-          caption: "ミニゲーム\n【ゲームジャム】",
+          caption: "ミニゲーム",
           img: require("@/assets/works/program/game/ToyboxAndLava/pic01.png"),
           detail: gameToyboxAndLava,
+          event: "ハッカソン",
           playable: false,
         },
         {
           title: "ゆでたまごとさめ",
-          caption: "ミニゲーム\n【ゲームジャム】",
+          caption: "ミニゲーム",
           img: require("@/assets/works/program/game/EggAndShark/pic01.png"),
           detail: gameEggAndShark,
+          event: "ゲームジャム",
           playable: true,
         },
         {
@@ -191,112 +209,119 @@ export default {
           img: require("@/assets/works/program/game/MoneyWars/pic01.png"),
           detail: gameMoneyWars,
           playable: true,
-        },         
+        },
         {
           title: "乙女のトメ",
-          caption: "横スクロール\n【ゲームジャム】",
+          caption: "横スクロール",
           img: require("@/assets/works/program/game/OtomeNoTome/pic01.png"),
           detail: gameOtomeNoTome,
+          event: "ゲームジャム",
           playable: false,
-        },        
+        },
         {
           title: "不可を見るな(仮)",
-          caption: "視線操作\n【ハッカソン】",
+          caption: "視線操作",
           img: require("@/assets/works/program/game/Seiseki/pic01.png"),
           detail: gameSeiseki,
+          event: "ハッカソン",
           playable: false,
-        },        
+        },
         {
           title: "宝さがし",
           caption: "視線操作",
           img: require("@/assets/works/program/game/TakaraSagashi/pic01.png"),
           detail: gameTakaraSagashi,
           playable: false,
-        },        
+        },
         {
           title: "NITMicじゃんぷばとらーず",
           caption: "乱闘アクション",
           img: require("@/assets/works/program/game/NITMicBrothers/pic01.jpg"),
           detail: gameNITMicBrothers,
           playable: false,
-        },        
+        },
         {
           title: "探索勇者",
           caption: "探索アルゴリズム",
           img: require("@/assets/works/program/game/TansakuYusha/pic01.png"),
           detail: gameTansakuYusha,
           playable: false,
-        }, 
+        },
         {
           title: "KanCore",
           caption: "クリックゲーム",
           img: require("@/assets/works/program/game/KanCore/pic01.png"),
           detail: gameKanCore,
           playable: false,
-        }, 
+        },
         {
           title: "DiceDeveloper",
           caption: "パズル",
           img: require("@/assets/works/program/game/DiceDeveloper/pic01.png"),
           detail: gameDiceDeveloper,
           playable: false,
-        }, 
+        },
         {
-          title: "どきどきメモリアル\nElderly's Side",
-          caption: "恋愛ノベル\n【ゲームジャム】",
+          title: "どきどきメモリアル Elderly's Side",
+          caption: "恋愛ノベル",
           img: require("@/assets/works/program/game/DokiMemoElderlys/pic01.png"),
           detail: gameDokiMemoElderlys,
+          event: "ゲームジャム",
           playable: false,
-        }, 
+        },
         {
           title: "もぐもぐSTG",
-          caption: "縦シューティング\n【未完成】",
+          caption: "縦シューティング",
           img: require("@/assets/works/program/game/MoguMoguSTG/pic01.png"),
           detail: gameMoguMoguSTG,
+          event: "未完成",
           playable: false,
-        }, 
+        },
         {
           title: "くうこう",
-          caption: "横スクロール\n【ハッカソン】",
+          caption: "横スクロール",
           img: require("@/assets/works/program/game/plane/pic01.png"),
           detail: gameplane,
+          event: "ハッカソン",
           playable: false,
-        },                
+        },
         {
           title: "FishGame",
-          caption: "横スクロール\n【ハッカソン】",
+          caption: "横スクロール",
           img: require("@/assets/works/program/game/FishGame/pic01.png"),
           detail: gameFishGame,
+          event: "ハッカソン",
           playable: false,
-        },         
+        },
         {
           title: "SoldGrow",
-          caption: "放置ゲーム\n【未完成】",
+          caption: "放置ゲーム",
           img: require("@/assets/works/program/game/SoldGrow/pic01.png"),
           detail: gameSoldGrow,
+          event: "未完成",
           playable: false,
-        },  
+        },
         {
           title: "AbyssDream",
           caption: "横スクロールアクション",
           img: require("@/assets/works/program/game/AbyssDream/pic01.png"),
           detail: gameAbyssDream,
           playable: false,
-        },         
+        },
         {
           title: "%5",
           caption: "落ちものパズル",
           img: require("@/assets/works/program/game/%5/pic01.png"),
           detail: gamePercent5,
           playable: false,
-        },               
+        },
         {
           title: "タイムトラベラー歩兵",
           caption: "縦スクロールクソゲー",
           img: require("@/assets/works/program/game/TimeTravelerHohei/pic01.png"),
           detail: gameTimeTravelerHohei,
           playable: false,
-        },        
+        },
         {
           title: "OdinCard",
           caption: "テーブルゲーム",
@@ -353,7 +378,7 @@ export default {
         },
         {
           title: "SQLite-for-Siv3D",
-          lang: "C++/OpenSiv3D",          
+          lang: "C++/OpenSiv3D",
           caption: "SQLite Support",
           detail: "https://github.com/tyanmahou/SQLite-for-Siv3D",
         },
@@ -411,6 +436,65 @@ ul {
   }
 }
 
+ul.work-list {
+  li {
+    width: 300px;
+    vertical-align: top;
+
+    .work-img {
+      display: table-cell;
+      vertical-align: middle;
+      width: 300px;
+      height: 225px;
+      overflow: hidden;
+      text-align: center;
+      background-color: #fff;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        vertical-align: middle;
+
+        transition: .3s;
+        &:hover {
+          opacity: 0.7;
+          scale: 105%;
+        }        
+      }
+    }
+
+    .detail {
+      position: relative;
+      min-height: 60px;
+      text-align: left;
+      .title {
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      .caption {
+        font-size: 12px;
+      }
+
+      .event {
+        display: inline;
+        color: #fff;
+        background-color: #aaa;
+        font-size: 10px;
+        padding: 2px;
+        border-radius: 7px;
+      }
+
+      .playable-icon {
+        position: absolute;
+        top: 28px;
+        right: 5px;
+        z-index: 3;
+      }
+    }
+  }
+}
+
 .work {
   position: relative;
   display: table-cell;
@@ -419,16 +503,11 @@ ul {
   height: 225px;
   overflow: hidden;
   text-align: center;
+
   img {
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
-  }
-  .playable-icon {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    z-index: 3;
   }
 }
 
@@ -439,6 +518,7 @@ ul {
   height: 125px;
   text-align: center;
   background: $color-text;
+
   p {
     color: $color-text-light;
     font-weight: bold;
