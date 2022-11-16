@@ -8,23 +8,23 @@
             <div class="work-img">
               <img :src="item.img" width="300">
             </div>
+            <div class="detail">
+              <p class="title">
+                {{ item.title }}
+              </p>
+              <p class="caption">
+                {{ item.caption }}
+              </p>
+              <p v-if="item.event" class="event">
+                {{ item.event }}
+              </p>
+              <playableicon class="playable-icon" v-if="item.playable" />
+            </div>
           </template>
           <template #contents>
             <component :is="item.detail" />
           </template>
         </mymodel>
-        <div class="detail">
-          <p class="title">
-            {{ item.title }}
-          </p>
-          <p class="caption">
-            {{ item.caption }}
-          </p>
-          <p v-if="item.event" class="event">
-            {{ item.event }}
-          </p>
-          <playableicon class="playable-icon" v-if="item.playable" />
-        </div>
       </li>
     </ul>
   </div>
@@ -449,17 +449,13 @@ ul.work-list {
       overflow: hidden;
       text-align: center;
       background-color: #fff;
+
       img {
         max-width: 100%;
         max-height: 100%;
         object-fit: cover;
         vertical-align: middle;
-
-        transition: .3s;
-        &:hover {
-          opacity: 0.7;
-          scale: 105%;
-        }        
+        transition: .2s;        
       }
     }
 
@@ -467,9 +463,11 @@ ul.work-list {
       position: relative;
       min-height: 60px;
       text-align: left;
+
       .title {
         font-size: 15px;
         font-weight: bold;
+        transition: .2s;
       }
 
       .caption {
@@ -492,6 +490,21 @@ ul.work-list {
         z-index: 3;
       }
     }
+
+    &:hover {
+      .work-img {
+        img {
+          opacity: 0.7;
+          scale: 105%;
+        }
+      }
+      .detail {
+        .title {
+          color: $color-theme;
+        }
+      }
+    }
+
   }
 }
 
