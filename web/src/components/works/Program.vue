@@ -122,7 +122,7 @@ export default {
           caption: "詰みミニゲーム",
           img: require("@/assets/works/program/game/HakoniA/pic01.png"),
           detail: gameHakoniA,
-          event: "ゲームジャム",
+          event: "unity1week",
           playable: true,
         },
         {
@@ -130,7 +130,7 @@ export default {
           caption: "ミニゲーム",
           img: require("@/assets/works/program/game/MathP/pic01.png"),
           detail: gameMathP,
-          event: "ゲームジャム",
+          event: "GGJ",
           playable: true,
         },
         {
@@ -146,7 +146,7 @@ export default {
           caption: "転がすミニゲーム",
           img: require("@/assets/works/program/game/JustRoll/pic01.png"),
           detail: gameJustRoll,
-          event: "ゲームジャム",
+          event: "unity1week",
           playable: true,
         },
         {
@@ -161,7 +161,7 @@ export default {
           caption: "ミニゲーム",
           img: require("@/assets/works/program/game/PerfectPlayer/pic01.png"),
           detail: gamePerfectPlayer,
-          event: "ゲームジャム",
+          event: "企業ゲームジャム",
           playable: false,
         },
         {
@@ -176,7 +176,7 @@ export default {
           caption: "ミニゲーム",
           img: require("@/assets/works/program/game/babekyaaaaaa/pic01.png"),
           detail: gamebabekyaaaaaa,
-          event: "ハッカソン",
+          event: "企業ハッカソン",
           playable: false,
         },
         {
@@ -184,7 +184,7 @@ export default {
           caption: "高速お絵描きゲーム",
           img: require("@/assets/works/program/game/10secDraw/pic01.png"),
           detail: game10secDraw,
-          event: "ゲームジャム",
+          event: "Siv3D Game Jam",
           playable: true,
         },
         {
@@ -200,7 +200,7 @@ export default {
           caption: "ミニゲーム",
           img: require("@/assets/works/program/game/EggAndShark/pic01.png"),
           detail: gameEggAndShark,
-          event: "ゲームジャム",
+          event: "Siv3D Game Jam",
           playable: true,
         },
         {
@@ -220,7 +220,7 @@ export default {
         },
         {
           title: "不可を見るな(仮)",
-          caption: "視線操作",
+          caption: "視線操作ゲーム",
           img: require("@/assets/works/program/game/Seiseki/pic01.png"),
           detail: gameSeiseki,
           event: "ハッカソン",
@@ -228,7 +228,7 @@ export default {
         },
         {
           title: "宝さがし",
-          caption: "視線操作",
+          caption: "視線操作ゲーム",
           img: require("@/assets/works/program/game/TakaraSagashi/pic01.png"),
           detail: gameTakaraSagashi,
           playable: false,
