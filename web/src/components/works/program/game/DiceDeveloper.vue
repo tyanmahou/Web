@@ -19,7 +19,7 @@
                 部活動で作った作品です。
             </div>
         </div>
-        <media :slide="slide" width="400" portrait />
+        <media :slide="slide" :width="400" portrait />
         <div class="to-left">
             <h3>DEVELOP</h3>
         </div>
