@@ -451,8 +451,8 @@ ul.work-list {
       background-color: #fff;
 
       img {
-        max-width: 100%;
-        max-height: 100%;
+        width: 100%; 
+        height: 100%;
         object-fit: cover;
         vertical-align: middle;
         transition: .2s;        
