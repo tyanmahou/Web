@@ -29,7 +29,7 @@ export default {
         },
         portrait: {
             type: Boolean,
-            default: false            
+            default: false
         }
     },
     data() {
@@ -59,6 +59,8 @@ ul.media {
         display: inline-block;
         margin: 5px;
 
+        background: #fff;
+        
         &.portrait {
             width: calc(100% / 5 - 5px * 2);
 
@@ -72,8 +74,9 @@ ul.media {
 
             @media only screen and (max-width: $layout-mobile) {
                 width: calc(100% / 2 - 5px * 2);
-            }            
+            }
         }
+
         &.landscape {
             width: calc(100% / 4 - 5px * 2);
 
@@ -92,11 +95,13 @@ ul.media {
 
         overflow: hidden;
 
-        img {
+        img {          
+            vertical-align: middle;
+            
             transition: .3s;
-
             &:hover {
-                scale: 110%;
+                opacity: 0.7;
+                scale: 105%;
             }
         }
     }
