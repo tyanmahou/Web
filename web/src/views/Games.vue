@@ -5,6 +5,7 @@
       <h1>GAMES</h1>
       <h2>UPCOMING</h2>
       <div class="contents-wrap" id="upcoming-wrap">
+      Comming Soon
         <ul id="upcoming-ul">
           <li v-for="item in upcoming">
             <mymodel>
@@ -22,6 +23,10 @@
           </li>
         </ul>
       </div>
+      <h2>RELEASED</h2>
+      <div class="contents-wrap" id="released-wrap">
+      Comming Soon
+      </div>      
     </div>
   </div>
   <foot />
