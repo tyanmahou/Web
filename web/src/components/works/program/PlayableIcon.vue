@@ -1,6 +1,6 @@
 <template>
     <div class="playable-icon">
-        <img src="@/assets/commons/icon/playable.png" width="30" />
+        <img src="@/assets/commons/icon/playable.png" width="28" />
     </div>
 </template>
     
@@ -25,8 +25,8 @@ export default {
     display: inline-block;
     background: $color-theme; //rgba($color-theme, 1);
     padding: 4px;
-    border-radius: 50%;
-    outline: #fff solid 2px;
+    //border-radius: 50%;
+    //outline: #fff solid 2px;
     img {
         vertical-align: middle;
     }
