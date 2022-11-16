@@ -450,6 +450,10 @@ ul.web-list {
   list-style: none;
   text-align: left;
 
+  @media only screen and (max-width: $layout-mobile) {
+    text-align: center;
+  }  
+
   li {
 
     display: inline-block;
@@ -535,11 +539,16 @@ ul.web-list {
 ul.library-list {
   text-align: left;
 
+  @media only screen and (max-width: $layout-mobile) {
+    text-align: center;
+  }  
+
   li {
     display: inline-block;
     margin: 5px;
 
     width: 300px;
+    text-align: left;
     vertical-align: top;
 
     a {
