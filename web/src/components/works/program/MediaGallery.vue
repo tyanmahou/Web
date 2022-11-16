@@ -1,28 +1,23 @@
 <template>
-    <ul class="media">
-        <li v-for="(path, index) in slide" :class="portrait ? 'portrait' : 'landscape'">
-            <a @click="open(true, index)" class="modal-button">
-                <img :src="path">
-            </a>
-        </li>
-    </ul>
-    <teleport to="body">
-        <transition name="fade" @before-enter="beforeEnter" @after-leave="afterLeave">
-            <div v-if="isOpen" class="modal-window" @click.self="open(false)">
-                <div class="modal-content">
-                    <div class="slide">
-                        <slideshow :width="width" :slide="slide" :auto-paging="false" :init-page="pageNo" />
-                    </div>
-                </div>
-                <div class="close-btn" @click="open(false)">
-                    <span /><span />
-                </div>
+    <div>
+        <ul class="media">
+            <li v-for="(path, index) in slide" :class="portrait ? 'portrait' : 'landscape'">
+                <a @click="open(true, index)" class="modal-button">
+                    <img :src="path">
+                </a>
+            </li>
+        </ul>
+        <modalbase :el="self" :isOpen="isOpen" @close="open(false)">
+            <div class="slide">
+                <slideshow :width="width" :slide="slide" :auto-paging="false" :init-page="pageNo" />
             </div>
-        </transition>
-    </teleport>
+        </modalbase>
+    </div>
 </template>
     
 <script>
+import modal from "@/components/Modal.vue"
+import modalbase from "@/components/ModalBase.vue"
 import slideshow from "@/components/Slideshow.vue"
 
 export default {
@@ -37,42 +32,28 @@ export default {
             type: Boolean,
             default: false
         },
-        el: {
-            type: Object,
-            default: null,
-        },
     },
     data() {
         return {
+            self: null,
             isOpen: false,
             pageNo: 0,
         };
     },
     components: {
+        modal,
+        modalbase,
         slideshow,
     },
     mounted() {
+        this.self = this.$el;
     },
     methods: {
         open(isOpen, pageNo) {
             this.isOpen = isOpen;
             this.pageNo = pageNo;
         },
-        beforeEnter(el) {
-            if (this.el) {
-                this.el.setAttribute("style", `overflow: hidden`);
-            } else {
-                document.body.setAttribute("style", `overflow: hidden`);
-            }
-        },
-        afterLeave(el) {
-            if (this.el) {
-                this.el.setAttribute("style", `overflow: auto`);
-            } else {
-                document.body.setAttribute("style", `overflow: auto`);
-            }
-        }
-    }
+    },
 };
 </script>
     
@@ -145,78 +126,8 @@ ul.media {
     width: 100%;
 }
 
-// Modal
-
-.fade-enter-active,
-.fade-leave-active {
-    transition: opacity 0.3s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-    opacity: 0;
-}
-
 .modal-button {
     cursor: pointer;
-}
-
-.modal-window {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-    overflow: auto;
-    text-align: center;
-
-    & .modal-content {
-        display: inline-block;
-        margin: 60px 20px 60px 20px;
-    }
-}
-
-.close-btn {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all .3s;
-
-    &:hover {
-        background: $color-text-light;
-
-        span {
-            background: $color-theme;
-        }
-    }
-
-    span {
-        display: inline-block;
-
-        position: absolute;
-        height: 7px;
-        border-radius: 2px;
-        background: #A0A0A0;
-        width: 70%;
-
-        &:nth-of-type(1) {
-            top: 22.5px;
-            left: 7.5px;
-            transform: rotate(-45deg);
-        }
-
-        &:nth-of-type(2) {
-            top: 22.5px;
-            left: 7.5px;
-            transform: rotate(45deg);
-        }
-    }
 }
 </style>
     
