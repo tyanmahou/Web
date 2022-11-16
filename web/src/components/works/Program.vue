@@ -522,23 +522,6 @@ ul.work-list {
 
   }
 }
-
-.work {
-  position: relative;
-  display: table-cell;
-  vertical-align: middle;
-  width: 300px;
-  height: 225px;
-  overflow: hidden;
-  text-align: center;
-
-  img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-  }
-}
-
 .work-library {
   display: table-cell;
   vertical-align: middle;
