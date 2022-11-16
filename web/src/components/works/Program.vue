@@ -6,7 +6,7 @@
         <mymodel>
           <template #title>
             <div class="work-img">
-              <img :src="item.img" width="300">
+              <img :src="item.img" width="300" class="game-img">
             </div>
             <div class="detail">
               <p class="title">
@@ -30,15 +30,24 @@
   </div>
   <h2>WEB</h2>
   <div class="contents-wrap" id="web-wrap">
-    <ul id="web-ul">
+    <ul id="web-ul" class="work-list">
       <li v-for="item in web">
         <mymodel>
           <template #title>
-            <mycaption :title="item.title" :caption="item.caption">
-              <div class="work">
-                <img :src="item.img" width="300">
-              </div>
-            </mycaption>
+            <div class="work-img">
+              <img :src="item.img" width="300" class="web-img">
+            </div>
+            <div class="detail">
+              <p class="title">
+                {{ item.title }}
+              </p>
+              <p class="caption">
+                {{ item.caption }}
+              </p>
+              <p v-if="item.event" class="event">
+                {{ item.event }}
+              </p>
+            </div>
           </template>
           <template #contents>
             <component :is="item.detail" />
@@ -451,11 +460,17 @@ ul.work-list {
       background-color: #fff;
 
       img {
-        width: 100%; 
-        height: 100%;
         object-fit: cover;
         vertical-align: middle;
         transition: .2s;        
+      }
+      img.game-img {
+        width: 100%; 
+        height: 100%;
+      }
+      img.web-img {
+        max-width: 100%; 
+        max-height: 100%;        
       }
     }
 
