@@ -1,7 +1,7 @@
 <template>
   <h2>GAME</h2>
   <div class="contents-wrap" id="game-wrap">
-    <ul id="game-ul" class="work-list">
+    <ul id="game-ul" class="game-list">
       <li v-for="item in game">
         <mymodel>
           <template #title>
@@ -20,6 +20,7 @@
               </p>
               <playableicon class="playable-icon" v-if="item.playable" />
             </div>
+            <hr/>
           </template>
           <template #contents>
             <component :is="item.detail" />
@@ -30,7 +31,7 @@
   </div>
   <h2>WEB</h2>
   <div class="contents-wrap" id="web-wrap">
-    <ul id="web-ul" class="work-list">
+    <ul id="web-ul" class="web-list">
       <li v-for="item in web">
         <mymodel>
           <template #title>
@@ -48,6 +49,7 @@
                 {{ item.event }}
               </p>
             </div>
+            <hr/>
           </template>
           <template #contents>
             <component :is="item.detail" />
@@ -57,17 +59,17 @@
     </ul>
   </div>
   <h2>Library</h2>
-  <div class="contents-wrap" id="library-wrap">
-    <ul id="library-ul">
+  <div class="contents-wrap">
+    <ul class="library-list">
       <li v-for="item in library">
-        <mylink :url="item.detail" absolute target="_blank">
-          <mycaption :title="item.lang" :caption="item.caption">
-            <div class="work-library">
-              <img v-if="item.img" :src="item.img" width="300">
-              <p v-else>{{ item.title }}</p>
-            </div>
-          </mycaption>
+        <mylink class="title" :url="item.detail" absolute target="_blank">
+          {{ item.title }}
         </mylink>
+        <p class="lang">{{ item.lang }}</p>
+        <p class="caption">
+          {{ item.caption }}
+        </p>
+        <hr/>
       </li>
     </ul>
   </div>
@@ -76,7 +78,6 @@
 <script>
 import mylink from "@/components/Link.vue"
 import mymodel from "@/components/Modal.vue"
-import mycaption from "@/components/FigCaption.vue"
 import playableicon from "@/components/works/program/PlayableIcon.vue"
 // Game
 import gamei19vsi8 from "@/components/works/program/game/i19vsi8.vue"
@@ -397,7 +398,6 @@ export default {
   components: {
     mylink,
     mymodel,
-    mycaption,
     playableicon,
   },
   mounted() {
@@ -415,13 +415,11 @@ export default {
     {
       updateContentMargin('game');
       updateContentMargin('web');
-      updateContentMargin('library');
     }
 
     window.addEventListener('resize', () => {
       updateContentMargin('game');
       updateContentMargin('web');
-      updateContentMargin('library');
     });
   }
 };
@@ -430,23 +428,16 @@ export default {
 <style lang="scss" scoped>
 @import "@/scss/common";
 
-ul {
-  text-align: left;
+ul.game-list,
+ul.web-list {
   list-style: none;
-  //transition: all .3s;
-
-  @media only screen and (max-width: $layout-mobile) {
-    text-align: center;
-  }
+  text-align: left;
 
   li {
+
     display: inline-block;
     margin: 5px;
-  }
-}
 
-ul.work-list {
-  li {
     width: 300px;
     vertical-align: top;
 
@@ -462,21 +453,23 @@ ul.work-list {
       img {
         object-fit: cover;
         vertical-align: middle;
-        transition: .2s;        
+        transition: .2s;
       }
+
       img.game-img {
-        width: 100%; 
+        width: 100%;
         height: 100%;
       }
+
       img.web-img {
-        max-width: 100%; 
-        max-height: 100%;        
+        max-width: 100%;
+        max-height: 100%;
       }
     }
 
     .detail {
       position: relative;
-      min-height: 60px;
+      height: 70px;
       text-align: left;
 
       .title {
@@ -513,27 +506,41 @@ ul.work-list {
           scale: 105%;
         }
       }
+
       .detail {
         .title {
           color: $color-theme;
         }
       }
     }
-
   }
+  hr {
+    border-top: 1px solid $color-theme;
+  }  
 }
-.work-library {
-  display: table-cell;
-  vertical-align: middle;
-  width: 300px;
-  height: 125px;
-  text-align: center;
-  background: $color-text;
 
-  p {
-    color: $color-text-light;
-    font-weight: bold;
+ul.library-list {
+  text-align: left;
+
+  @include normal-link;
+
+  .title {
+    //color: $color-theme;
     font-size: 30px;
+    font-weight: bold;
+  }
+
+  .lang {
+    font-size: 15px;
+    font-weight: bold;
+    transition: .2s;
+  }
+
+  .caption {
+    font-size: 12px;
+  }
+  hr {
+    border-top: 1px solid $color-theme;
   }
 }
 </style>
