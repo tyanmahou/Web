@@ -124,10 +124,7 @@ import gameMathP from "@/components/works/program/game/MathP.vue"
 import gameHakoniA from "@/components/works/program/game/HakoniA.vue"
 import gameColorfulTone from "@/components/works/program/game/ColorfulTone.vue"
 
-// Web
-import webHomePage from "@/components/works/program/web/HomePage.vue"
-import webColorfulTone from "@/components/works/program/web/ColorfulTone.vue"
-
+import web from "@/data/works/web";
 import library from "@/data/works/library";
 
 export default {
@@ -362,21 +359,8 @@ export default {
           playable: false,
         },
       ],
-      web: [
-        {
-          title: "チャンマホウのHP",
-          caption: "ホームページ",
-          img: require("@/assets/commons/web_logo.png"),
-          detail: shallowRef(webHomePage),
-        },
-        {
-          title: "ColorfulTone",
-          caption: "公式サイト",
-          img: require("@/assets/works/program/web/ColorfulTone/logo.png"),
-          detail: shallowRef(webColorfulTone),
-        },
-      ],
-      library: library
+      web: web,
+      library: library,
     };
   },
   components: {
