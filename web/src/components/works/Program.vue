@@ -1,6 +1,6 @@
 <template>
   <h2>GAME</h2>
-  <lsma element-width="310" margin-offset="20" class="contents-wrap">
+  <lsma :element-width="310" :margin-offset="20" class="contents-wrap">
     <ul class="game-list">
       <li v-for="item in game">
         <mymodel>
@@ -30,7 +30,7 @@
     </ul>
   </lsma>
   <h2>WEB</h2>
-  <lsma element-width="310" margin-offset="20" class="contents-wrap">
+  <lsma :element-width="310" :margin-offset="20" class="contents-wrap">
     <ul class="web-list">
         <li v-for="item in web">
           <mymodel>
@@ -59,7 +59,7 @@
       </ul>
   </lsma>
   <h2>Library</h2>
-  <lsma element-width="310" margin-offset="20" class="contents-wrap">
+  <lsma :element-width="310" :margin-offset="20" class="contents-wrap">
     <ul id="library-ul" class="library-list">
       <li v-for="item in library">
         <mylink :url="item.detail" absolute target="_blank">
