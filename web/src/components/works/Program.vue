@@ -1,7 +1,7 @@
 <template>
   <h2>GAME</h2>
-  <div class="contents-wrap" id="game-wrap">
-    <ul id="game-ul" class="game-list">
+  <lsma element-width="310" margin-offset="20" class="contents-wrap">
+    <ul class="game-list">
       <li v-for="item in game">
         <mymodel>
           <template #title>
@@ -28,43 +28,43 @@
         </mymodel>
       </li>
     </ul>
-  </div>
+  </lsma>
   <h2>WEB</h2>
-  <div class="contents-wrap" id="web-wrap">
-    <ul id="web-ul" class="web-list">
-      <li v-for="item in web">
-        <mymodel>
-          <template #title>
-            <div class="work-img">
-              <img :src="item.img" width="300" class="web-img">
-            </div>
-            <div class="detail">
-              <p class="title">
-                {{ item.title }}
-              </p>
-              <p class="caption">
-                {{ item.caption }}
-              </p>
-              <p v-if="item.event" class="event">
-                {{ item.event }}
-              </p>
-            </div>
-            <hr />
-          </template>
-          <template #contents>
-            <component :is="item.detail" />
-          </template>
-        </mymodel>
-      </li>
-    </ul>
-  </div>
+  <lsma element-width="310" margin-offset="20" class="contents-wrap">
+    <ul class="web-list">
+        <li v-for="item in web">
+          <mymodel>
+            <template #title>
+              <div class="work-img">
+                <img :src="item.img" width="300" class="web-img">
+              </div>
+              <div class="detail">
+                <p class="title">
+                  {{ item.title }}
+                </p>
+                <p class="caption">
+                  {{ item.caption }}
+                </p>
+                <p v-if="item.event" class="event">
+                  {{ item.event }}
+                </p>
+              </div>
+              <hr />
+            </template>
+            <template #contents>
+              <component :is="item.detail" />
+            </template>
+          </mymodel>
+        </li>
+      </ul>
+  </lsma>
   <h2>Library</h2>
-  <div class="contents-wrap" id="library-wrap">
+  <lsma element-width="310" margin-offset="20" class="contents-wrap">
     <ul id="library-ul" class="library-list">
       <li v-for="item in library">
         <mylink :url="item.detail" absolute target="_blank">
           <p class="title">
-          {{ item.title }}
+            {{ item.title }}
           <div class="ex">
           </div>
           </p>
@@ -81,15 +81,17 @@
         <hr />
       </li>
     </ul>
-  </div>
+  </lsma>
 </template>
   
 <script>
-import { shallowRef,  ref, computed } from 'vue'
+import { shallowRef, ref, computed } from 'vue'
 
 import mylink from "@/components/Link.vue"
 import mymodel from "@/components/Modal.vue"
 import playableicon from "@/components/works/program/PlayableIcon.vue"
+import lsma from "@/components/ListSideMarginAdjuster.vue"
+
 // Game
 import gamei19vsi8 from "@/components/works/program/game/i19vsi8.vue"
 import gameOdinCard from "@/components/works/program/game/OdinCard.vue"
@@ -410,30 +412,9 @@ export default {
     mylink,
     mymodel,
     playableicon,
+    lsma,
   },
   mounted() {
-    const updateContentMargin = (id) => {
-      if (window.matchMedia('(max-width: 420px)').matches) {
-        document.getElementById(`${id}-ul`).setAttribute("style", `margin-left: 0px`);
-        return;
-      }
-      const width = document.getElementById(`${id}-wrap`).clientWidth - 20;
-      const itemNum = Math.floor(width / 310);
-      const left = (width - itemNum * 310) / 2;
-      document.getElementById(`${id}-ul`).setAttribute("style", `margin-left: ${left}px`);
-    };
-
-    {
-      updateContentMargin('game');
-      updateContentMargin('web');
-      updateContentMargin('library');
-    }
-
-    window.addEventListener('resize', () => {
-      updateContentMargin('game');
-      updateContentMargin('web');
-      updateContentMargin('library');
-    });
   }
 };
 </script>
@@ -454,7 +435,7 @@ ul.web-list {
 
   @media only screen and (max-width: $layout-mobile) {
     text-align: center;
-  }  
+  }
 
   li {
 
@@ -543,7 +524,7 @@ ul.library-list {
 
   @media only screen and (max-width: $layout-mobile) {
     text-align: center;
-  }  
+  }
 
   li {
     display: inline-block;
@@ -569,14 +550,15 @@ ul.library-list {
         height: 20px;
         background-color: #008080;
         background-blend-mode: multiply;
-        mask-image: url(@/assets/commons/icon/external_link.png);   
-        mask-size:20px; 
+        mask-image: url(@/assets/commons/icon/external_link.png);
+        mask-size: 20px;
       }
     }
 
     .detail {
       position: relative;
       height: 40px;
+
       .lang {
         color: $color-text;
         font-size: 15px;
@@ -597,8 +579,9 @@ ul.library-list {
     &:hover {
       .title {
         color: $color-theme;
+
         .ex {
-          background-color:$color-theme;
+          background-color: $color-theme;
         }
       }
     }

@@ -1,6 +1,6 @@
 <template>
     <div>
-    <slot></slot>
+        <slot></slot>
     </div>
 </template>
   
@@ -8,7 +8,7 @@
 export default {
     name: 'ListSideMarginAdjuster',
     props: {
-        elementWidth : Number,
+        elementWidth: Number,
         marginOffset: {
             type: Number,
             default: 0
@@ -21,9 +21,12 @@ export default {
         }
     },
     mounted() {
+        // element キャッシュ
         this.wrap = this.$el;
         this.ul = this.wrap.querySelector("ul");
-        const updateContentMargin = () => {
+
+        // マージン更新
+        const updateMargin = () => {
             if (window.matchMedia('(max-width: 420px)').matches) {
                 this.ul.setAttribute("style", `margin-left: 0px`);
                 return;
@@ -35,11 +38,11 @@ export default {
         };
 
         {
-            updateContentMargin();
+            updateMargin();
         }
 
         window.addEventListener('resize', () => {
-            updateContentMargin();
+            updateMargin();
         });
     }
 }
