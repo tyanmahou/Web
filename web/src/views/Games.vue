@@ -4,9 +4,9 @@
     <div class="main-container">
       <h1>GAMES</h1>
       <h2>UPCOMING</h2>
-      <div class="contents-wrap" id="upcoming-wrap">
-      Comming Soon
-        <ul id="upcoming-ul">
+      <lsma :element-width="310" :margin-offset="20" class="contents-wrap">
+        Comming Soon      
+        <ul>
           <li v-for="item in upcoming">
             <mymodel>
               <template #title>
@@ -22,11 +22,13 @@
             </mymodel>
           </li>
         </ul>
-      </div>
+      </lsma>
       <h2>RELEASED</h2>
-      <div class="contents-wrap" id="released-wrap">
-      Comming Soon
-      </div>      
+      <lsma :element-width="310" :margin-offset="20" class="contents-wrap">
+        Comming Soon
+        <ul>
+        </ul>
+      </lsma>
     </div>
   </div>
   <foot />
@@ -37,8 +39,7 @@ import myheader from "@/components/Header.vue";
 import foot from "@/components/Foot.vue";
 import mylink from "@/components/Link.vue"
 import mymodal from "@/components/Modal.vue"
-import mycaption from "@/components/FigCaption.vue"
-
+import lsma from "@/components/ListSideMarginAdjuster.vue"
 export default {
   name: "GamesView",
   data() {
@@ -53,27 +54,9 @@ export default {
     foot,
     mylink,
     mymodal,
-    mycaption,    
+    lsma,    
   },
   mounted() {
-    const updateContentMargin = (id) => {
-      if (window.matchMedia('(max-width: 420px)').matches) {
-        document.getElementById(`${id}-ul`).setAttribute("style", `margin-left: 0px`);
-        return;
-      }
-      const width = document.getElementById(`${id}-wrap`).clientWidth - 20;
-      const itemNum = Math.floor(width / 310);
-      const left = (width - itemNum * 310) / 2;
-      document.getElementById(`${id}-ul`).setAttribute("style", `margin-left: ${left}px`);
-    };
-
-    {
-      updateContentMargin('upcoming');
-    }
-
-    window.addEventListener('resize', () => {
-      updateContentMargin('upcoming');
-    });
   }
 };
 </script>
