@@ -29,6 +29,12 @@
         <ul>
         </ul>
       </lsma>
+      <h2>CASUAL</h2>
+      <lsma :element-width="310" :margin-offset="20" class="contents-wrap">
+        Comming Soon
+        <ul>
+        </ul>
+      </lsma>      
     </div>
   </div>
   <foot />
@@ -40,13 +46,18 @@ import foot from "@/components/Foot.vue";
 import mylink from "@/components/Link.vue"
 import mymodal from "@/components/Modal.vue"
 import lsma from "@/components/ListSideMarginAdjuster.vue"
+
+import upcoming from "@/data/games/upcoming";
+import released from "@/data/games/released";
+import casual from "@/data/games/casual";
+
 export default {
   name: "GamesView",
   data() {
     return {
-      upcoming: [],
-      released: [],
-      minigame: [],
+      upcoming: upcoming,
+      released: released,
+      casual : casual ,
     };
   },
   components: {
