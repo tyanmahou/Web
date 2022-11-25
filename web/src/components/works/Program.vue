@@ -3,7 +3,7 @@
   <lsma :element-width="310" :margin-offset="20" class="contents-wrap">
     <ul class="game-list">
       <li v-for="item in game">
-        <mymodel>
+        <mymodal>
           <template #title>
             <div class="work-img">
               <img :src="item.img" width="300" class="game-img">
@@ -25,7 +25,7 @@
           <template #contents>
             <component :is="item.detail" />
           </template>
-        </mymodel>
+        </mymodal>
       </li>
     </ul>
   </lsma>
@@ -33,7 +33,7 @@
   <lsma :element-width="310" :margin-offset="20" class="contents-wrap">
     <ul class="web-list">
         <li v-for="item in web">
-          <mymodel>
+          <mymodal>
             <template #title>
               <div class="work-img">
                 <img :src="item.img" width="300" class="web-img">
@@ -54,7 +54,7 @@
             <template #contents>
               <component :is="item.detail" />
             </template>
-          </mymodel>
+          </mymodal>
         </li>
       </ul>
   </lsma>
@@ -86,7 +86,7 @@
   
 <script>
 import mylink from "@/components/Link.vue"
-import mymodel from "@/components/Modal.vue"
+import mymodal from "@/components/Modal.vue"
 import playableicon from "@/components/works/program/PlayableIcon.vue"
 import lsma from "@/components/ListSideMarginAdjuster.vue"
 
@@ -105,7 +105,7 @@ export default {
   },
   components: {
     mylink,
-    mymodel,
+    mymodal,
     playableicon,
     lsma,
   },
