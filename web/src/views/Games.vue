@@ -33,7 +33,7 @@
                 <hr />
               </template>
               <template #contents>
-                <component :is="item.detail" />
+                <component :is="item.detail" :detailed="false"/>
               </template>
             </mymodal>
           </li>
