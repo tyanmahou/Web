@@ -5,8 +5,32 @@
       <h1>GAMES</h1>
       <h2>UPCOMING</h2>
       <lsma :element-width="310" :margin-offset="20" class="contents-wrap">
-        Comming Soon
-        <ul>
+        <ul class="game-list">
+          <li v-for="item in upcoming">
+            <mymodal>
+              <template #title>
+                <div class="work-img">
+                  <img :src="item.img" width="300">
+                </div>
+                <div class="detail">
+                  <p class="title">
+                    {{ item.title }}
+                  </p>
+                  <p class="caption">
+                    {{ item.caption }}
+                  </p>
+                  <p v-if="item.event" class="event">
+                    {{ item.event }}
+                  </p>
+                  <playableicon class="playable-icon" v-if="item.playable" />
+                </div>
+                <hr />
+              </template>
+              <template #contents>
+                <component :is="item.detail" :detailed="false"/>
+              </template>
+            </mymodal>
+          </li>
         </ul>
       </lsma>
       <h2>RELEASED</h2>
