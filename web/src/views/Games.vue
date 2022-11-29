@@ -19,9 +19,6 @@
                   <p class="caption">
                     {{ item.caption }}
                   </p>
-                  <p v-if="item.event" class="event">
-                    {{ item.event }}
-                  </p>
                   <playableicon class="playable-icon" v-if="item.playable" />
                 </div>
                 <hr />
@@ -49,9 +46,6 @@
                   <p class="caption">
                     {{ item.caption }}
                   </p>
-                  <p v-if="item.event" class="event">
-                    {{ item.event }}
-                  </p>
                   <playableicon class="playable-icon" v-if="item.playable" />
                 </div>
                 <hr />
@@ -78,9 +72,6 @@
                   </p>
                   <p class="caption">
                     {{ item.caption }}
-                  </p>
-                  <p v-if="item.event" class="event">
-                    {{ item.event }}
                   </p>
                   <playableicon class="playable-icon" v-if="item.playable" />
                 </div>
