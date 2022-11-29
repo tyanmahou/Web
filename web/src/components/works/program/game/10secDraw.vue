@@ -1,7 +1,7 @@
 <template>
     <workbase>
         <h2>Siv3Dくん版深夜のお絵かき10秒一本勝負</h2>
-        <div class="skill">
+        <div class="skill" v-if="detailed">
             <skillicon v-for="s in skills" :name="s" />
         </div>
         <div class="about">
@@ -55,6 +55,12 @@ import media from "@/components/works/program/MediaGallery.vue"
 
 export default {
     name: "10secDraw",
+    props: {
+        detailed: {
+            type: Boolean,
+            default: true
+        }
+    },    
     data() {
         return {
             slide: [
