@@ -9,12 +9,17 @@
                 <div class="to-left">
                     <h3>DESCRIPTION</h3>
                 </div>
-                <div class="text">
+                <div v-if="detailed" class="text">
                     10秒でどれだけうまくかけるか！<br />
                     ※Twitter連携を利用します。<br /><br />
                     10秒で「Siv3Dくん」を描いて類似度で点数を付けます。<br>
                     <br />
                     「第10回Siv3dGameJam」投稿作品です。<br />
+                </div>
+                <div v-else class="text">
+                    10秒でどれだけうまくかけるか！<br />
+                    ※Twitter連携を利用します。<br /><br />
+                    10秒で「Siv3Dくん」を描いて類似度で点数を付けます。                
                 </div>
             </div>
             <div class="top-media">
@@ -22,26 +27,32 @@
             </div>
         </div>
         <media :slide="slide" />
-        <div class="to-left">
-            <h3>PLAY</h3>
+        <div>
+            <div class="to-left">
+                <h3>PLAY</h3>
+            </div>
+            <div class="text">
+                <a href="http://ux.getuploader.com/tyanmahou_game/download/4/10secDraw.zip" target="blank">ダウンロード</a>
+            </div>
         </div>
-        <div class="text">
-            <a href="http://ux.getuploader.com/tyanmahou_game/download/4/10secDraw.zip" target="blank">ダウンロード</a>
+        <div v-if="detailed">
+            <div class="to-left">
+                <h3>REPOSITORY</h3>
+            </div>
+            <div class="text">
+                <autolink url="https://github.com/tyanmahou/Siv3dGameJam10" />
+            </div>
         </div>
-        <div class="to-left">
-            <h3>REPOSITORY</h3>
-        </div>
-        <div class="text">
-            <autolink url="https://github.com/tyanmahou/Siv3dGameJam10" />
-        </div>
-        <div class="to-left">
-            <h3>DEVELOP</h3>
-        </div>
-        <div class="text">
-            2016 (1日)<br /><br />
-            プログラマー：mahou<br>
-            サウンド：mahou<br />
-            スペシャルサンクス：Siv3D
+        <div v-if="detailed">
+            <div class="to-left">
+                <h3>DEVELOP</h3>
+            </div>
+            <div class="text">
+                2016 (1日)<br /><br />
+                プログラマー：mahou<br>
+                サウンド：mahou<br />
+                スペシャルサンクス：Siv3D
+            </div>
         </div>
     </workbase>
 </template>
@@ -60,7 +71,7 @@ export default {
             type: Boolean,
             default: true
         }
-    },    
+    },
     data() {
         return {
             slide: [
