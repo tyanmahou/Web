@@ -44,6 +44,12 @@ import media from "@/components/works/program/MediaGallery.vue"
 
 export default {
     name: "HakoniA",
+    props: {
+        detailed: {
+            type: Boolean,
+            default: true
+        }
+    },    
     data() {
         return {
             slide: [
