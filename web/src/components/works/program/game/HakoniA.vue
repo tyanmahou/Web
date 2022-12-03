@@ -1,7 +1,7 @@
 <template>
     <workbase>
         <h2>箱にア</h2>
-        <div class="skill">
+        <div class="skill" v-if="detailed">
             <skillicon v-for="s in skills" :name="s" />
         </div>
         <div class="about">
@@ -9,10 +9,13 @@
                 <div class="to-left">
                     <h3>DESCRIPTION</h3>
                 </div>
-                <div class="text">
+                <div class="text" v-if="detailed">
                     箱いっぱいに「ア」を詰めよう！！<br>
                     <br />
                     「Unity1week」投稿作品です。<br />
+                </div>
+                <div class="text" v-else>
+                    箱いっぱいに「ア」を詰めよう！！
                 </div>
             </div>
             <div class="top-media">
@@ -20,17 +23,21 @@
             </div>
         </div>
         <media :slide="slide" />
-        <div class="to-left">
-            <h3>PLAY</h3>
+        <div>
+            <div class="to-left">
+                <h3>PLAY</h3>
+            </div>
+            <div class="text">
+                <a href="https://unityroom.com/games/hakoniA" target="blank">UnityRoomへ</a>
+            </div>
         </div>
-        <div class="text">
-            <a href="https://unityroom.com/games/hakoniA" target="blank">UnityRoomへ</a>
-        </div>
-        <div class="to-left">
-            <h3>DEVELOP</h3>
-        </div>
-        <div class="text">
-            2019 (1週間)
+        <div v-if="detailed">
+            <div class="to-left">
+                <h3>DEVELOP</h3>
+            </div>
+            <div class="text">
+                2019 (1週間)
+            </div>
         </div>
     </workbase>
 </template>
@@ -49,7 +56,7 @@ export default {
             type: Boolean,
             default: true
         }
-    },    
+    },
     data() {
         return {
             slide: [
