@@ -1,7 +1,7 @@
 <template>
     <workbase>
         <h2>JustRoll</h2>
-        <div class="skill">
+        <div class="skill" v-if="detailed">
             <skillicon v-for="s in skills" :name="s" />
         </div>
         <div class="about">
@@ -9,10 +9,13 @@
                 <div class="to-left">
                     <h3>DESCRIPTION</h3>
                 </div>
-                <div class="text">
+                <div class="text" v-if="detailed">
                     赤線の上に上手く乗るように線を引くカジュアルゲームです。<br>
                     <br />
                     「Unity1week」投稿作品です。<br />
+                </div>
+                <div class="text" v-else>
+                    赤線の上に上手く乗るように線を引くカジュアルゲームです。
                 </div>
             </div>
             <div class="top-media">
@@ -20,17 +23,21 @@
             </div>
         </div>
         <media :slide="slide" />
-        <div class="to-left">
-            <h3>PLAY</h3>
+        <div>
+            <div class="to-left">
+                <h3>PLAY</h3>
+            </div>
+            <div class="text">
+                <a href="https://unityroom.com/games/just_roll" target="blank">UnityRoomへ</a>
+            </div>
         </div>
-        <div class="text">
-            <a href="https://unityroom.com/games/just_roll" target="blank">UnityRoomへ</a>
-        </div>
-        <div class="to-left">
-            <h3>DEVELOP</h3>
-        </div>
-        <div class="text">
-            2017 (1週間)
+        <div v-if="detailed">
+            <div class="to-left">
+                <h3>DEVELOP</h3>
+            </div>
+            <div class="text">
+                2017 (1週間)
+            </div>
         </div>
     </workbase>
 </template>
@@ -44,6 +51,12 @@ import media from "@/components/works/program/MediaGallery.vue"
 
 export default {
     name: "JustRoll",
+    props: {
+        detailed: {
+            type: Boolean,
+            default: true
+        }
+    },    
     data() {
         return {
             slide: [
