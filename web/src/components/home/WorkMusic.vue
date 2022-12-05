@@ -25,7 +25,7 @@ export default {
     return {
       visual: false,
       pickup: {
-        url: "https://soundcloud.com/tyanmahou/cqd8kyc7mxr1",
+        url: "https://soundcloud.com/tyanmahou/flower-days",
         width: "100%",
         height: "170",
       },
