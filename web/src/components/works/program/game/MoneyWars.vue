@@ -1,7 +1,7 @@
 <template>
     <workbase>
         <h2>お年玉うぉーず</h2>
-        <div class="skill">
+        <div class="skill" v-if="detailed">
             <skillicon v-for="s in skills" :name="s" />
         </div>
         <div class="about">
@@ -23,25 +23,29 @@
             </div>
         </div>
         <media :slide="slide" />
-        <div class="to-left">
-            <h3>PLAY</h3>
+        <div>
+            <div class="to-left">
+                <h3>PLAY</h3>
+            </div>
+            <div class="text">
+                <a href="http://ux.getuploader.com/tyanmahou_game/download/2/MoneyWars.zip" target="blank">ダウンロード</a>
+            </div>
         </div>
-        <div class="text">
-            <a href="http://ux.getuploader.com/tyanmahou_game/download/2/MoneyWars.zip" target="blank">ダウンロード</a>
-        </div>
-        <div class="to-left">
-            <h3>DEVELOP</h3>
-        </div>
-        <div class="text">
-            2016 (数日)<br /><br />
-            プログラマー：mahou<br>
-            デザイン：udon<br>
-            サウンド：フリー素材
-            <ul>
-                <li>【BGM/SE】ニコニ・コモンズ</li>
-                <li>【SE】<a href="http://www.369musiq.com/index.html" target="blank">369様</a></li>
-                <li>【SE】<a href="http://www.kurage-kosho.info/" target="blank">くらげ工匠様</a> </li>
-            </ul>
+        <div v-if="detailed">
+            <div class="to-left">
+                <h3>DEVELOP</h3>
+            </div>
+            <div class="text">
+                2016 (数日)<br /><br />
+                プログラマー：mahou<br>
+                デザイン：udon<br>
+                サウンド：フリー素材
+                <ul>
+                    <li>【BGM/SE】ニコニ・コモンズ</li>
+                    <li>【SE】<a href="http://www.369musiq.com/index.html" target="blank">369様</a></li>
+                    <li>【SE】<a href="http://www.kurage-kosho.info/" target="blank">くらげ工匠様</a> </li>
+                </ul>
+            </div>
         </div>
     </workbase>
 </template>
@@ -55,6 +59,12 @@ import media from "@/components/works/program/MediaGallery.vue"
 
 export default {
     name: "MoneyWars",
+    props: {
+        detailed: {
+            type: Boolean,
+            default: true
+        }
+    },
     data() {
         return {
             slide: [
