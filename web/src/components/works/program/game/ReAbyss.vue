@@ -10,7 +10,8 @@
                     <h3>DESCRIPTION</h3>
                 </div>
                 <div class="text">
-                    王道横スクロール水中アクションを開発中。
+                    王道横スクロール水中アクションを開発中。<br/><br/>
+                    2014年に開発した「AbyssDream」を完全リニューアルします。
                 </div>
             </div>
             <div class="top-media">
