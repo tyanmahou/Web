@@ -161,16 +161,8 @@ ul.game-list{
         object-fit: cover;
         vertical-align: middle;
         transition: .2s;
-      }
-
-      img.game-img {
         width: 100%;
-        height: 100%;
-      }
-
-      img.web-img {
-        max-width: 100%;
-        max-height: 100%;
+        height: 100%;        
       }
     }
 
