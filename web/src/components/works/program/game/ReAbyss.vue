@@ -39,6 +39,12 @@ import media from "@/components/works/program/MediaGallery.vue"
 
 export default {
     name: "ReAbyss",
+    props: {
+        detailed: {
+            type: Boolean,
+            default: true
+        }
+    },    
     data() {
         return {
             slide: [
