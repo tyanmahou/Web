@@ -1,6 +1,9 @@
 <template>
   <myheader current="1" />
   <div class="main">
+    <div class="head-container">
+      <img src="@/assets/games/Re-Abyss.png">
+    </div>
     <div class="main-container">
       <h1>GAMES</h1>
       <h2>UPCOMING</h2>
@@ -24,7 +27,7 @@
                 <hr />
               </template>
               <template #contents>
-                <component :is="item.detail" :detailed="false"/>
+                <component :is="item.detail" :detailed="false" />
               </template>
             </mymodal>
           </li>
@@ -51,7 +54,7 @@
                 <hr />
               </template>
               <template #contents>
-                <component :is="item.detail" :detailed="false"/>
+                <component :is="item.detail" :detailed="false" />
               </template>
             </mymodal>
           </li>
@@ -78,7 +81,7 @@
                 <hr />
               </template>
               <template #contents>
-                <component :is="item.detail" :detailed="false"/>
+                <component :is="item.detail" :detailed="false" />
               </template>
             </mymodal>
           </li>
@@ -126,13 +129,28 @@ export default {
 <style lang="scss" scoped>
 @import "@/scss/common";
 
+.head-container {
+  margin: -20px 0 0 0;
+  padding: 40px 0 40px 0;
+
+  @media only screen and (max-width: $layout-mobile) {
+    margin: 20px 0 0 0;
+    padding: 0px 0 0px 0;
+  }
+
+  img {
+    width: 100%;
+    vertical-align: middle;
+  }
+}
+
 ul {
   hr {
     border-top: 1px solid $color-theme;
   }
 }
 
-ul.game-list{
+ul.game-list {
   list-style: none;
   text-align: left;
 
@@ -162,7 +180,7 @@ ul.game-list{
         vertical-align: middle;
         transition: .2s;
         width: 100%;
-        height: 100%;        
+        height: 100%;
       }
     }
 
