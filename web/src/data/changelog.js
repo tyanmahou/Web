@@ -4,6 +4,18 @@ export default [
     //     text:'',
     // },
     {
+      date: "2022.12.12",
+      text: "GAMEページ整理",
+    },
+    {
+      date: "2022.12.12",
+      text: "GAMEページ整理",
+    },
+    {
+      date: "2022.11.17",
+      text: "ColorfulTone 「2022 秋パック」配信開始",
+    },
+    {
       date: "2022.11.16",
       text: "プログラム作品ページを更新",
     },
