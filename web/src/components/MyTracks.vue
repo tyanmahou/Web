@@ -4,9 +4,9 @@
     :width="width"
     :height="height"
     :color="color"
-    sharing="true"
-    showUser="false"
-    hideRelated="true"
+    :sharing="true"
+    :showUser="false"
+    :hideRelated="true"
     />
   </template>
   
