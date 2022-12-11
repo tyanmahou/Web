@@ -31,7 +31,7 @@
           <div class="contents-wrap">
             <news />
             <div class="changelog">
-              <modal id="modal-changelog">
+              <modal>
                 <template #title> 更新履歴 </template>
                 <template #contents>
                   <changelog />
