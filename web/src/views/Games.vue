@@ -2,10 +2,12 @@
   <myheader current="1" />
   <div class="main">
     <div class="head-container">
-      <img src="@/assets/games/Re-Abyss.png">
+      <slidefade :slide="slide" />
     </div>
     <div class="main-container">
-      <h1>GAMES</h1>
+      <div class="logo">
+        <img src="@/assets/games/logo.png">
+      </div>
       <h2>UPCOMING</h2>
       <lsma :element-width="310" :margin-offset="20" class="contents-wrap">
         <ul class="game-list">
@@ -99,6 +101,7 @@ import mylink from "@/components/Link.vue"
 import mymodal from "@/components/Modal.vue"
 import playableicon from "@/components/works/program/PlayableIcon.vue"
 import lsma from "@/components/ListSideMarginAdjuster.vue"
+import slidefade from "@/components/SlideshowFade.vue"
 
 import upcoming from "@/data/games/upcoming";
 import released from "@/data/games/released";
@@ -108,6 +111,10 @@ export default {
   name: "GamesView",
   data() {
     return {
+      slide: [
+        require("@/assets/games/ColorfulTone.png"),
+        require("@/assets/games/Re-Abyss.png"),
+      ],
       upcoming: upcoming,
       released: released,
       casual: casual,
@@ -120,6 +127,7 @@ export default {
     mymodal,
     playableicon,
     lsma,
+    slidefade,
   },
   mounted() {
   }
@@ -137,13 +145,13 @@ export default {
     margin: 20px 0 0 0;
     padding: 0px 0 0px 0;
   }
-
-  img {
-    width: 100%;
-    vertical-align: middle;
-  }
 }
 
+.logo {
+  img {
+    max-width: 100%;
+  }
+}
 ul {
   hr {
     border-top: 1px solid $color-theme;
