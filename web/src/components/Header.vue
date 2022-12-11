@@ -131,7 +131,7 @@ export default {
       padding: 20px 0 0 0;
     }
 
-    @media only screen and (max-width: $layout-min-width) {
+    @media only screen and (max-width: $layout-mobile) {
       padding: 0;
       height: 60px;
       border-radius: 0;
