@@ -4,8 +4,8 @@
   :width="width"
   :height="height"
   :color="color"
-  showUser="false"
-  hideRelated="true"
+  :showUser="false"
+  :hideRelated="true"
   :visual="visual"
   />
 </template>
