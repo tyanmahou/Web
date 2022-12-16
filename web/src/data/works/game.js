@@ -22,6 +22,7 @@ import gameMoneyWars from "@/components/works/program/game/MoneyWars.vue"
 import gameEggAndShark from "@/components/works/program/game/EggAndShark.vue"
 import gameToyboxAndLava from "@/components/works/program/game/ToyboxAndLava.vue"
 import game10secDraw from "@/components/works/program/game/10secDraw.vue"
+import gameBlockKuzusi from "@/components/works/program/game/BlockKuzusi.vue"
 import gamebabekyaaaaaa from "@/components/works/program/game/babekyaaaaaa.vue"
 import gameGoatGhost from "@/components/works/program/game/GoatGhost.vue"
 import gamePerfectPlayer from "@/components/works/program/game/PerfectPlayer.vue"
@@ -102,6 +103,13 @@ export default [
     event: "企業ハッカソン",
     playable: false,
   },
+  {
+    title: "ブロック崩し",
+    caption: "クソゲー",
+    img: require("@/assets/works/program/game/BlockKuzusi/pic01.png"),
+    detail: shallowRef(gameBlockKuzusi),
+    playable: false,
+  },  
   {
     title: "Siv3Dくん版 深夜のお絵かき10秒一本勝負",
     caption: "高速お絵描きゲーム",
