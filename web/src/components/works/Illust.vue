@@ -15,7 +15,7 @@
         <div>
           <ul>
             <li v-for="img in item.data" :key="img.id">
-              <imagemodal :src="require(`@/assets/works/illust/${item.year}/${img.id}.png`)"
+              <imagemodal :src="`contents/works/illust/${item.year}/${img.id}.png`"
                 width="300" />
             </li>
           </ul>
@@ -26,20 +26,29 @@
 </template>
   
 <script>
+import axios from 'axios'
 import imagemodal from "@/components/ImageModal.vue";
-import gallery from "@/data/works/illust";
 
 export default {
   name: "Illust",
   data() {
     return {
       category: '',
-      gallery: gallery,
+      gallery: [],
     };
   },
   components: {
     imagemodal,
   },
+  mounted () {
+    axios.get('server/works/illust.json')
+      .then(response => {
+        this.gallery = response.data
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  },  
   methods: {
     changeCategory(nextCategory) {
       this.category = nextCategory;
