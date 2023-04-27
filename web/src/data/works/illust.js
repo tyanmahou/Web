@@ -1,5 +1,14 @@
 export default [
     {
+        year: 2023,
+        data: [
+            {
+                id: 1,
+                category: 'fanfic',
+            },
+        ],
+    },    
+    {
         year: 2022,
         data: [
             {
