@@ -56,7 +56,7 @@
             </template>
           </mymodal>
         </li>
-      </ul>
+    </ul>
   </lsma>
   <h2>Library</h2>
   <lsma :element-width="310" :margin-offset="20" class="contents-wrap">
@@ -82,6 +82,35 @@
       </li>
     </ul>
   </lsma>
+  <h2>Other</h2>
+  <lsma :element-width="310" :margin-offset="20" class="contents-wrap">
+    <ul class="other-list">
+        <li v-for="item in other">
+          <mymodal>
+            <template #title>
+              <div class="work-img">
+                <img :src="item.img" width="300" class="other-img">
+              </div>
+              <div class="detail">
+                <p class="title">
+                  {{ item.title }}
+                </p>
+                <p class="caption">
+                  {{ item.caption }}
+                </p>
+                <p v-if="item.event" class="event">
+                  {{ item.event }}
+                </p>
+              </div>
+              <hr />
+            </template>
+            <template #contents>
+              <component :is="item.detail" />
+            </template>
+          </mymodal>
+        </li>
+    </ul>
+  </lsma>  
 </template>
   
 <script>
@@ -93,6 +122,7 @@ import lsma from "@/components/ListSideMarginAdjuster.vue"
 import game from "@/data/works/game";
 import web from "@/data/works/web";
 import library from "@/data/works/library";
+import other from "@/data/works/program_other";
 
 export default {
   name: "Program",
@@ -101,6 +131,7 @@ export default {
       game: game,
       web: web,
       library: library,
+      other: other,
     };
   },
   components: {
@@ -124,7 +155,8 @@ ul {
 }
 
 ul.game-list,
-ul.web-list {
+ul.web-list,
+ul.other-list {
   list-style: none;
   text-align: left;
 
@@ -164,6 +196,10 @@ ul.web-list {
         max-width: 100%;
         max-height: 100%;
       }
+      img.other-img {
+        width: 100%;
+        height: 100%;
+      }      
     }
 
     .detail {
