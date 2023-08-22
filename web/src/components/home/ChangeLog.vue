@@ -14,14 +14,23 @@
 </template>
 
 <script>
-import changelog from "@/data/changelog";
+import axios from 'axios'
 export default {
   name: "ChangeLog",
   data() {
     return {
-      items: changelog,
+      items: [],
     };
   },
+  mounted () {
+    axios.get('server/changelog.json')
+      .then(response => {
+        this.items = response.data
+      })
+      .catch(error => {
+        console.log(error)
+      });
+  },    
 };
 </script>
 
