@@ -39,6 +39,9 @@
               </modal>
             </div>
           </div>
+          <div class="contents-wrap">
+            <rssfeed/>
+          </div>
           <h2>WORKS</h2>
           <div class="contents-wrap">
             <ul class="works">
@@ -83,6 +86,7 @@ import foot from "@/components/Foot.vue";
 import mylink from "@/components/Link.vue";
 import modal from "@/components/Modal.vue";
 import news from "@/components/home/News.vue";
+import rssfeed from "@/components/home/RSSFeed.vue";
 import changelog from "@/components/home/ChangeLog.vue";
 import mymission from "@/components/home/MyMission.vue";
 import workgame from "@/components/home/WorkGame.vue";
@@ -106,6 +110,7 @@ export default {
     workgame,
     workillust,
     workmusic,
+    rssfeed,
   },
 };
 </script>
