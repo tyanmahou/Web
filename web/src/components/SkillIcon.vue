@@ -32,18 +32,30 @@ span {
     color: #ffffff;
     background: #f56c6c;
   }
+  &.edit {
+    color: #ffffff;
+    background: #483d8b;
+  }
   &.tool {
     color: #ffffff;
     background: #f3c950;
   }
+  &.vcs {
+    color: #ffffff;
+    background: #e67f2b;
+  }  
   &.system {
     color: #ffffff;
     background: #6ec543;
   }  
   &.service {
     color: #ffffff;
-    background: #483d8b;
+    background: #00aebb;
   }
+  &.platform {
+    color: #ffffff;
+    background: #606060;
+  }  
   &.device {
     color: #ffffff;
     background: #b306e7;
@@ -55,7 +67,7 @@ span {
 
   @for $lv from 1 through 6 {
     &.level-#{$lv} {
-    $scale: 1 + ($lv - 1) * 0.6;
+    $scale: 1 + ($lv - 1) * 0.5;
     font-size: 12px * $scale;
     height: 14px * $scale;
     padding: 0 9px * $scale 2px * $scale 9px * $scale;

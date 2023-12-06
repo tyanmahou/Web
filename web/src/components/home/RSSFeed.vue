@@ -7,7 +7,7 @@
             <p class="date">{{ item.pubDate }}</p>
             <p class="title"><a :href="item.link" target="_blank">{{ item.title }}</a></p>
           </td>
-          <td class="feed-title-area"> <a :href="item.feedLink" target="_blank">
+          <td> <a :href="item.feedLink" target="_blank">
               <p class="feed-title">{{ item.feedTitle }}</p>
             </a></td>
         </tr>
@@ -110,12 +110,6 @@ export default {
       padding: 2px 9px 2px 9px;
       border-radius: 14px;
       min-width: 150px;
-    }
-
-    .feed-title-area {
-      @media only screen and (max-width: $layout-mobile) {
-        display: none;
-      }
     }
   }
 }</style>

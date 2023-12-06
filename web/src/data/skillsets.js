@@ -18,7 +18,19 @@ export default [
     },
     {
       name:"Siv3D", level:5
-    },
+    },             
+    {
+      name:"Tobii EyeX", level:2
+    },       
+    {
+      name:"Unreal Engine", level:1
+    },    
+    {
+      name:"Windows", level:4
+    },       
+    {
+      name:"Nintendo Switch", level:2
+    },       
     {
       name:"HLSL", level:3
     },
@@ -30,6 +42,12 @@ export default [
     },
     {
       name:"GLSL", level:2
+    },     
+    {
+      name:"Android", level:2
+    },      
+    {
+      name:"AR", level:2
     },        
     {
       name:"Visual Studio", level:4
@@ -44,8 +62,17 @@ export default [
       name:"GitHub", level:4
     },
     {
-      name:"SVN", level:3
+      name:"Bitbucket", level:3
+    },    
+    {
+      name:"SVN", level:2
     },
+    {
+      name:"Plastic SCM", level:2
+    },
+    {
+      name:"Perforce", level:1
+    },    
     {
       name:"Docker", level:3
     },    
@@ -119,9 +146,6 @@ export default [
       name:"CocosCreater", level:2
     },
     {
-      name:"Microsoft 365", level:3
-    },       
-    {
       name:"MATLAB", level:1
     },                  
     {
@@ -131,9 +155,15 @@ export default [
       name:"Perl", level:1
     }, 
     {
-      name:"AR", level:2
-    },          
+      name:"Haskell", level:1
+    },      
     {
-      name:"Tobii EyeX", level:2
-    },        
+      name:"Microsoft 365", level:3
+    },       
+    {
+      name:"Slack", level:3
+    },       
+    {
+      name:"Notion", level:1
+    },       
   ];
