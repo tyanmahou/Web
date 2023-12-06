@@ -46,11 +46,11 @@ span {
   }  
   &.system {
     color: #ffffff;
-    background: #6ec543;
+    background: #00aebb;
   }  
   &.service {
     color: #ffffff;
-    background: #00aebb;
+    background: #6ec543;
   }
   &.platform {
     color: #ffffff;

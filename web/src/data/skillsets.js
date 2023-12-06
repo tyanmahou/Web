@@ -62,7 +62,7 @@ export default [
       name:"GitHub", level:4
     },
     {
-      name:"Bitbucket", level:3
+      name:"Atlassian", level:3
     },    
     {
       name:"SVN", level:2
@@ -138,6 +138,9 @@ export default [
     },
     {
       name:"cocos2d-x", level:1
+    },      
+    {
+      name:"Mac", level:2
     },            
     {
       name:"XCode", level:2

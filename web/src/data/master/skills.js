@@ -113,15 +113,6 @@ export default{
     "XCode": {
       name:"XCode", category:"edit"
     },            
-    "Microsoft 365": {
-      name:"Microsoft 365", category:"tool"
-    },       
-    "Slack": {
-      name:"Slack", category:"tool"
-    },       
-    "Notion": {
-      name:"Notion", category:"tool"
-    },       
     "Docker": {
       name:"Docker", category:"system"
     },    
@@ -140,9 +131,18 @@ export default{
     "GitHub": {
       name:"GitHub", category:"service"
     },
-    "Bitbucket": {
-      name:"Bitbucket", category:"service"
+    "Atlassian": {
+      name:"Atlassian", category:"service"
     },
+    "Microsoft 365": {
+      name:"Microsoft 365", category:"service"
+    },       
+    "Slack": {
+      name:"Slack", category:"service"
+    },       
+    "Notion": {
+      name:"Notion", category:"service"
+    },       
     "AWS" :{
       name:"AWS", category:"service"
     },
