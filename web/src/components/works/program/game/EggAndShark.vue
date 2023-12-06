@@ -79,6 +79,7 @@ export default {
             skills: [
                 "C++",
                 "Siv3D",
+                "Visual Studio",
             ],
         };
     },

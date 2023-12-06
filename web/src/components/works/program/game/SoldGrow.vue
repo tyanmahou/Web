@@ -42,6 +42,7 @@ export default {
             skills: [
                 "C++",
                 "Windows API",
+                "Visual Studio",
             ],
         };
     },

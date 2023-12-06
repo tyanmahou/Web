@@ -39,6 +39,9 @@ export default {
                 "css",
                 "JavaScript",
                 "PHP",
+                "Git",
+                "GitHub",
+                "VS Code",
             ],
         };
     },

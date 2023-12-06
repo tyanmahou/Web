@@ -57,6 +57,7 @@ export default {
             skills: [
                 "C#",
                 "Unity",
+                "Visual Studio",
             ],
         };
     },

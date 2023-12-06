@@ -58,7 +58,10 @@ export default {
             ],
             skills: [
                 "C++",
+                "HLSL",
                 "DirectX",
+                "Windows API",
+                "Visual Studio",
             ],
         };
     },

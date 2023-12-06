@@ -55,7 +55,12 @@ export default {
             ],
             skills: [
                 "C++",
+                "HLSL",
                 "OpenSiv3D",
+                "SQLite",
+                "Git",
+                "GitHub",
+                "Visual Studio",
             ],
         };
     },

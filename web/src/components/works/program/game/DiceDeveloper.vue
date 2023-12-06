@@ -52,6 +52,7 @@ export default {
             skills: [
                 "Java",
                 "Android Studio",
+                "Android",
             ],
         };
     },

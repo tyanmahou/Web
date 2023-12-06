@@ -90,6 +90,10 @@ export default {
                 "sass",
                 "JavaScript",
                 "Vue.js",
+                "Git",
+                "GitHub",
+                "VS Code",                
+                "Docker",
             ],
         };
     },

@@ -48,6 +48,7 @@ export default {
                 "C++",
                 "Windows API",
                 "DirectX",
+                "Visual Studio",
             ],
         };
     },

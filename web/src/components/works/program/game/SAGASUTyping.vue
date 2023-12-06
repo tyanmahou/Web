@@ -49,6 +49,7 @@ export default {
             skills: [
                 "C++",
                 "DirectX",
+                "Visual Studio",
             ],
         };
     },

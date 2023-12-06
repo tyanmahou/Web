@@ -122,8 +122,12 @@ export default {
             ],
             skills: [
                 "C++",
+                "HLSL",
                 "Siv3D",
                 "PHP",
+                "Git",
+                "GitHub",
+                "Visual Studio",
             ],
         };
     },

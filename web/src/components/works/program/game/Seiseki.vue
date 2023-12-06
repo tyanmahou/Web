@@ -53,7 +53,8 @@ export default {
             skills: [
                 "C++",
                 "Siv3D",
-                "Tobii EyeX"
+                "Tobii EyeX",
+                "Visual Studio",
             ],
         };
     },
