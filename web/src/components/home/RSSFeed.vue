@@ -4,7 +4,7 @@
       <tbody>
         <tr v-for="item in sortedFeedItems" :key="item.guid">
           <td>
-            <p class="date">{{ item.pubDate }}</p>
+            <p class="date">{{ item.pubDateTokyo }}</p>
             <p class="title"><a :href="item.link" target="_blank">{{ item.title }}</a></p>
           </td>
           <td> <a :href="item.feedLink" target="_blank">
@@ -18,6 +18,7 @@
 
 <script>
 import axios from 'axios'
+import moment from 'moment-timezone';
 
 export default {
   name: "RSSFeed",
@@ -51,6 +52,7 @@ export default {
           responses.forEach(response => {
             const data = response.data;
             const fixedData = data.items.map(item => {
+              item.pubDateTokyo = moment.utc(item.pubDate, "YYYY-MM-DD HH:mm:ss").tz('Asia/Tokyo').format('YYYY-MM-DD HH:mm:ss');
               item.feedTitle = data.feed.title;
               item.feedLink = data.feed.link + item.author; // Qiitaのリンクがおかしいので暫定的にauthorを足してる
               return item;
