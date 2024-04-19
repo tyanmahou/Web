@@ -2,7 +2,7 @@
   <div class="feed">
     <table>
       <tbody>
-        <tr v-for="item in sortedFeedItems" :key="item.guid">
+        <tr v-for="item in feedItems" :key="item.guid">
           <td>
             <p class="date">{{ item.pubDateTokyo }}</p>
             <p class="title"><a :href="item.link" target="_blank">{{ item.title }}</a></p>
@@ -29,17 +29,11 @@ export default {
   },
   components: {
   },
-  computed: {
-    sortedFeedItems() {
-      // pubDataを基準に記事を降順にソート
-      return this.feedItems.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
-    },
-  },
   mounted() {
     this.fetchRSSFeeds();
   },
   methods: {
-    fetchRSSFeeds() {
+    async fetchRSSFeeds() {
       const requests = [
         "https://qiita.com/tyanmahou/feed",
         "https://mahou-ptr.hatenablog.com/rss",
@@ -48,23 +42,34 @@ export default {
       ].map(url =>
         axios.get(`https://api.rss2json.com/v1/api.json?rss_url=${url}`)
       );
+      try {
+        const responses = await axios.all(requests);
 
-      axios.all(requests)
-        .then(responses => {
-          responses.forEach(response => {
-            const data = response.data;
-            const fixedData = data.items.map(item => {
+        for (let index = 0; index < responses.length; ++index) {
+          const data = responses[index].data;
+
+          // タイトル
+          let feedTitle = data.feed.title;
+          if (index == 2) {
+            feedTitle += ' - Youtube';
+          }
+          // リンク
+          let feedLink = data.feed.link;
+          if (index == 0) {
+            feedLink += 'tyanmahou'; // Qiitaのリンクがおかしいので暫定的にauthorを足してる;
+          }
+          const fixedData = data.items.map(item => {
               item.pubDateTokyo = moment.utc(item.pubDate, "YYYY-MM-DD HH:mm:ss").tz('Asia/Tokyo').format('YYYY-MM-DD HH:mm:ss');
-              item.feedTitle = data.feed.title;
-              item.feedLink = data.feed.link + item.author; // Qiitaのリンクがおかしいので暫定的にauthorを足してる
+              item.feedTitle = feedTitle;
+              item.feedLink = feedLink;
               return item;
             });
             this.feedItems = this.feedItems.concat(fixedData);
-          });
-        })
-        .catch(error => {
-          console.error('Error fetching RSS feeds:', error);
-        });
+        }
+      } catch(error) {
+        console.error('Error fetching RSS feeds:', error);
+      }
+      this.feedItems = this.feedItems.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate)).slice(0,20);
     },
   },
 };
