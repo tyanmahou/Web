@@ -43,7 +43,8 @@ export default {
       const requests = [
         "https://qiita.com/tyanmahou/feed",
         "https://mahou-ptr.hatenablog.com/rss",
-        "https://www.youtube.com/feeds/videos.xml?channel_id=UCWh2iVqxwFO30ik27gZmNAg"
+        "https://www.youtube.com/feeds/videos.xml?channel_id=UCWh2iVqxwFO30ik27gZmNAg",
+        "https://feeds.soundcloud.com/users/soundcloud:users:152681006/sounds.rss"
       ].map(url =>
         axios.get(`https://api.rss2json.com/v1/api.json?rss_url=${url}`)
       );
