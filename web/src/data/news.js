@@ -1,12 +1,12 @@
 export default [
     {
-        date: "2022.11.17",
-        title: "ColorfulTone 2022 秋パック",
+        date: "2024.04.21",
+        title: "ColorfulTone v4.0.1リリース",
         img: "https://colorfultone.tyanmahou.com/web/img/slide/Screenshot1.png",
         text: `
       <a href="https://colorfultone.tyanmahou.com/web/" target="_blank">
     「ColorfulTone」
-     </a>の追加楽曲<br>「2022 秋パック」が配信されました。<br>ダウンロードはゲーム内から。          
+     </a>のv4.0.1が正式リリース<br>また、「2024 春パック」が配信されました。<br>譜面のダウンロードはゲーム内から。          
       `,
         link: {
             url: "https://colorfultone.tyanmahou.com/web/",
