@@ -2,6 +2,7 @@ import { shallowRef } from 'vue'
 // Web
 import webHomePage from "@/components/works/program/web/HomePage.vue"
 import webColorfulTone from "@/components/works/program/web/ColorfulTone.vue"
+import webIjinKenriCounter from "@/components/works/program/web/IjinKenriCounter.vue"
 
 export default [
     {
@@ -15,5 +16,11 @@ export default [
       caption: "公式サイト",
       img: require("@/assets/works/program/web/ColorfulTone/logo.png"),
       detail: shallowRef(webColorfulTone),
+    },
+    {
+      title: "イジンデン 権利カウンター",
+      caption: "Webアプリ(※非公認)",
+      img: require("@/assets/works/program/web/IjinKenriCounter/screenshot.png"),
+      detail: shallowRef(webIjinKenriCounter),
     },
   ];

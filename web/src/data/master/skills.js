@@ -86,6 +86,9 @@ export default{
     "Vue.js": {
       name:"Vue.js", category:"framework"
     },
+    "Capacitor": {
+      name:"Capacitor", category:"framework"
+    },
     "Git": {
       name:"Git", category:"vcs"
     },
