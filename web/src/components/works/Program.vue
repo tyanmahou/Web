@@ -61,7 +61,7 @@
   <h2>Library</h2>
   <lsma :element-width="310" :margin-offset="20" class="contents-wrap">
     <ul id="library-ul" class="library-list">
-      <li v-for="item in library">
+      <li v-for="item in library.cpp">
         <mylink :url="item.detail" absolute target="_blank">
           <p class="title">
             {{ item.title }}
@@ -82,6 +82,29 @@
       </li>
     </ul>
   </lsma>
+  <lsma :element-width="310" :margin-offset="20" class="contents-wrap">
+    <ul id="library-ul" class="library-list">
+      <li v-for="item in library.unity">
+        <mylink :url="item.detail" absolute target="_blank">
+          <p class="title">
+            {{ item.title }}
+          <div class="ex">
+          </div>
+          </p>
+          <div class="detail">
+            <p class="lang">{{ item.lang }}</p>
+            <p class="caption">
+              {{ item.caption }}
+            </p>
+            <div class="icon">
+              <img src="@/assets/commons/icon/web/github.png" width="28" />
+            </div>
+          </div>
+        </mylink>
+        <hr />
+      </li>
+    </ul>
+  </lsma>  
   <h2>Other</h2>
   <lsma :element-width="310" :margin-offset="20" class="contents-wrap">
     <ul class="other-list">
