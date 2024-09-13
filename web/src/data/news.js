@@ -1,5 +1,20 @@
 export default [
     {
+        date: "2024.09.03",
+        title: "イジンデン 権利カウンター",
+        img: require("@/assets/works/program/web/IjinKenriCounter/screenshot.png"),
+        text: `
+        TCG「イジンデン」サポートWebアプリ、<br>
+      <a href="https://ijin-kenri-counter.tyanmahou.com" target="_blank">
+    「イジンデン 権利カウンター」(※非公認)<br>
+     </a>をリリース。          
+      `,
+        link: {
+            url: "https://colorfultone.tyanmahou.com/web/",
+            external: true
+        },
+    },    
+    {
         date: "2024.04.21",
         title: "ColorfulTone v4.0.1リリース",
         img: "https://colorfultone.tyanmahou.com/web/img/slide/Screenshot1.png",
@@ -12,12 +27,6 @@ export default [
             url: "https://colorfultone.tyanmahou.com/web/",
             external: true
         },
-    },
-    {
-        date: "2022.10.24",
-        title: "ホームページリニューアル！",
-        img: require("@/assets/commons/web_logo.png"),
-        text: `ホームページをリニューアルしました。<br>今後ともよろしくお願いいたします。`,
     },
     {
         date: "2020.11.16",

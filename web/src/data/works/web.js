@@ -19,7 +19,7 @@ export default [
     },
     {
       title: "イジンデン 権利カウンター",
-      caption: "Webアプリ(※非公認)",
+      caption: "Webツール(※非公認)",
       img: require("@/assets/works/program/web/IjinKenriCounter/screenshot.png"),
       detail: shallowRef(webIjinKenriCounter),
     },
