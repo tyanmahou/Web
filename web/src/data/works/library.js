@@ -19,6 +19,12 @@ export default {
       detail: "https://github.com/tyanmahou/Magico",
     },
     {
+      title: "ColorCpp",
+      lang: "C++20",
+      caption: "C++20 ColorSpace Module",
+      detail: "https://github.com/tyanmahou/ColorCpp",
+    },
+    {
       title: "S3DTiled",
       lang: "C++/OpenSiv3D",
       caption: "Tiled Support",
