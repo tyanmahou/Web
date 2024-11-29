@@ -3,6 +3,10 @@
         "year": 2024,
         "data": [
             {
+                "id": 2,
+                "category": "fanfic"
+            },
+            {
                 "id": 1,
                 "category": "original"
             }
