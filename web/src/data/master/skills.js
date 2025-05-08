@@ -89,6 +89,30 @@ export default{
     "Capacitor": {
       name:"Capacitor", category:"framework"
     },
+    "MySQL" :{
+      name:"MySQL", category:"db"
+    },
+    "SQLite":{
+      name:"SQLite", category:"db"
+    },
+    "Redis": {
+      name:"Redis", category:"db"
+    },     
+    "Docker": {
+      name:"Docker", category:"container"
+    },    
+    "Vagrant": {
+      name:"Vagrant", category:"container"
+    },             
+    "AWS" :{
+      name:"AWS", category:"cloud"
+    },
+    "GitHub Actions":{
+      name:"GitHub Actions", category:"cicd"
+    },       
+    "CircleCI":{
+      name:"CircleCI", category:"cicd"
+    },   
     "Git": {
       name:"Git", category:"vcs"
     },
@@ -116,42 +140,6 @@ export default{
     "XCode": {
       name:"XCode", category:"edit"
     },            
-    "Docker": {
-      name:"Docker", category:"system"
-    },    
-    "Vagrant": {
-      name:"Vagrant", category:"system"
-    },             
-    "MySQL" :{
-      name:"MySQL", category:"system"
-    },
-    "SQLite":{
-      name:"SQLite", category:"system"
-    },
-    "Redis": {
-      name:"Redis", category:"system"
-    },
-    "GitHub": {
-      name:"GitHub", category:"service"
-    },
-    "Atlassian": {
-      name:"Atlassian", category:"service"
-    },
-    "Microsoft 365": {
-      name:"Microsoft 365", category:"service"
-    },       
-    "Slack": {
-      name:"Slack", category:"service"
-    },       
-    "Notion": {
-      name:"Notion", category:"service"
-    },       
-    "AWS" :{
-      name:"AWS", category:"service"
-    },
-    "CircleCI":{
-      name:"CircleCI", category:"service"
-    },   
     "Windows": {
       name:"Windows", category:"platform"
     },            
@@ -176,4 +164,28 @@ export default{
     "Tobii EyeX": {
       name:"Tobii EyeX", category:"device"
     },       
+    "GitHub": {
+      name:"GitHub", category:"workspace"
+    },
+    "Atlassian": {
+      name:"Atlassian", category:"workspace"
+    },
+    "Google Workspace": {
+      name:"Google Workspace", category:"workspace"
+    },        
+    "Microsoft 365": {
+      name:"Microsoft 365", category:"workspace"
+    },       
+    "Discord": {
+      name:"Discord", category:"workspace"
+    },       
+    "Slack": {
+      name:"Slack", category:"workspace"
+    },   
+    "Notion": {
+      name:"Notion", category:"workspace"
+    },       
+    "ChatGPT": {
+      name:"ChatGPT", category:"workspace"
+    },    
 };

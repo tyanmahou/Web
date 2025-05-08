@@ -14,7 +14,6 @@
           <div class="profile-right">
             <span class="name">TYANMAHOU</span> <span class="aka">a.k.a mahou</span>
             <p class="text">
-              1995.12.31日生まれ 愛知出身。<br />
               本業はゲームプログラマ―。家庭用ゲームソフトの開発やモバイル向けのソーシャルゲーム開発など経験。<br />
               モノづくりが好きで、趣味でもプログラミングをしたりDTM作曲やイラストを描いたりしている。<br />
               愛する言語は「C++」。<br />
@@ -23,7 +22,7 @@
             <div class="profile-right-down">
               <div class="profile-right-down-1">
                 <h3>HOBBY!!</h3>
-                <p class="text">創作活動 ゲーム アニメ サイクリング パン作り など</p>
+                <p class="text">創作活動 ゲーム アニメ サイクリング など</p>
               </div>
 
               <div class="profile-right-down-2">
@@ -46,7 +45,7 @@
           <h2>SKILL</h2>
           <div>
             <ul>
-              <li v-for="item in skills">
+              <li v-for="item in filteredSkills">
                 <skillicon :name="item.name" :level="item.level" />
               </li>
             </ul>
@@ -144,6 +143,13 @@ export default {
       skills: skillsets,
     };
   },
+  computed: {
+    filteredSkills() {
+      return this.skills
+      .filter(skill => skill.level >= 3)
+      .sort((a, b) => b.level - a.level);
+    },
+  },  
   components: {
     myheader,
     foot,
