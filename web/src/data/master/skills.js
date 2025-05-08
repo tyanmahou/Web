@@ -20,6 +20,9 @@ export default{
     "Go": {
       name:"Go", category:"lang"
     },
+    "Python": {
+      name:"Python", category:"lang"
+    },
     "Haskell": {
       name:"Haskell", category:"lang"
     },
