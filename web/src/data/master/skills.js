@@ -32,9 +32,6 @@ export default{
     "Zephir": {
       name:"Zephir", category:"lang"
     },        
-    "SQL": {
-      name:"SQL", category:"lang"
-    },             
     "MATLAB": {
       name:"MATLAB", category:"lang"
     },                  
@@ -56,6 +53,9 @@ export default{
     "sass": {
       name:"sass", category:"lang"
     },
+    "SQL": {
+      name:"SQL", category:"lang"
+    },             
     "DirectX": {
       name:"DirectX", category:"framework"
     },
@@ -122,8 +122,8 @@ export default{
     "SVN": {
       name:"SVN", category:"vcs"
     },
-    "Plastic SCM": {
-      name:"Plastic SCM", category:"vcs"
+    "Unity Version Control": {
+      name:"Unity Version Control", category:"vcs"
     },
     "Perforce": {
       name:"Perforce", category:"vcs"
@@ -160,7 +160,10 @@ export default{
     },            
     "Nintendo Switch": {
       name:"Nintendo Switch", category:"platform"
-    },            
+    },     
+    "Web": {
+      name:"Web", category:"platform"
+    } ,      
     "AR": {
       name:"AR", category:"device"
     },            

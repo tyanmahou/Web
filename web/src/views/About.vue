@@ -50,6 +50,15 @@
               </li>
             </ul>
           </div>
+          <hr>
+          <div class="skillgraph">
+            <mymodal>
+              <template #title>詳細スキルグラフ</template>
+                <template #contents>
+                  <skillgraph/>
+                </template>
+            </mymodal>
+          </div>
         </div>
       </div>
       <h2>MISSION</h2>
@@ -91,6 +100,8 @@ import skillicon from "@/components/SkillIconAutoCategory.vue";
 import skillsets from "@/data/skillsets";
 import mottocode from "@/data/mottocode";
 import mymission from "@/components/home/MyMission.vue";
+import mymodal from "@/components/Modal.vue";
+import skillgraph from "@/components/about/SkillGraph.vue";
 
 export default {
   name: "AboutView",
@@ -157,6 +168,8 @@ export default {
     serviceicon,
     skillicon,
     mymission,
+    mymodal,
+    skillgraph,
   },
 };
 </script>
@@ -330,6 +343,47 @@ export default {
     }
 
     @include normal-link;
+  }
+}
+
+:deep(.skillgraph) {
+  margin: 10px 0;
+  font-weight: bold;
+  display: inline-block;
+
+  a {
+    display: block;
+    padding: 0 10px;
+    text-decoration: none;
+    color: #2e8b57;
+
+    /*線の基点とするためrelativeを指定*/
+    position: relative;
+  }
+
+  a::after {
+    content: "";
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    /*線の形状*/
+    width: 80%;
+    height: 2px;
+    background: #2e8b57;
+    /*アニメーションの指定*/
+    transition: all 0.3s;
+    transform: scale(0, 1);
+    /*X方向0、Y方向1*/
+    transform-origin: center top;
+    /*上部中央基点*/
+  }
+
+  /*現在地とhoverの設定*/
+  &.current a::after,
+  a:hover::after {
+    transform: scale(1, 1);
+    /*X方向にスケール拡大*/
   }
 }
 </style>

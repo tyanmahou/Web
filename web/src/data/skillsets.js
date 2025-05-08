@@ -40,9 +40,6 @@ export default [
       name:"Zephir", level:0
     },        
     {
-      name:"SQL", level:4
-    },             
-    {
       name:"MATLAB", level:0
     },                  
     {
@@ -63,6 +60,9 @@ export default [
     {
       name:"sass", level:3
     },
+    {
+      name:"SQL", level:4
+    },             
     {
       name:"DirectX", level:2
     },
@@ -97,7 +97,7 @@ export default [
       name:"Vue.js", level:3
     },
     {
-      name: "Capacitor", level:1
+      name:"Capacitor", level:1
     },
     {
       name:"MySQL", level:3
@@ -130,7 +130,7 @@ export default [
       name:"SVN", level:1
     },
     {
-      name:"Plastic SCM", level:1
+      name:"Unity Version Control", level:1
     },
     {
       name:"Perforce", level:0
@@ -159,7 +159,6 @@ export default [
     {
       name:"Linux", level:2
     },            
-
     {
       name:"Android", level:2
     },      
@@ -168,7 +167,10 @@ export default [
     }, 
     {
       name:"Nintendo Switch", level:1
-    },             
+    },            
+    {
+      name:"Web", level:3
+    },      
     {
       name:"AR", level:0
     }, 
