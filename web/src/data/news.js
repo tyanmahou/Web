@@ -1,16 +1,16 @@
 export default [
     {
-        date: "2024.09.03",
-        title: "イジンデン 権利カウンター",
-        img: require("@/assets/works/program/web/IjinKenriCounter/screenshot.png"),
+        date: "2024.12.28",
+        title: "My Best Selection 30",
+        img: require("@/assets/home/news/BestSelection.png"),
         text: `
-        TCG「イジンデン」サポートWebアプリ、<br>
-      <a href="https://ijin-kenri-counter.tyanmahou.com" target="_blank">
-    「イジンデン 権利カウンター」(※非公認)<br>
-     </a>をリリース。          
+        作曲10周年記念<br>
+      プレイリスト<a href="https://soundcloud.com/tyanmahou/sets/mybest" target="_blank">
+    「My Best Selection 30」<br>
+     </a>を公開しました。          
       `,
         link: {
-            url: "https://ijin-kenri-counter.tyanmahou.com",
+            url: "https://soundcloud.com/tyanmahou/sets/mybest",
             external: true
         },
     },    
