@@ -16,6 +16,9 @@ export default [
       name:"C#", level:5
     },
     {
+      name:"Objective-C", level:0
+    },
+    {
       name:"Java", level:3
     },
     {
@@ -30,21 +33,21 @@ export default [
     {
       name:"Python", level:0
     },    
-    {
-      name:"Haskell", level:0
-    },      
-    {
-      name:"Perl", level:0
-    }, 
-    {
-      name:"Zephir", level:0
-    },        
-    {
-      name:"MATLAB", level:0
-    },                  
-    {
-      name:"Prolog", level:0
-    },
+    // {
+    //   name:"Haskell", level:0
+    // },      
+    // {
+    //   name:"Perl", level:0
+    // }, 
+    // {
+    //   name:"Zephir", level:0
+    // },        
+    // {
+    //   name:"MATLAB", level:0
+    // },                  
+    // {
+    //   name:"Prolog", level:0
+    // },
     {
       name:"HLSL", level:4
     },
@@ -90,9 +93,9 @@ export default [
     {
       name:"Phalcon", level:0
     },
-    {
-      name:"Laravel", level:0
-    },
+    // {
+    //   name:"Laravel", level:0
+    // },
     {
       name:"Vue.js", level:3
     },
@@ -111,9 +114,9 @@ export default [
     {
       name:"Docker", level:3
     },    
-    {
-      name:"Vagrant", level:0
-    },             
+    // {
+    //   name:"Vagrant", level:0
+    // },             
     {
       name:"AWS", level:1
     },
@@ -171,12 +174,12 @@ export default [
     {
       name:"Web", level:3
     },      
-    {
-      name:"AR", level:0
-    }, 
-    {
-      name:"Tobii EyeX", level:0
-    },       
+    // {
+    //   name:"AR", level:0
+    // }, 
+    // {
+    //   name:"Tobii EyeX", level:0
+    // },       
     {
       name:"GitHub", level:4
     },
@@ -192,12 +195,12 @@ export default [
     {
       name:"Slack", level:3
     },       
-    {
-      name:"Discord", level:2
-    },      
-    {
-      name:"Notion", level:1
-    },       
+    // {
+    //   name:"Discord", level:2
+    // },      
+    // {
+    //   name:"Notion", level:1
+    // },       
     {
       name:"ChatGPT", level:3
     },     

@@ -2,7 +2,7 @@
   <a @click="open(true)" class="modal-button">
     <slot name="title"></slot>
   </a>
-  <modalbase :el="el" :isOpen="isOpen" @close="open(false)">
+  <modalbase :el="el" :isOpen="isOpen" :fullscreen="fullscreen" @close="open(false)">
     <slot name="contents"></slot>
   </modalbase>
 </template>
@@ -17,6 +17,7 @@ export default {
       type: Object,
       default: null,
     },
+    fullscreen: false,
   },
 
   data() {

@@ -87,7 +87,7 @@ span {
 
   @for $lv from 0 through 6 {
     &.level-#{$lv} {
-      $scale: 1 + ($lv - 1) * 0.4;
+      $scale: 1 + ($lv - 1) * 0.3;
       font-size: 12px * $scale;
       padding: 0 9px * $scale;
       border-radius: 14px * $scale;

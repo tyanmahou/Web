@@ -52,8 +52,8 @@
           </div>
           <hr>
           <div class="skillgraph">
-            <mymodal>
-              <template #title>詳細スキルグラフ</template>
+            <mymodal fullscreen="true">
+              <template #title>AND MORE...</template>
                 <template #contents>
                   <skillgraph/>
                 </template>

@@ -8,6 +8,9 @@ export default{
     "C#": {
       name:"C#", category:"lang"
     },
+    "Objective-C": {
+      name:"Objective-C", category:"lang"
+    },    
     "Java": {
       name:"Java", category:"lang"
     },

@@ -2,7 +2,7 @@
   <teleport to="body">
     <transition name="fade" @before-enter="beforeEnter" @after-leave="afterLeave">
       <div v-if="isOpen" class="modal-window" @click.self="$emit('close')">
-        <div class="modal-content">
+        <div :class="fullscreen ? 'modal-content-full' : 'modal-content'">
           <slot></slot>
         </div>
         <div class="close-btn" @click="$emit('close')">
@@ -22,6 +22,7 @@ export default {
       default: null,
     },
     isOpen: false,
+    fullscreen: false,
   },
   emits: ['close'],
   data() {
@@ -79,6 +80,13 @@ export default {
     display: inline-block;
     margin: 60px 20px 60px 20px;
   }
+  & .modal-content-full {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+  }  
 }
 
 .close-btn {
