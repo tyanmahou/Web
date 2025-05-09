@@ -10,7 +10,7 @@ export default [
      </a>をリリース。          
       `,
         link: {
-            url: "https://colorfultone.tyanmahou.com/web/",
+            url: "https://ijin-kenri-counter.tyanmahou.com",
             external: true
         },
     },    
