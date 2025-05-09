@@ -29,7 +29,7 @@ export default {
       },
       sub: {
         width: "200",
-        list: ['2022/2.png', '2021/6.png', '2019/7.png', '2018/6.png'],
+        list: ['2022/2.png', '2021/6.png', '2019/7.png', '2018/6.png', '2024/1.png'],
       }
     };
   },

@@ -25,7 +25,7 @@ export default {
     return {
       visual: false,
       pickup: {
-        url: "https://soundcloud.com/tyanmahou/flower-days",
+        url: "https://soundcloud.com/tyanmahou/for-you-forever",
         width: "100%",
         height: "170",
       },
@@ -33,10 +33,10 @@ export default {
         width: "100%",
         height: "100",
         list: [
-          "https://soundcloud.com/tyanmahou/chip-seekers",
-          "https://soundcloud.com/tyanmahou/wqtvlbqiqgzo",
+          "https://soundcloud.com/tyanmahou/chip-challengers",
+          "https://soundcloud.com/tyanmahou/gzmiu0axco89",
           "https://soundcloud.com/tyanmahou/neo-the-city",
-          "https://soundcloud.com/tyanmahou/code-of-eden",
+          "https://soundcloud.com/tyanmahou/e1exayadoyid",
         ],
       }
     };
